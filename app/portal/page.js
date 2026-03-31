@@ -374,12 +374,27 @@ export default function PortalPage() {
           )}
         </div>
 
+        {/* Partners */}
+        <div className="partners-section">
+          <div className="partners-label">Ils nous font confiance</div>
+          <div className="partners-logos">
+            <img src="/logos/aopb.png" alt="AOPB" className="partner-logo" />
+            <img src="/logos/mnx.png" alt="MNX" className="partner-logo" />
+            <img src="/logos/eiyolab.png" alt="EIYÖLAB" className="partner-logo" />
+            <img src="/logos/lelocal.png" alt="[LE] LOCAL" className="partner-logo" />
+            <img src="/logos/dietrich.png" alt="Dietrich" className="partner-logo" />
+          </div>
+        </div>
+
         {/* Footer */}
         <div className="portal-footer">
           <div className="portal-footer-logo">TL</div>
           <span>© 2026 Thomas Loiseau Visuals — Lausanne, Suisse</span>
           <a href="https://thomasloiseauvisuals.com" target="_blank" rel="noopener">
             thomasloiseauvisuals.com
+          </a>
+          <a href="mailto:contact@thomasloiseauvisuals.com">
+            contact@thomasloiseauvisuals.com
           </a>
         </div>
       </main>

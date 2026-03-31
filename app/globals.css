@@ -86,6 +86,11 @@ input { font-family: inherit; }
 .total-bar { padding: 16px 22px; background: #fafaf8; border-top: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center; }
 .total-label { font-size: 13px; font-weight: 500; color: #888; }
 .total-amount { font-size: 17px; font-weight: 700; color: #1a1a1a; font-variant-numeric: tabular-nums; }
+.partners-section { margin-top: 40px; text-align: center; }
+.partners-label { font-size: 11px; color: #bbb; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 20px; }
+.partners-logos { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 32px; }
+.partner-logo { height: 36px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.45; transition: opacity 0.2s, filter 0.2s; }
+.partner-logo:hover { filter: grayscale(0%); opacity: 1; }
 .portal-footer { margin-top: 40px; text-align: center; font-size: 12px; color: #ccc; display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .portal-footer-logo { width: 26px; height: 26px; border-radius: 6px; background: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 9px; font-weight: 700; font-family: 'Playfair Display', serif; }
 .portal-footer a { color: #aaa; transition: color 0.2s; }

@@ -115,6 +115,19 @@ const TABS = [
   { id: 'paiements', label: 'Paiements', icon: <PayIcon /> },
 ];
 
+/* ====== TAB BUTTON ====== */
+function TabBtn({ tab, active, onClick }) {
+  return (
+    <button
+      className={`tab-btn ${active ? 'active' : ''}`}
+      onClick={onClick}
+    >
+      {tab.icon}
+      <span className="tab-label">{tab.label}</span>
+    </button>
+  );
+}
+
 /* ====== PORTAL PAGE ====== */
 export default function PortalPage() {
   const router = useRouter();
@@ -189,7 +202,7 @@ export default function PortalPage() {
           </div>
           <div className="portal-user">
             <div className="portal-user-avatar">{getInitials(client.contact)}</div>
-            <span>{client.contact}</span>
+            <span className="portal-user-name">{client.contact}</span>
             <button
               onClick={handleLogout}
               title="Se déconnecter"
@@ -239,14 +252,12 @@ export default function PortalPage() {
         {/* Tabs */}
         <div className="tabs">
           {TABS.map((tab) => (
-            <button
+            <TabBtn
               key={tab.id}
-              className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+              tab={tab}
+              active={activeTab === tab.id}
               onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.icon}
-              {tab.label}
-            </button>
+            />
           ))}
         </div>
 

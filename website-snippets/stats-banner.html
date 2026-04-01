@@ -32,9 +32,9 @@
 
     <div class="stat-item reveal">
       <div class="stat-number">
-        <span class="stat-count" data-target="50">0</span><span class="stat-suffix">+</span>
+        <span class="stat-count-world">WORLD</span>
       </div>
-      <p class="stat-desc">Clients satisfaits</p>
+      <p class="stat-desc">Couverture globale</p>
     </div>
 
     <div class="stat-sep" aria-hidden="true"></div>
@@ -125,6 +125,14 @@
 }
 
 /* ── Label ──────────────────────────────────────────────────── */
+.stat-count-world {
+  font-family: var(--display);
+  font-size: clamp(56px, 7vw, 96px);
+  color: var(--green);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
 .stat-desc {
   font-family: var(--body);
   font-size: 11px;

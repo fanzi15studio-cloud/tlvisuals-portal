@@ -1,0 +1,208 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  BLOC STATS BANNER — Thomas Loiseau Visuals                  ║
+  ║  → Colle le HTML dans index.html à l'endroit voulu           ║
+  ║  → Colle le CSS dans ton style.css                           ║
+  ║  → Colle le JS juste avant </body>                           ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<!-- ═══════════════════════════ HTML ═══════════════════════════ -->
+
+<section class="stats-banner" id="stats">
+  <div class="stats-inner">
+
+    <div class="stat-item reveal">
+      <div class="stat-number">
+        <span class="stat-count" data-target="17">0</span><span class="stat-suffix">ans</span>
+      </div>
+      <p class="stat-desc">Passion pour l'image</p>
+    </div>
+
+    <div class="stat-sep" aria-hidden="true"></div>
+
+    <div class="stat-item reveal">
+      <div class="stat-number">
+        <span class="stat-count" data-target="500">0</span><span class="stat-suffix">+</span>
+      </div>
+      <p class="stat-desc">Projets réalisés</p>
+    </div>
+
+    <div class="stat-sep" aria-hidden="true"></div>
+
+    <div class="stat-item reveal">
+      <div class="stat-number">
+        <span class="stat-count" data-target="50">0</span><span class="stat-suffix">+</span>
+      </div>
+      <p class="stat-desc">Clients satisfaits</p>
+    </div>
+
+    <div class="stat-sep" aria-hidden="true"></div>
+
+    <div class="stat-item reveal">
+      <div class="stat-number">
+        <span class="stat-count" data-target="360">0</span><span class="stat-suffix">°</span>
+      </div>
+      <p class="stat-desc">Créativité globale</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ CSS ═══════════════════════════ -->
+<style>
+/* ── Bannière stats ─────────────────────────────────────────── */
+.stats-banner {
+  position: relative;
+  padding: 80px 50px;
+  background-color: #060d06;
+  background-image:
+    linear-gradient(rgba(180, 255, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 255, 0, 0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+  overflow: hidden;
+}
+
+/* Halo vert centré */
+.stats-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(150, 220, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Grille de 4 colonnes ───────────────────────────────────── */
+.stats-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+/* ── Item ───────────────────────────────────────────────────── */
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+}
+
+/* ── Nombre + suffixe ───────────────────────────────────────── */
+.stat-number {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.stat-count {
+  font-family: var(--display);
+  font-size: clamp(56px, 7vw, 96px);
+  color: var(--green);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-suffix {
+  font-family: var(--display);
+  font-size: clamp(22px, 3vw, 38px);
+  color: var(--green);
+  line-height: 1;
+  margin-top: 8px;
+  margin-left: 4px;
+}
+
+/* ── Label ──────────────────────────────────────────────────── */
+.stat-desc {
+  font-family: var(--body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ── Séparateur vertical ────────────────────────────────────── */
+.stat-sep {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(200, 255, 0, 0.2), transparent);
+  flex-shrink: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stats-banner { padding: 60px 24px; }
+
+  .stats-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 0;
+  }
+
+  .stat-sep { display: none; }
+
+  .stat-item { padding: 0 20px; }
+}
+
+@media (max-width: 480px) {
+  .stat-count { font-size: clamp(48px, 12vw, 72px); }
+}
+</style>
+
+
+<!-- ═══════════════════════════ JS ═══════════════════════════ -->
+<!--
+  Compteur animé — à fusionner avec ton <script> existant
+  (ou à coller juste avant </body>)
+-->
+<script>
+(function () {
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1600;
+    const start = performance.now();
+
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target
+            .querySelectorAll('.stat-count')
+            .forEach(animateCount);
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  const banner = document.getElementById('stats');
+  if (banner) statsObserver.observe(banner);
+})();
+</script>

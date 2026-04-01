@@ -1,0 +1,378 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  BLOC YOUTUBE GALLERY — Thomas Loiseau Visuals               ║
+  ║  → Colle ce bloc dans ton index.html à l'endroit voulu       ║
+  ║  → Remplace les 2 constantes en haut du <script>             ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<!-- ═══════════════════════════ HTML ═══════════════════════════ -->
+
+<section class="yt-gallery" id="videos">
+  <div class="yt-gallery-header section-header reveal">
+    <span class="section-label">La chaîne</span>
+    <h2 class="section-title">MES VIDÉOS</h2>
+  </div>
+
+  <!-- Grille remplie par JS -->
+  <div class="yt-grid" id="yt-grid">
+    <!-- Skeleton loader affiché pendant le fetch -->
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+    <div class="yt-skeleton"></div>
+  </div>
+
+  <div class="yt-gallery-cta reveal">
+    <a
+      href="https://www.youtube.com/@thomasloiseauvisuals"
+      target="_blank"
+      rel="noopener"
+      class="btn-outline"
+    >
+      Voir toute la chaîne →
+    </a>
+  </div>
+</section>
+
+<!-- Modal lecteur vidéo -->
+<div class="yt-modal" id="yt-modal" role="dialog" aria-modal="true">
+  <div class="yt-modal-backdrop" id="yt-modal-backdrop"></div>
+  <div class="yt-modal-content">
+    <button class="yt-modal-close" id="yt-modal-close" aria-label="Fermer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="yt-modal-frame">
+      <iframe
+        id="yt-modal-iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════ CSS ═══════════════════════════ -->
+<!--
+  À coller dans ton fichier CSS (ou dans un <style> avant </head>)
+-->
+<style>
+/* ── Section container ── */
+.yt-gallery {
+  padding: 100px 0 80px;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.yt-gallery-header {
+  padding: 0 50px;
+  margin-bottom: 48px;
+}
+
+/* ── Grille plein écran ── */
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 0 6px;
+}
+
+/* ── Carte vidéo ── */
+.yt-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0d0d0d;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: border-color 0.3s ease, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.yt-card:hover {
+  border-color: var(--green);
+  transform: scale(1.025);
+  z-index: 2;
+}
+
+.yt-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.35s ease;
+}
+
+.yt-card:hover img {
+  opacity: 0.55;
+}
+
+/* Bouton play */
+.yt-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.yt-card:hover .yt-card-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.yt-card-play svg {
+  margin-left: 3px;
+}
+
+/* Overlay titre */
+.yt-card-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yt-card:hover .yt-card-info {
+  opacity: 1;
+}
+
+.yt-card-title {
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Skeleton loader */
+.yt-skeleton {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s infinite;
+  border-radius: 3px;
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* CTA */
+.yt-gallery-cta {
+  text-align: center;
+  margin-top: 52px;
+  padding: 0 50px;
+}
+
+/* ── Modal ── */
+.yt-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.yt-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.yt-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.yt-modal-content {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 1100px);
+  transform: scale(0.94);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.yt-modal.open .yt-modal-content {
+  transform: scale(1);
+}
+
+.yt-modal-close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+  display: flex;
+}
+
+.yt-modal-close:hover {
+  color: var(--green);
+}
+
+.yt-modal-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.yt-modal-frame iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .yt-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .yt-gallery { padding: 60px 0 60px; }
+  .yt-gallery-header { padding: 0 24px; margin-bottom: 32px; }
+  .yt-gallery-cta { padding: 0 24px; margin-top: 36px; }
+  .yt-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; padding: 0 4px; }
+  .yt-card-play { width: 44px; height: 44px; }
+  .yt-modal-content { width: 95vw; }
+  .yt-modal-close { top: -38px; }
+}
+
+@media (max-width: 480px) {
+  .yt-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+
+<!-- ═══════════════════════════ JS ═══════════════════════════ -->
+<!--
+  À coller juste avant </body> dans ton index.html
+-->
+<script>
+(function () {
+  // ┌──────────────────────────────────────────────────────┐
+  // │  ➡  REMPLACE CES 2 VALEURS                           │
+  // └──────────────────────────────────────────────────────┘
+  const API_KEY     = 'COLE_TON_API_KEY_ICI';      // Google Cloud Console
+  const PLAYLIST_ID = 'COLE_TON_PLAYLIST_ID_ICI';  // ex: PLxxxxxxxxxxxxxxxx
+  const MAX_VIDEOS  = 12; // nombre de vidéos affichées
+
+  // ── Fetch playlist ──────────────────────────────────────
+  async function loadVideos() {
+    const url =
+      `https://www.googleapis.com/youtube/v3/playlistItems` +
+      `?part=snippet&maxResults=${MAX_VIDEOS}` +
+      `&playlistId=${PLAYLIST_ID}&key=${API_KEY}`;
+
+    try {
+      const res  = await fetch(url);
+      const data = await res.json();
+
+      if (!data.items) {
+        console.error('YouTube API:', data.error?.message || 'Erreur inconnue');
+        return;
+      }
+
+      const grid = document.getElementById('yt-grid');
+      grid.innerHTML = ''; // retire les skeletons
+
+      data.items.forEach(item => {
+        const id    = item.snippet.resourceId.videoId;
+        const title = item.snippet.title;
+        const thumb =
+          item.snippet.thumbnails?.maxres?.url ||
+          item.snippet.thumbnails?.high?.url   ||
+          item.snippet.thumbnails?.medium?.url ||
+          `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
+        const card = document.createElement('div');
+        card.className = 'yt-card';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', title);
+        card.innerHTML = `
+          <img src="${thumb}" alt="${title}" loading="lazy">
+          <div class="yt-card-play">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#000">
+              <path d="M5 3l14 9-14 9V3z"/>
+            </svg>
+          </div>
+          <div class="yt-card-info">
+            <p class="yt-card-title">${title}</p>
+          </div>
+        `;
+        card.addEventListener('click', () => openModal(id));
+        card.addEventListener('keydown', e => { if (e.key === 'Enter') openModal(id); });
+        grid.appendChild(card);
+      });
+
+    } catch (err) {
+      console.error('Impossible de charger les vidéos YouTube:', err);
+    }
+  }
+
+  // ── Modal ────────────────────────────────────────────────
+  function openModal(videoId) {
+    const modal  = document.getElementById('yt-modal');
+    const iframe = document.getElementById('yt-modal-iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    const modal  = document.getElementById('yt-modal');
+    const iframe = document.getElementById('yt-modal-iframe');
+    modal.classList.remove('open');
+    iframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // ── Listeners fermeture modal ────────────────────────────
+  document.getElementById('yt-modal-backdrop').addEventListener('click', closeModal);
+  document.getElementById('yt-modal-close').addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ── Init ─────────────────────────────────────────────────
+  loadVideos();
+})();
+</script>

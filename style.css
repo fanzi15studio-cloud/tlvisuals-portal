@@ -1194,6 +1194,11 @@ footer p {
     gap: 8px;
   }
 
+  .tlv-col:nth-child(2) {
+    animation-name: gridScrollUp;
+    animation-duration: 95s;
+  }
+
   .tlv-col:nth-child(3) {
     display: none;
   }

@@ -24,6 +24,7 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#showreel">Showreel</a></li>
         <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#apropos">À Propos</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -366,6 +367,29 @@
       </div>
     </section>
 
+    <section class="portfolio-videos" id="portfolio">
+      <div class="section-header reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Réalisations</h2>
+      </div>
+      <div class="videos-grid" id="videos-grid">
+        <div class="videos-loading"><div class="loading-spinner"></div></div>
+      </div>
+    </section>
+
+    <div class="video-modal" id="video-modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+        <div class="modal-video-wrap">
+          <iframe id="modal-iframe" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="modal-title" id="modal-title"></p>
+      </div>
+    </div>
+
     <section class="apropos" id="apropos">
       <div class="apropos-inner">
         <div class="apropos-left">
@@ -606,6 +630,69 @@
           links.classList.remove("open");
         }),
       );
+
+      // Portfolio YouTube
+      (function () {
+        const API_KEY = 'AIzaSyCbWpDG4honIvx9xqxi5qSvSzXVFnEQ7r8';
+        const PLAYLIST_ID = 'PL8Vl4KaV9yL5RZBtCjWY93N_-ZX9pJMmu';
+
+        async function fetchPage(token) {
+          const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${PLAYLIST_ID}&key=${API_KEY}${token ? '&pageToken=' + token : ''}`;
+          const r = await fetch(url);
+          return r.json();
+        }
+
+        async function loadPlaylist() {
+          const grid = document.getElementById('videos-grid');
+          let videos = [], token = '';
+          try {
+            do {
+              const data = await fetchPage(token);
+              if (!data.items) break;
+              videos = videos.concat(data.items.filter(v => v.snippet.title !== 'Deleted video' && v.snippet.thumbnails));
+              token = data.nextPageToken || '';
+            } while (token);
+
+            grid.innerHTML = videos.map(({ snippet }) => {
+              const id = snippet.resourceId.videoId;
+              const title = snippet.title;
+              const esc = title.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
+              const thumb = (snippet.thumbnails.maxres || snippet.thumbnails.high || snippet.thumbnails.medium || {}).url || '';
+              return `<div class="video-card" onclick="openVideo('${id}','${esc}')">
+                <div class="video-thumb">
+                  <img src="${thumb}" alt="${esc}" loading="lazy">
+                  <div class="video-play-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+                <div class="video-info"><p class="video-title">${title}</p></div>
+              </div>`;
+            }).join('');
+          } catch (e) {
+            grid.innerHTML = '<p style="grid-column:1/-1;color:var(--grey);text-align:center;padding:60px 0">Impossible de charger les vidéos.</p>';
+          }
+        }
+
+        window.openVideo = function (id, title) {
+          const modal = document.getElementById('video-modal');
+          document.getElementById('modal-iframe').src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+          document.getElementById('modal-title').textContent = title;
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        };
+
+        function closeModal() {
+          document.getElementById('video-modal').classList.remove('open');
+          document.getElementById('modal-iframe').src = '';
+          document.body.style.overflow = '';
+        }
+
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        document.getElementById('modal-backdrop').addEventListener('click', closeModal);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        loadPlaylist();
+      })();
 
       // Reveal au scroll
       const obs = new IntersectionObserver(

@@ -399,23 +399,27 @@ nav.scrolled {
 
 @media (max-width: 768px) {
   .services {
-    max-height: 1000px;
-    display: block;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    position: static;
   }
   .services::before {
     content: none;
   }
   .services-desc {
-    padding: 0;
+    padding: 40px 24px 32px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--bg);
   }
   .services__intro {
-    padding: 8px 0 0 10px;
+    padding: 0;
     font-size: 1rem;
     font-family: var(--display);
-    color: var(--bg);
+    color: var(--green);
+    margin-bottom: 12px;
   }
   .services__title {
     width: 100%;
@@ -424,16 +428,17 @@ nav.scrolled {
     font-size: clamp(1.8rem, 6vw, 3rem);
     line-height: 1.1;
     text-align: left;
+    color: var(--white);
   }
   .services__list {
-    padding: 15px 10px 30px;
-    font-size: 0.9rem;
+    padding: 15px 0 0;
+    font-size: 1rem;
   }
   .services ul::before {
     content: none;
   }
   .services__list li {
-    padding: 5px 0;
+    padding: 6px 0;
     position: relative;
   }
   .services__list li::before {
@@ -443,12 +448,12 @@ nav.scrolled {
     bottom: -1px;
   }
   .services img {
+    position: static;
     width: 100%;
-    max-height: 400px;
+    max-height: 320px;
     object-fit: cover;
-    top: 0;
-    left: 0;
-    bottom: auto;
+    object-position: center top;
+    display: block;
   }
 }
 
@@ -1179,15 +1184,23 @@ footer p {
 @media (max-width: 768px) {
   .tlv-bg-grid {
     gap: 8px;
+    width: 100%;
+    left: 0;
   }
 
   .tlv-col {
     gap: 8px;
+    width: 50%;
+  }
+
+  .tlv-col:nth-child(3) {
+    display: none;
   }
 
   .tlv-hero {
     min-height: 100vh;
     height: 110vh;
+    overflow: hidden;
   }
 }
 

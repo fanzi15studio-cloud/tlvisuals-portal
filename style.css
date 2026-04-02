@@ -1545,22 +1545,24 @@ footer p {
 
 /* ===== PORTFOLIO VIDEOS ===== */
 .portfolio-videos {
-  padding: 120px 50px;
+  padding: 120px 0 80px;
   background: var(--bg2);
+}
+
+.portfolio-videos .section-header {
+  padding: 0 50px 60px;
 }
 
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-  max-width: 1400px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
 }
 
 .video-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: #000;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
@@ -1710,11 +1712,14 @@ footer p {
 
 @media (max-width: 768px) {
   .portfolio-videos {
-    padding: 80px 24px;
+    padding: 80px 0 60px;
+  }
+  .portfolio-videos .section-header {
+    padding: 0 24px 40px;
   }
   .videos-grid {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
   }
   .video-modal {
     padding: 12px;
@@ -1727,6 +1732,7 @@ footer p {
 
 @media (max-width: 480px) {
   .videos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
   }
 }

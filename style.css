@@ -1230,8 +1230,8 @@ footer p {
   }
 
   .tlv-hero {
+    height: auto;
     min-height: 100vh;
-    height: 110vh;
     overflow: hidden;
   }
 }

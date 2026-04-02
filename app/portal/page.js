@@ -381,6 +381,9 @@ export default function PortalPage() {
           <a href="https://thomasloiseauvisuals.com" target="_blank" rel="noopener">
             thomasloiseauvisuals.com
           </a>
+          <a href="https://thomasloiseauvisuals.com/cv/" target="_blank" rel="noopener">
+            CV
+          </a>
         </div>
       </main>
     </div>

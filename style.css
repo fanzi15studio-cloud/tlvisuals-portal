@@ -1189,8 +1189,9 @@ footer p {
   }
 
   .tlv-col {
+    flex: 1;
+    min-width: 0;
     gap: 8px;
-    width: 50%;
   }
 
   .tlv-col:nth-child(3) {

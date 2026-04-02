@@ -754,11 +754,34 @@ nav.scrolled {
 }
 
 .expertise-card {
-  background: var(--bg2);
+  background-color: var(--bg2);
+  background-size: cover;
+  background-position: center;
   padding: 60px 50px;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
+}
+
+/* dark overlay by default */
+.expertise-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  transition: opacity 0.45s ease;
+  z-index: 0;
+}
+
+/* reveal on hover */
+.expertise-card:hover::after {
+  opacity: 0;
+}
+
+/* keep content above the overlay */
+.expertise-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .expertise-card::before {
@@ -770,10 +793,7 @@ nav.scrolled {
   height: 0;
   background: var(--green);
   transition: height 0.4s;
-}
-
-.expertise-card:hover {
-  background: #161616;
+  z-index: 2;
 }
 
 .expertise-card:hover::before {

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Loiseau Visuals | Production Photo & Vidéo</title>
+    <meta name="description" content="Production photo et vidéo professionnelle en Suisse. 16 ans d'expérience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <a href="#accueil" class="nav-logo">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=200,fit=crop,q=95/6HaGICsI5vpAXndL/logo-final-tlvisuals-FC1w1gzdkPCnFx8F.png" alt="Thomas Loiseau Visuals" class="logo-img">
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://tlvisuals-portal-3ioi.vercel.app/" class="btn-client" target="_blank">Espace Client</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="accueil">
+        <video autoplay muted loop playsinline id="bg-video">
+            <!-- ✏️ EDITABLE : remplace showreel.mp4 par ton fichier uploadé sur Hostinger -->
+            <source src="showreel.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- ✏️ EDITABLE : modifie le texte ci-dessous -->
+            <p class="hero-tagline">Production Vidéo & Photo · Suisse</p>
+            <h1 class="hero-title">Une image<br>vaut mille<br>mots.</h1>
+            <p class="hero-sub"><!-- ✏️ EDITABLE -->16 ans de passion à créer des images qui racontent votre histoire avec élégance et précision.</p>
+            <div class="hero-cta">
+                <a href="#projets" class="btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn-secondary">Discutons</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- SHOWREEL -->
+    <section class="showreel" id="showreel">
+        <div class="showreel-inner">
+            <h2 class="section-label">Showreel</h2>
+            <div class="video-wrapper">
+                <!-- ✏️ EDITABLE : remplace l'ID YouTube "VOTRE_ID_YOUTUBE" par l'ID de ta vidéo -->
+                <!-- Pour trouver l'ID : dans l'URL youtube.com/watch?v=XXXXXXXX, l'ID est XXXXXXXX -->
+                <iframe 
+                    src="https://www.youtube.com/embed/b9dKQbgDZ8Q?autoplay=0&rel=0&modestbranding=1" 
+                    title="Thomas Loiseau Visuals - Showreel"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="portfolio" id="projets">
+        <div class="section-header">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Travaux Récents</h2>
+        </div>
+        <div class="project-grid">
+
+            <!-- ✏️ EDITABLE : Projet 1 - remplace l'URL de l'image et les textes -->
+            <div class="project-card" data-category="video">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80')">
+                    <div class="card-overlay">
+                        <span class="card-cat">Vidéo</span>
+                        <h3>Campagne Internationale</h3>
+                        <p>Production vidéo & direction artistique</p>
+                        <a href="#" class="card-link">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✏️ EDITABLE : Projet 2 -->
+            <div class="project-card" data-category="corporate">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?auto=format&fit=crop&w=800&q=80')">
+                    <div class="card-overlay">
+                        <span class="card-cat">Corporate</span>
+                        <h3>Corporate Suisse</h3>
+                        <p>Documentaire d'entreprise</p>
+                        <a href="#" class="card-link">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✏️ EDITABLE : Projet 3 -->
+            <div class="project-card" data-category="photo">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80')">
+                    <div class="card-overlay">
+                        <span class="card-cat">Photo</span>
+                        <h3>Spot Publicitaire</h3>
+                        <p>Direction artistique & photographie</p>
+                        <a href="#" class="card-link">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✏️ EDITABLE : Projet 4 -->
+            <div class="project-card" data-category="video">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80')">
+                    <div class="card-overlay">
+                        <span class="card-cat">Vidéo</span>
+                        <h3>Événement Live</h3>
+                        <p>Captation multi-caméras</p>
+                        <a href="#" class="card-link">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="expertise" id="expertise">
+        <div class="section-header">
+            <span class="section-label">Services</span>
+            <h2 class="section-title">Expertise</h2>
+        </div>
+        <div class="expertise-grid">
+
+            <div class="expertise-card">
+                <div class="expertise-num">01</div>
+                <h3>Vidéo</h3>
+                <!-- ✏️ EDITABLE -->
+                <p>Captation fluide avec Sony FX30 Cinema Line, montage soigné et color grading professionnel pour raconter votre histoire.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-num">02</div>
+                <h3>Photographie</h3>
+                <!-- ✏️ EDITABLE -->
+                <p>Portraits, événements corporate et images d'architecture au rendu naturel et élégant. Une seule image peut suffire.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-num">03</div>
+                <h3>Consulting</h3>
+                <!-- ✏️ EDITABLE -->
+                <p>Conseils personnalisés pour optimiser votre visibilité et votre stratégie de contenu visuel sur tous vos canaux.</p>
+            </div>
+
+        </div>
+
+        <div class="expertise-statement">
+            <!-- ✏️ EDITABLE -->
+            <p>"Je ne suis pas obligé de capturer 25 images par seconde.<br>Une seule image suffit parfois à transmettre le message."</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <span class="section-label">Contact</span>
+                <!-- ✏️ EDITABLE -->
+                <h2>Discutons de<br>votre projet.</h2>
+                <a href="https://calendly.com/fanzi15studio/30min" target="_blank" class="btn-primary">Prendre RDV →</a>
+            </div>
+            <div class="contact-right">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <!-- ✏️ EDITABLE -->
+                        <a href="mailto:contact@thomasloiseauvisuals.com">contact@thomasloiseauvisuals.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Adresse</span>
+                        <!-- ✏️ EDITABLE -->
+                        <p>c/o ExpertFid & Audit SA<br>Rue de bourg 27<br>1003 Lausanne, Suisse</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Réseaux</span>
+                        <div class="social-links">
+                            <a href="https://instagram.com" target="_blank">Instagram</a>
+                            <a href="https://youtube.com" target="_blank">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=200,fit=crop,q=95/6HaGICsI5vpAXndL/logo-final-tlvisuals-FC1w1gzdkPCnFx8F.png" alt="TL Visuals" class="footer-logo">
+        <p>© 2026 Thomas Loiseau Visuals. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

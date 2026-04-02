@@ -1071,8 +1071,8 @@ footer p {
 
   .expertise-card {
     padding: 40px 28px;
-    min-height: 260px;
-    max-height: 260px;
+    min-height: 380px;
+    max-height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

@@ -1071,6 +1071,11 @@ footer p {
 
   .expertise-card {
     padding: 40px 28px;
+    min-height: 260px;
+    max-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   .apropos {

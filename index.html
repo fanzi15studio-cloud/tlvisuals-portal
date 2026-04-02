@@ -657,17 +657,29 @@
               const id = snippet.resourceId.videoId;
               const title = snippet.title;
               const esc = title.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
-              const thumb = (snippet.thumbnails.maxres || snippet.thumbnails.high || snippet.thumbnails.medium || {}).url || '';
-              return `<div class="video-card" onclick="openVideo('${id}','${esc}')">
-                <div class="video-thumb">
-                  <img src="${thumb}" alt="${esc}" loading="lazy">
-                  <div class="video-play-btn">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
+              const embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&rel=0&modestbranding=1&playsinline=1`;
+              return `<div class="video-card" data-videoid="${id}" data-embed="${embedUrl}" data-title="${esc}" onclick="openVideo('${id}','${esc}')">
+                <div class="video-live-wrap">
+                  <iframe data-src="${embedUrl}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen loading="lazy"></iframe>
+                  <div class="video-title-overlay"><p>${title}</p></div>
                 </div>
-                <div class="video-info"><p class="video-title">${title}</p></div>
               </div>`;
             }).join('');
+
+            // Lazy load iframes via IntersectionObserver
+            const iframeObs = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                const iframe = entry.target;
+                if (entry.isIntersecting && !iframe.src) {
+                  iframe.src = iframe.dataset.src;
+                }
+              });
+            }, { rootMargin: '200px' });
+
+            grid.querySelectorAll('iframe[data-src]').forEach(iframe => iframeObs.observe(iframe));
+
           } catch (e) {
             grid.innerHTML = '<p style="grid-column:1/-1;color:var(--grey);text-align:center;padding:60px 0">Impossible de charger les vidéos.</p>';
           }

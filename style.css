@@ -755,7 +755,7 @@ nav.scrolled {
 
 .expertise-card {
   background-color: var(--bg2);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding: 60px 50px;

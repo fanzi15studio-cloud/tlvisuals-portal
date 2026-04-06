@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { fetchClientData } from './lib/fetchClientData';
 
 export default function LoginPage() {
   const [code, setCode] = useState('');
@@ -15,17 +16,11 @@ export default function LoginPage() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/client?code=' + encodeURIComponent(code.trim()));
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error || 'Une erreur est survenue.');
-        setLoading(false);
-        return;
-      }
+      await fetchClientData(code.trim());
       sessionStorage.setItem('tlv_code', code.trim().toUpperCase());
       router.push('/portal');
-    } catch {
-      setError('Impossible de se connecter. Réessayez.');
+    } catch (err) {
+      setError(err.message || 'Une erreur est survenue.');
       setLoading(false);
     }
   }

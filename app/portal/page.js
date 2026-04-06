@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { fetchClientData } from '../lib/fetchClientData';
 
 /* ====== SVG ICONS ====== */
 const VideoIcon = () => (
@@ -130,11 +131,7 @@ export default function PortalPage() {
       return;
     }
 
-    fetch(`/api/client?code=${encodeURIComponent(code)}`)
-      .then((res) => {
-        if (!res.ok) throw new Error('invalid');
-        return res.json();
-      })
+    fetchClientData(code)
       .then((d) => {
         setData(d);
         setLoading(false);

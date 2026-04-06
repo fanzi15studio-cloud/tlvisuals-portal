@@ -1,0 +1,31 @@
+# Allow access to _next static assets
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /cv-digital/
+
+    # Serve existing files and directories directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Fallback: serve index.html for client-side routing
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# Allow _next folder (Apache sometimes blocks underscore dirs)
+<IfModule mod_authz_core.c>
+    <Directory "_next">
+        Require all granted
+    </Directory>
+</IfModule>
+
+# Correct MIME types
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+</IfModule>
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>

@@ -1,0 +1,3062 @@
+Important Notice and Disclaimer: For Research
+Use Only
+
+It is critical for all readers, users, and customers to understand that all products
+referenced, described, or discussed within this book, and potentially on the affiliated
+website, worldpeptideassociation.com, are strictly and unequivocally designated for
+Research and Development (R&D) purposes only.
+
+
+These compounds are raw chemical materials intended solely for in vitro (test tube) and
+ex vivo (outside a living organism) scientific investigations, laboratory experimentation,
+and professional research applications.
+
+
+Under no circumstances whatsoever are these products intended or approved for Human
+consumption or administration of any kind. This includes, but is not limited to, oral
+ingestion, injection, topical application, or any other method of introduction into the human
+body. The misuse of these research-grade materials constitutes a violation of this
+disclaimer and is entirely at the user's risk.
+
+
+Disclaimer on Health and Medical Efficacy:
+
+The content, statements, and claims made or implied within this book, as well as those
+associated with these products, have not been evaluated, scrutinized, or approved by the
+United States Food and Drug Administration (US FDA) or any equivalent regulatory
+agency in other jurisdictions.
+
+
+Consequently, the statements and these research products are explicitly not intended to be
+used to diagnose, treat, cure, or prevent any disease, medical condition, or ailment. No
+information provided herein should be construed as medical advice. Readers and researchers
+must seek guidance from qualified healthcare professionals for all health and medical
+concerns. By engaging with this material and these products, the user acknowledges and
+accepts this critical limitation of use.
+
+
+
+
+2
+Why WPA and this book? ​
+The Definitive Book for the Research
+Peptide Community
+
+The World Peptide Association (WPA) stands alone as the paramount authority and
+indispensable resource for the global research peptide community. Our mission is to foster
+knowledge, ensure safety, and provide unparalleled data transparency to researchers
+operating in the for research purposes domain. This book is a direct extension of that
+commitment, providing the most current, data-driven insights available anywhere.The
+Uniqueness of WPA Data: The WPA Calculator
+
+What truly sets the WPA apart is our exclusive and robust data source for understanding
+the real-world methodologies employed by research professionals: The WPA Calculator.
+This tool is not just a mechanism for planning; it is the world's only continuous, dynamic,
+and rapidly growing data collection platform focused on the self-reported practices of the
+research peptide community.
+
+We gather critical, high-fidelity information anonymously, allowing researchers to
+contribute their real-world usage protocols without compromising their privacy. This
+self-reported data includes:
+
+
+1. What Compound Is It?
+
+    ●​ Name of Compound: Clearly state the specific peptide or chemical you are working
+       with.
+
+2. Mixing Instructions (Your 'Recipe')
+
+    ●​ Vial Size (mg): How much of the pure powder is in the sealed bottle? (The starting
+       amount).
+    ●​ Water Added (mL): How much water (specifically, "Bac Water") did you add to the
+
+
+
+3
+       powder? (This is key for figuring out the strength).
+
+3. Dosing & Schedule
+
+    ●​ Target Dose (mcg or mg): How much of the mixture do you plan to inject each time?
+       (Be specific to avoid errors).
+    ●​ How Often: How many times a week do you plan to inject it?
+
+This data—compound identity, starting mass, reconstitution volume, target dose, and dosing
+schedule—is the basis for calculating concentration, injection volume, and vial longevity.
+
+
+No other organization on the planet has access to this depth or breadth of current
+research practice data, nor are they collecting it with the speed and commitment of the
+WPA.Commitment to Transparency and Value
+
+
+As of the preparation of this definitive guide, the WPA Calculator is rapidly approaching
+20,000 individual calculations—a staggering repository of self-reported research data. The
+WPA does not hoard this information; instead, we freely analyze and share this
+aggregated data to bring essential transparency, credibility, and value to the community
+we serve.​
+​
+This book leverages that monumental dataset, transforming raw practice statistics into
+actionable knowledge, establishing best practices, and ensuring that researchers have
+access to the most informed, community-validated information available. It is designed to
+be the authoritative manual, powered by the collective experience of the world's peptide
+researchers.
+
+
+
+
+4
+How to Use the WPA Peptide
+Calculator (Step‑by‑Step)
+
+These steps mirror the workflow on worldpeptideassociation.com so researchers can
+quickly translate a protocol into a syringe draw volume. ​
+
+
+
+
+       Click the graphic above to launch the WPA Peptide Calculator
+    1.​ Choose your peptide.
+    2.​ Decide your research dose for a single administration (mcg and mg are shown
+        throughout this guide).
+    3.​ Enter your vial’s total content (e.g., 10 mg).
+    4.​ Pick BAC water volume for reconstitution. You can choose any volume; the
+        calculator also shows community analytics for commonly used volumes.
+    5.​ Click Calculate Dosage. The syringe graphic highlights the draw line
+        corresponding to your dose with the chosen dilution.
+    6.​ Record your dose → draw volume for the protocol schedule.​
+        ​
+        Tip: If the draw volume seems too small or too large, adjust the BAC water
+        volume and recalculate until the draw is at a level you are comfortable with.
+
+
+
+
+5
+WPA Data Advantage: Truth Over
+"Bro Science
+
+The Problem: Most research protocols come from a game of "telephone." When
+researchers are going to start researching with a new compound they might turn to a
+forum, reddit or youtube or see what a friend is taking, which is sometimes based on
+some form of research in animal models that may or may not translate to humans.
+Someone posts on a forum, an influencer repeats it, and suddenly it becomes a "rule." But
+is it actually correct? Or is it just Bro Science?
+
+The Solution: We don't guess. We count. Driving Data-Informed Research Practices. Every
+instance of the WPA Calculator's use is an opportunity to anonymously enhance a growing,
+comprehensive dataset on dosing practices. This collection is meticulous, automatically
+recording essential, anonymous parameters that allow us to observe real-world trends.
+
+    The key data points we anonymously collect are:
+
+    1.​ What compound? Tracking the specific substances being prepared provides insight into
+        the most commonly researched compounds and helps researchers understand which
+        compounds are the best for their researcher.
+    2.​ What vial size? If someone wants to start researching a new compound they are easily
+        able to see what the most common vial size is based on thousands of fellow researchers.
+    3.​ How much BAC water? The volume of Bacteriostatic Water used as a diluent (fancy
+        word for mixing) is essential and WPA analytics show you exactly how much BAC water
+        for every compound.
+    4.​ What dose? The target dose is the most critical variable, offering a direct view into the
+        range of dosages researchers are aiming for.
+    5.​ How often? The frequency of administration provides context for experimental design
+        and total cumulative substance use over a defined period.
+
+By aggregating and analyzing this secure, anonymous usage data, we can identify best
+practices, flag potential areas of confusion, and continuously refine the WPA Calculator's
+algorithms and user experience. This data-driven approach ensures that the tool remains the
+most accurate, reliable, and relevant resource for standardized and safe dosing preparation in
+the research community.
+
+With nearly 20,000 unique calculations (and growing daily), we have built the world's largest
+dataset on real-world peptide usage. This allows us to ignore the "noise" and show you the
+Ground Truth.
+
+
+
+6
+The Macro View (Industry Trends)
+First, let’s look at the big picture. What is the rest of the world actually researching?
+
+1. The Popularity Contest (All-Time Leaders)
+
+You don't need to ask "What’s popular?" The data tells us instantly.
+
+    ●​ The Insight: While everyone talks about the "new" stuff, the data shows that the classics
+       (like Tirzepatide and BPC-157) still dominate the landscape.
+
+Top 10 Compounds Bar Chart​
+
+
+
+
+                                                                                                   ​
+The Leaderboard: Based on nearly 20,000 data points, this chart shows exactly which
+compounds are being researched the most right now - click here to see up to date data.
+
+2. The "Trending" List (What’s Hot Now)
+
+Usage shifts fast. We track momentum over
+the last 30 days to see what is exploding in
+popularity and what is fading away.
+
+    ●​ The Insight: Use this to spot the
+       "Next Big Thing" before it hits the
+       forums.
+
+Trending/Gaining Popularity
+
+    ●​ What to Capture: The list showing
+       "Tirzepatide +44%", "Retatrutide
+       +57%", etc.
+
+"The Movers & Shakers: Green means
+growing. Red means slowing. See click here
+which compounds are capturing the
+community's attention this month."
+
+3. The Mixing Standard (BAC Water)
+
+"How much water should I add?" This is the
+#1 question for beginners.
+
+
+
+7
+    ●​ The Truth: There is no "wrong" answer, but there is a "common" answer. Our data
+       shows that while 41% of users prefer 2ml, a solid 29% still prefer 3ml.​
+
+                                           BAC Water Usage ChartLink:
+
+                                           The Consensus: Don't stress about the water. As
+                                           you can see click here, preferences vary. Use this
+                                           chart to see what the majority of researchers are
+                                           doing.
+
+
+
+                                           The Micro View
+                                           (Compound Specifics)
+                                           Now, let’s zoom in. Let's look at Tirzepatide as an
+                                           example of how granular we can get.
+
+                                           4. The "Real" Dose
+
+                                           If you ask Reddit, they might say "Everyone starts
+
+
+
+
+at 2.5mg." But is that true?
+
+    ●​ The Data: It’s nuanced. Our data
+       reveals a near-even split: 23% of
+       researchers stick to the starter
+       dose (2.5mg), while 21% have
+       moved up to 5mg.
+
+    ●​ Why it matters: Seeing the
+       distribution helps you realize
+       there is no "One Size Fits All."
+
+Tirzepatide Dosing Amounts
+
+    ●​ What to Capture: The bar chart
+       showing the breakdown of
+       specific doses (2.5mg, 5mg,
+       7.5mg, etc.).
+
+Benchmarks, Not Guesses: See exactly
+how many users are at your dose level
+versus moving up click here. This helps
+
+
+
+
+8
+you benchmark your research against the 'Norm'.
+
+                                          5. Frequency Patterns
+
+                                          How often should you research?
+
+                                             ●​ The Standard: For Tirzepatide, the data
+                                          confirms the standard protocol: 94% of users
+                                          administer it Once Weekly.
+
+                                             ●​ The Outliers: Interestingly, 5% of users are
+                                          experimenting with "Micro-dosing" (7 days a week).
+                                          The data captures these emerging protocols that
+                                          you might otherwise miss.
+
+                                          Dosing Frequency Pie Chart
+
+                                              ●​ Caption: "Protocol Check: Are you an
+                                          outlier? This chart shows how frequently the
+                                          majority of researchers administer this specific
+                                          compound."
+
+
+
+
+9
+WPA Verified Vendors
+
+The "Wild West" Problem In the research peptide market, not everyone plays by the rules. The
+most critical safety check is the COA (Certificate of Analysis). A proper COA tests for two
+things:
+
+     1.​ Purity: Is the product actually 99%+ pure, or is it full of who knows what?
+     2.​ Assay (Quantity): If the vial says "10mg," is there actually 10mg inside, or did they only
+         put 5mg to save money?
+
+
+
+
+     Step 1: The Filter (Finding Safe Products)
+
+You don't have to guess. Our tools allow you to filter the entire market to find exactly what you
+need. You can sort by Recency (to avoid the "Dusty Scenario") and decide what "Value" means
+to you:
+
+     ●​ Price Per Vial: Great for researchers on a budget who just need one bottle.
+     ●​ Price Per MG: The smart way to buy in bulk. Often, a more expensive vial is actually a
+        better deal because it has double the product.
+
+
+
+
+Click Here to Use This Tool: Use the live filters to instantly hide any product that hasn't
+been tested recently. You can also toggle between "Price Per Vial" and "Price Per MG" to
+find the best setup for your research.​
+
+
+
+
+10
+     Step 2: The Vendor Quality Check
+
+Transparency is everything. We list every vendor we track, even the ones who don't have their
+paperwork in order. This allows you to see the difference side-by-side.
+
+The COA "Freshness" (Why Dates Matter) Checking for a COA isn't enough—you have to
+check the Date. At WPA, we recommend looking for tests performed within the last 6 months.
+
+Why? Because an old COA (e.g., from 3 years ago) usually implies one of three bad things:
+     1.​ The "Lazy" Scenario: They are making new batches but aren't bothering to test them
+         (so you have no idea what you are buying).
+     2.​ The "Ghost" Scenario: They are testing new batches, failing, and hiding the results.
+     3.​ The "Dusty" Scenario: They are still selling the same batch from 3 years ago, which
+         means the product has likely degraded from sitting on a shelf for too long.
+None of these are good options.
+
+
+
+
+Click Here to See the Live Vendor List: Don't fly blind, see which vendors currently have
+COAs and which ones are missing critical testing data.
+
+
+
+
+     Step 3: Visualizing Value (The Dot Chart)
+
+Sometimes a list of numbers is hard to read. That is why we built the Dot Chart. The dot chart is
+visible when you are looking for any product on WPA sites. Sometimes a list of 40 different
+options of the same product can be overwhelming, that is why we built the dot chart.
+
+     ●​ The Dot Chart: Each dot is a different offer from a different company. The chart allows
+        sorting by both Price/Vial and Price/mg along with several other ways (see above) to
+
+
+
+
+11
+        satisfy two different buyer needs.
+     ●​ Research group 1: Wants the cheapest priced vial, we highlight the yellow dot to make
+        picking your next research product easy.
+     ●​ Price/mg (Horizontal Axis): This helps the second group of researchers, who need
+        larger quantities for longer studies, find the most cost-effective per-milligram price (often
+        found in larger vials/quantities). The horizontal axis is color-coded: bright green dots on
+        the left indicate the lowest Price/mg, while the transition to red on the far right indicates
+        the highest Price/mg.
+The Red Arrow: In the example below, the arrow points to the absolute lowest price on the
+market for this specific compound, representing the cheapest Price/Vial.
+
+     Note: The vertical axis also shows different vendors. Vendors may offer multiple vial sizes for
+        the same product, and the chart helps identify any inconsistencies in their pricing.
+
+
+
+
+Click Here to Find the Cheapest Deal: Stop overpaying! The ones on the left are the best
+deals. Click this chart to see who is charging fair prices right now.
+
+
+
+
+12
+How This Book Works
+
+This book is designed for efficiency. Every compound entry follows a precise, identical
+structure so you can find critical research data in seconds.
+
+
+1. The Anatomy of an Entry
+Each peptide profile is broken down into five distinct sections:
+
+     ●​ The Science ("What it is / research focus") A technical summary of the peptide’s
+        mechanism of action, listing primary targets and physiological effects based on
+        clinical or preclinical literature.
+
+     ●​ The Translation ("In simple terms") A plain-English summary aimed at 5th-grade
+        readability. If the science gets too dense, look here for the "bottom line."
+
+     ●​ The Real-World Context ("Anecdotal") Observations from independent
+        researchers. This section highlights subjective effects (e.g., "improved sleep") or
+        side effects that may not yet be documented in clinical trials.
+
+     ●​ The Research Protocols (Beginner / Intermediate / Advanced) Tiered dosing
+        schedules designed to match research goals.
+
+            ○​ Includes: Specific dosage (mg and mcg), frequency, and cycle duration.
+
+            ○​ Note: Protocols move from conservative (safety-first) to aggressive
+               (efficacy-first).
+
+     ●​ The Support Stack ("Supplements & diet") Nutritional and supplemental adjuncts
+        that may synergize with the peptide or mitigate specific side effects.
+
+     ●​ The Safety Signal ("Cautions") A summary of known side effects,
+        contraindications, or adverse events.
+
+            ○​ Source: Derived from both clinical literature and common anecdotal reports.
+
+            ○​ Purpose: To identify "red flags" and expected physiological responses
+               during research.
+
+
+2. Universal Research Standards
+Unless explicitly noted otherwise in a specific entry, the following standards apply to every
+
+
+
+
+13
+compound in this book:
+
+     ●​ Reconstitution: Assume Bacteriostatic Water (BAC water) is the standard solvent
+        for all lyophilized powders.
+
+     ●​ Administration: All protocols imply Subcutaneous (SubQ) administration.
+        Intramuscular (IM) is rarely required unless specified.
+
+     ●​ Storage:
+
+            ○​ Powder (Unreconstituted): Store in a cool, dark place (freezer optional for
+               long-term).
+
+            ○​ Liquid (Reconstituted): Must be kept refrigerated (36-46°F). Avoid shaking
+               or repeated warming.
+
+     ●​ Evidence Hierarchy: This book prioritizes data in the following order:
+        Peer-Reviewed Human Trials → Animal/In-Vitro Studies → Independent
+        Researcher Logs.
+
+
+
+
+14
+Pick A Goal Table of Context
+
+Note: This isn't the whole menu! These are just the main categories. We cover many more
+compounds in the pages that follow.
+
+
+💪 Muscle & Performance Research
+     ●​ CJC-1295 / Ipamorelin: Growth hormone secretion & recovery.
+     ●​ GHRP-2 / GHRP-6 / Hexarelin: Potent growth hormone secretion (appetite
+        stimulation).
+     ●​ IGF-1 LR3 / IGF-1 DES: Anabolic signaling & insulin-like growth factors.
+     ●​ PEG-MGF: Muscle tissue repair signaling.
+     ●​ Follistatin-315 / Follistatin-344: Myostatin inhibition research.
+     ●​ 5-Amino-1MQ: Cellular metabolism & muscle preservation.
+
+
+⚖️ Metabolic & Body Composition
+     ●​ Semaglutide / Tirzepatide / Retatrutide / Liraglutide: GLP-1 agonists for
+        satiety & insulin sensitivity.
+     ●​ AOD-9604 / hGH Frag 176-191: Lipolysis (fat breakdown) signaling.
+     ●​ Tesamorelin: Visceral adipose tissue reduction.
+     ●​ Adipotide: Adipose tissue vasculature targeting.
+     ●​ MOTS-c / SS-31: Mitochondrial energy & metabolic regulation.
+
+
+🩹 Injury Repair & Tissue Regeneration
+     ●​ BPC-157: Tendon, ligament, & gut mucosa healing.
+     ●​ TB-500 (Thymosin Beta-4): Cellular migration & tissue remodeling.
+     ●​ GHK-Cu: Skin repair, collagen synthesis, & anti-inflammatory signaling.
+     ●​ ARA-290: Neuropathic repair & anti-inflammatory pathways.
+     ●​ KPV: Skin & gut anti-inflammatory; antimicrobial defense.
+
+
+
+
+15
+🧠 Cognitive Function & Nootropics
+     ●​ Semax / N-Acetyl Semax: Focus, clarity, & BDNF expression.
+     ●​ Selank / N-Acetyl Selank: Anxiolytic (calming) & cognitive support.
+     ●​ Cortagen / Pinealon: Neuropeptide regulation & stress response.
+     ●​ P21 / PE-22-28: Neurogenesis & neuroprotection.
+
+
+⏳ Longevity & Cellular Health
+     ●​ Epithalon: Telomere length regulation & circadian rhythm.
+     ●​ Thymosin Alpha-1: Immune system modulation & T-cell support.
+     ●​ Glutathione / NAD+: Antioxidant status & cellular energy.
+     ●​ Humanin: Cytoprotection & mitochondrial health.
+
+
+🌙 Sleep, Mood, & Vitality
+     ●​ DSIP: Delta-wave sleep induction.
+     ●​ PT-141 (Bremelanotide): Libido & sexual arousal signaling.
+     ●​ Melanotan II: Melanogenesis (pigmentation) & libido.
+     ●​ Oxytocin: Social bonding & stress regulation.
+
+
+
+
+16
+Peptide Compound Directory​
+
+
+5-Amino-1MQ
+What it is / research focus: 5-Amino-1MQ is technically a "small molecule," not a
+peptide, which means it can be taken as a capsule. It is a specific inhibitor of an enzyme
+called NNMT.
+     ●​ The Problem: As we age, our fat cells start overproducing NNMT. This enzyme
+        impairs fat burning and slows down muscle repair.
+     ●​ The Goal: To block this enzyme, forcing the fat cells to shrink and the muscle cells
+        to repair themselves.
+How it works (The Parking Brake Story): Think of your metabolism as a car.
+     ●​ The Problem (NNMT): As you get older, your body starts pulling the Parking Brake
+        (NNMT) while you are trying to drive. You can press the gas (exercise) and cut the
+        fuel (diet), but because the brake is on, the car won't move, and you just waste
+        energy.
+     ●​ The Solution (5-Amino-1MQ): This compound reaches down and releases the
+        parking brake.
+     ●​ The Result: Suddenly, the same amount of gas (exercise) makes the car go much
+        faster. The engine stops struggling, and the fuel efficiency (fat burning) skyrockets.
+The "Strange" Fact (The Muscle Miracle): Most "fat burners" eat away at muscle, but
+5-Amino-1MQ does the opposite.
+     ●​ The Study: In famous experiments, aged mice given this compound became
+        stronger and had better muscle endurance even without exercising. It seems to
+        wake up "Satellite Cells" (muscle stem cells) that usually go dormant in old age,
+        allowing old muscles to heal like young muscles.
+In simple terms: It is a "Metabolic Brake Release." It stops your fat cells from fighting
+against your weight loss and helps muscles stay young.
+Anecdotal:
+     ●​ "The Oral Advantage": Because this survives digestion, researchers love that
+        they don't have to inject it. It is almost exclusively found as capsules.
+
+
+
+17
+     ●​ "The Clean Energy": Unlike caffeine or pre-workouts that make you jittery, users
+        report a "background" energy. They simply don't get tired as fast during the day.
+     ●​ "The De-Bloat": A very common report is a rapid drop in water weight and
+        inflammation within the first 10 days.
+
+Beginner Protocol:
+      ●​ Dose: 50 mg
+      ●​ Frequency: Daily (Oral Capsule).
+      ●​ Timing: Take with breakfast (it can be stimulating, so avoid night dosing).
+      ●​ Cycle: 4–8 weeks.
+Intermediate Protocol:
+      ●​ Dose: 100 mg
+      ●​ Frequency: Daily.
+      ●​ Cycle: 6–8 weeks.
+Advanced Protocol:
+      ●​ Dose: 150 mg
+      ●​ Frequency: Daily.
+      ●​ Note: Doses higher than 150 mg have not shown better results in research and
+         can get very expensive.
+
+Supplements & diet:
+     ●​ NAD+ Boosters: Since 5-Amino-1MQ works by saving NAD+, adding an NAD+
+        precursor (like NMN or NR) is like adding fuel to the fire.
+     ●​ Methyl Donors: Unlike other compounds that deplete your body's methylation
+        (energy) pool, 5-Amino-1MQ actually saves it. However, taking a simple
+        B-Complex vitamin is still recommended to keep the pathways running smoothly.
+Cautions:
+     ●​ Insomnia: If you take it after 2:00 PM, you might find yourself staring at the ceiling
+        at midnight. It wakes up the brain's energy systems.
+     ●​ Headaches: Mild headaches are reported in the first week as the body adjusts to
+        the new metabolic rate.
+
+
+
+
+18
+Adipotide (FTPP)
+What it is / research focus: Adipotide is a very different kind of research compound. Most diet
+aids work by making you feel full or speeding up your metabolism. Adipotide works by "starving"
+the fat cells directly.
+How it works (The Garden Hose Story): Imagine your body fat is like a big garden. For the
+grass (fat) to grow, it needs water from a garden hose (blood vessels).
+     ●​ The Target: Adipotide is like a smart clamp. It is designed to find only the garden hoses
+         that feed your body fat.
+     ●​ The Action: It clamps those hoses shut so no blood can get through.
+     ●​ The Result: Without fresh blood, the fat cells cannot survive. They shrink and die away.
+Why is this serious? Because the fat cells are actually dying inside the body, the body has to
+clean up the mess. This is a lot of work for the system, which is why researchers often report
+feeling "flu-like" symptoms or getting dehydrated.
+In simple terms: It cuts off the blood supply to fat cells. The fat cells run out of food and die.
+Anecdotal: This is considered a "heavy duty" researcher tool. It is known for working fast, but it
+is not comfortable. Many reports mention feeling tired or having a tummy ache while the fat is
+breaking down. Drinking a lot of water is non-negotiable to help the kidneys flush out the
+waste.
+
+ Beginner Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg)
+      ●​ Frequency: 2 to 3 times per week (SubQ)
+      ●​ Cycle: 4–6 weeks
+ Intermediate Protocol:
+      ●​ Dose: 1.0 mg – 2.0 mg (1,000 mcg – 2,000 mcg)
+      ●​ Frequency: 2 to 3 times per week
+      ●​ Cycle: 6–8 weeks
+ Advanced Protocol:
+      ●​ Dose: 2.0 mg – 3.0 mg (2,000 mcg – 3,000 mcg)
+      ●​ Frequency: 2 to 3 times per week
+
+
+
+
+19
+      ●​ Cycle: 8 weeks max
+
+Supplements & diet:
+     ●​ Hydration is #1: You must drink extra water to help your kidneys.
+     ●​ Protein: Keep protein high to protect your muscles.
+     ●​ Electrolytes: Add these to your water to prevent headaches.
+Cautions:
+     ●​ Kidney Stress: Because the body is flushing out dead fat cells, the kidneys work
+        overtime.
+     ●​ Side Effects: Nausea and fatigue are common. If back pain occurs (kidney area),
+        research usually stops immediately.
+
+
+
+AICAR
+What it is / research focus: AICAR is famous for being an "exercise mimic." It is a research
+chemical that tricks the body into thinking it is working out, even when it is resting.
+How it works (The Battery Meter Story): Inside your cells, there is a sensor called AMPK.
+Think of AMPK as your body's "Battery Meter."
+     ●​ Normal Exercise: When you run or lift weights, your battery meter drops. Your body
+        sees this and starts burning sugar and fat to charge it back up.
+     ●​ The Trick: AICAR enters the cell and pulls a prank. It manually turns the "Low Battery"
+        light on.
+     ●​ The Result: Your body panics (in a good way) and starts burning fuel to recharge the
+        battery—even if the subject is just sitting on the couch. It also starts building more "power
+        plants" (mitochondria) in the muscles to prepare for this fake workout.
+Why is this researched? Scientists are studying it to see if it can help people who cannot
+exercise (like the elderly or injured) stay fit. Athletes have studied it for endurance because it
+might help muscles run longer without getting tired.
+In simple terms: It flips the "exercise switch" in your cells. It makes the body burn fat and build
+endurance without actually moving.
+Anecdotal: This is not a "feel good" compound. Researchers often report that it feels like doing
+a hard workout. "Hot flashes," sweating, and feeling winded or tired (even while sitting still) are
+common reports because the metabolism is working so hard.
+
+
+
+
+20
+ Beginner Protocol:
+      ●​ Dose: 5 mg – 10 mg
+      ●​ Frequency: Daily (SubQ)
+      ●​ Cycle: 2–4 weeks
+ Intermediate Protocol:
+      ●​ Dose: 10 mg – 20 mg
+      ●​ Frequency: Daily
+      ●​ Cycle: 4–6 weeks
+ Advanced Protocol:
+      ●​ Dose: 20 mg – 30 mg
+      ●​ Frequency: Daily
+      ●​ Cycle: 6–8 weeks
+
+Supplements & diet:
+     ●​ Carbs: Since AICAR burns blood sugar, having some healthy carbs (like oatmeal or fruit)
+        is important so blood sugar doesn't drop too low.
+     ●​ Hydration: Drink electrolytes.
+     ●​ Creatine: Often added to help the muscles handle the extra energy demand.
+Cautions:
+     ●​ "The Drop": Because it pushes sugar into muscles very fast, it can cause low blood
+        sugar (hypoglycemia). Researchers usually keep a snack nearby.
+     ●​ Heart Rate: Some reports note a slight increase in heart rate (similar to light exercise).
+
+
+
+AOD‑9604
+What it is / research focus: A modified piece of the human growth hormone molecule,
+specifically designed to target fat loss. It was originally developed by scientists in Australia who
+wanted to find a drug that could cure obesity without the side effects of regular growth hormone.
+Why is it called "hGH Frag 176-191"? Imagine the Human Growth Hormone (hGH) molecule is
+a long train with 191 cars.
+     ●​ The Whole Train (hGH): Does many things—it makes muscles grow, it raises blood
+        sugar, and it burns fat.
+     ●​ The Fragment (176-191): Scientists discovered that the "fat burning" ability was only
+
+
+
+
+21
+        located in the very last few cars of the train (numbers 176 to 191).
+     ●​ The Result: They cut off just that tail end. This "Fragment" sends the signal to burn fat,
+        but because the rest of the train is missing, it cannot make you grow or mess up your
+        blood sugar.
+In simple terms: Think of this as "Diet Growth Hormone." It is a tiny slice of the growth hormone
+molecule that focuses only on breaking down fat. It doesn't make muscles grow or raise insulin
+like the full version does.
+Anecdotal: Researchers often report it is best used during a "cutting" phase (dieting). It is not a
+magic pill—it works best when the subject is already active. Reports of side effects are very rare,
+usually just mild stomach upset.
+
+ Beginner Protocol:
+      ●​ Dose: 0.25 mg – 0.5 mg (250 mcg – 500 mcg)
+      ●​ Frequency: Daily (usually in the morning on an empty stomach)
+      ●​ Cycle: 8–12 weeks
+ Intermediate Protocol:
+      ●​ Dose: 0.5 mg – 0.8 mg (500 mcg – 800 mcg)
+      ●​ Frequency: Daily
+      ●​ Cycle: 8–12 weeks
+ Advanced Protocol:
+      ●​ Dose: 0.8 mg – 1.2 mg (800 mcg – 1,200 mcg)
+      ●​ Frequency: Daily
+      ●​ Cycle: 12 weeks
+
+Supplements & diet: It works best with a diet high in protein and lower in sugar/carbs. Drinking
+lots of water is essential.
+Cautions: Very mild. Some people report a little redness where they injected or a slight tummy
+ache, but it is generally considered much safer than full Growth Hormone.
+
+
+
+
+ARA‑290 (Cibinetide)
+What it is / research focus: ARA-290 is a man-made copy of a small section of Erythropoietin
+(EPO). You might know EPO as the drug cyclists use to make more red blood cells and have
+endless energy.
+
+
+
+
+22
+     ●​ The Difference: Scientists realized that EPO does two things: 1) Makes thick blood, and
+        2) Heals nerves. They cut off the "blood" part and kept only the "nerve healing" part to
+        create ARA-290.
+How it works (The Master Key Story): Think of the original EPO hormone as a Master Key
+that opens two doors.
+     ●​ Door #1 (The Blood Factory): Opens the bone marrow to make red blood cells.
+     ●​ Door #2 (The Repair Shop): Opens the "Innate Repair Receptor" (IRR) to fix damaged
+        nerves and lower inflammation.
+     ●​ The Hack: ARA-290 is a modified key that only fits Door #2. It opens the Repair Shop
+        to fix the nerves, but it cannot open the Blood Factory. This means you get the healing
+        without the dangerous thick blood.
+The "Strange" Fact (The Ghost Receptor): ARA-290 targets a receptor (IRR) that is
+essentially a "Ghost."
+     ●​ The Secret: In a healthy person, this receptor doesn't exist. It only pops up on the
+        surface of your cells when they are injured or stressed. This means ARA-290 floats
+        harmlessly past healthy cells and only binds to the cells that are screaming for help. It is
+        a "smart bomb" for inflammation.
+In simple terms: It is "Nerve Fertilizer." It helps small, damaged nerves grow back and stops the
+burning pain caused by inflammation.
+Anecdotal:
+     ●​ "The Fire Extinguisher": This is the #1 peptide for Small Fiber Neuropathy (burning
+        skin/nerves). Users often report that the constant "burning" sensation in their hands and
+        feet starts to cool down after 2–3 weeks.
+     ●​ "The Cost Factor": Because it has a very short lifespan in the body (half-life), clinical
+        trials used huge doses (4 mg daily). Because this is very expensive, most researchers
+        use smaller doses (listed below) or take it only on days when pain is bad.
+
+ Beginner Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg).
+      ●​ Frequency: 3 times per week (SubQ).
+      ●​ Cycle: 4–6 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 1.0 mg – 2.0 mg.
+
+
+
+
+23
+      ●​ Frequency: 3 times per week.
+      ●​ Cycle: 6–8 weeks.
+ Advanced Protocol:
+      ●​ Dose: 2.0 mg – 3.0 mg.
+      ●​ Frequency: 3 times per week.
+      ●​ Note: Even at this "Advanced" level, this dose is lower than what was used in
+         successful medical trials (4 mg daily). This peptide has a very high safety ceiling.
+
+Supplements & diet:
+     ●​ Omega-3s (Fish Oil): Think of your nerves like electrical wires. The insulation around
+        them is made of fat. You need Omega-3s to rebuild that insulation.
+     ●​ ALA (Alpha Lipoic Acid): Often stacked with ARA-290 to help nerve pain from the
+        inside.
+Cautions:
+     ●​ Headaches: A dull headache is the most common complaint, usually because it
+        increases blood flow to the brain.
+     ●​ Fatigue: Some users feel tired after the shot as the body switches into "repair mode."
+
+
+
+
+B7‑33
+What it is / research focus: Analog of relaxin‑2 studied for anti‑fibrotic and cardioprotective
+pathways in preclinical models. It is a biased agonist at RXFP1, favoring ERK‑dependent
+signaling while reducing cAMP‑linked effects compared to native relaxation. Studies explore
+benefits in cardiac and hepatic fibrosis models. ​
+In simple terms: A relaxin‑like peptide studied to reduce scarring and protect the heart. ​
+Anecdotal: Limited. Some users cite joint or soft‑tissue comfort and easier breathing during
+light cardio, though experiences vary. ​
+Research Protocol:
+
+ Beginner: 0.2–0.5 mg (200–500 mcg) SubQ 3×/week ·Cycle: 4–6 weeks. ​
+ Intermediate: 0.5–1.0 mg SubQ 3×/week · Cycle: 6–8 weeks.
+ Advanced: 1.0–1.5 mg SubQ 3×/week · Cycle: 8 weeks.
+
+Supplements & diet: General cardiometabolic support (DHA/EPA, potassium‑rich foods).
+
+
+
+
+24
+Cautions: Hypotension‑like feelings reported anecdotally.
+
+
+
+BPC‑157
+What it is / research focus: BPC stands for "Body Protection Compound." It is a synthetic
+version of a peptide found in your own stomach juice.
+     ●​ The Goal: Its natural job is to protect your stomach from its own acid. Scientists realized
+        that if it can heal the harsh environment of the stomach, it might be able to heal
+        anything—muscles, tendons, and even the brain.
+How it works (The Construction Foreman Story): Think of a damaged tendon or muscle like a
+collapsed bridge.
+     ●​ The Workers: Your body has plenty of workers (nutrients, blood cells), but they don't
+        know where to go.
+     ●​ The Foreman: BPC-157 acts like the Foreman. It stands at the injury site and directs
+        traffic.
+     ●​ The Action: It specifically tells the body to build new "roads" (blood
+        vessels/angiogenesis) to the injury. Without these roads, the trucks carrying cement
+        (collagen) can't get to the site to fix the bridge.
+The "Strange" Fact (The Alcohol Trick): This peptide is famous for being "Anti-Intoxication."
+     ●​ The Study: In animal studies, BPC-157 was able to block the toxic effects of alcohol and
+        NSAIDs (like Ibuprofen/Tylenol). It protected the liver and brain so well that the subjects
+        didn't get "drunk" or suffer liver damage, even with high doses of toxins. Note: Do not try
+        this at home.
+In simple terms: It is a "Healing Coordinator." It builds new blood vessels to speed up repair for
+injuries that usually take months to fix.
+Anecdotal:
+     ●​ "The Wolverine": This is the most popular peptide in the world for injuries. Reports of
+        healing old tendonitis or tears in half the normal time are common.
+     ●​ "The Anhedonia" (Warning): A small number of researchers on Reddit report a strange
+        side effect: "Anhedonia" (inability to feel pleasure). Because BPC-157 affects the brain's
+        dopamine system, some users feel "flat" or emotionless for a while. This usually goes
+        away after stopping.
+
+
+
+
+25
+ Beginner Protocol:
+      ●​ Dose: 0.1 mg – 0.25 mg (100 mcg – 250 mcg).
+      ●​ Frequency: Daily (SubQ).
+      ●​ Cycle: 2–4 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 0.25 mg – 0.5 mg (250 mcg – 500 mcg).
+      ●​ Frequency: Daily.
+      ●​ Note: Many researchers split this into two doses (Morning and Night) because it
+         leaves the body quickly (short half-life).
+ Advanced Protocol:
+      ●​ Dose: 0.5 mg – 0.75 mg (500 mcg – 750 mcg).
+      ●​ Frequency: Daily.
+      ●​ Cycle: 6–8 weeks.
+      ●​ Oral vs. Injectable: For gut issues (IBS/stomach pain), researchers usually drink it
+         (Oral). For muscle/tendon injuries, they inject it near the pain (SubQ).
+
+Supplements & diet:
+     ●​ Collagen & Vitamin C: BPC-157 is the Foreman, but Collagen is the cement. You must
+        provide the raw materials, or the Foreman has nothing to build with.
+Cautions:
+     ●​ WADA Ban: This peptide is Banned by the World Anti-Doping Agency (WADA). Athletes
+        cannot use it.
+     ●​ Redness: It can cause a red spot at the injection site.
+
+
+
+
+Bronchogen (bioregulator)
+What it is / research focus: Bioregulator peptide complex reported for respiratory tissue
+support in Russian literature. Typically described as low‑molecular‑weight peptides derived
+from organ extracts, with putative regulation of epithelial repair. ​
+In simple terms: A mix of tiny proteins said to support the lungs. ​
+Anecdotal: Interest around airway comfort and recovery sensations. ​
+Research Protocol:
+
+
+
+
+26
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg SubQ weekly · Cycle: 6–8 weeks.
+ Advanced: 30–40 mg SubQ weekly · Cycle: 8 weeks.
+
+Supplements & diet: Hydration, antioxidant‑rich produce.
+Cautions: Limited English‑language primary data; monitor for idiosyncratic reactions.
+
+
+
+Cagrilintide
+What it is / research focus: Amylin analog investigated for appetite and weight‑related
+outcomes (often in combination with GLP‑1 agonists). It engages amylin receptors to slow
+gastric emptying and enhance satiety signals; clinical programs examine synergy with
+semaglutide. ​
+In simple terms: A fullness‑signal drug that can make you feel satisfied with less food.
+Anecdotal: Used in appetite management; nausea common early.
+Research Protocol:
+
+ Beginner: 0.1–0.3 mg SubQ weekly · Cycle: 8–12 weeks.
+ Intermediate: 0.3–0.6 mg SubQ weekly ·Cycle: 12–16 weeks.
+ Advanced: 0.6–1.0 mg SubQ weekly · Cycle: 16 weeks.
+
+Supplements & diet: Protein targets, fiber 25–40 g/day.
+Cautions: Nausea, fullness early in cycle.
+
+
+
+
+Cardiogen (bioregulator)
+What it is / research focus: Bioregulator complex described for myocardial tissue support in
+legacy Russian sources. Claimed mechanisms include normalization of peptide synthesis and
+modulation of oxidative stress pathways. ​
+In simple terms: A peptide mix aimed at helping heart tissue work better. ​
+Anecdotal: Perceived endurance support in light training. Occasional users note calmer
+resting heart rate trends during deload weeks. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks. ​
+
+
+
+
+27
+ Intermediate: 20–30 mg SubQ weekly · Cycle: 6–8 weeks. ​
+ Advanced: 30–40 mg SubQ weekly · Cycle: 8 weeks.
+
+Supplements & diet: Omega‑3s, potassium‑rich foods; avoid excessive stimulants.
+Cautions: Insufficient modern clinical data.
+
+
+
+
+Cartalax (bioregulator)
+What it is / research focus: Cartilage‑oriented bioregulator complex from legacy Eastern
+European research streams. Literature suggests chondrocyte metabolic support and
+potential modulation of inflammatory markers. ​
+In simple terms: A peptide mix meant to support cartilage and joints. ​
+Anecdotal: Joint comfort reports during training blocks. Some pair with collagen + vitamin C
+pre‑training to support connective tissue routines. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg SubQ weekly · Cycle: 6–8 weeks.
+ Advanced: 30–40 mg SubQ weekly ·Cycle: 8 weeks.
+
+Supplements & diet: Collagen + vitamin C, omega‑3s.
+Cautions: Limited contemporary peer‑reviewed data.
+
+
+
+
+CJC‑1295 no DAC (Mod GRF 1‑29)
+What it is / research focus: This is a man-made version of the signal your brain sends to your
+pituitary gland to release Growth Hormone. It is designed to work fast and then disappear,
+exactly like your body’s natural signals.
+How it works (The Doorbell Story): Your pituitary gland (which releases growth hormone)
+works like a Doorbell.
+     ●​ The Natural Way: To get growth hormone, you have to "press the button," let it ring, and
+        then let go. This creates a "pulse."
+     ●​ The Problem with "DAC": The other version of this medicine (CJC-1295 with DAC) is
+
+
+
+
+28
+        like taping the doorbell button down so it rings forever. This annoys the body and can
+        cause side effects.
+     ●​ The Solution (No DAC): This version presses the button once and then runs away. It
+        creates a perfect, natural "pulse" of growth hormone without annoying the gland.
+The "Strange" Fact (The False Identity): This peptide is actually using a fake name!
+     ●​ The Truth: Real CJC-1295 always has the "DAC" part attached to it. The "No DAC"
+        version is actually a completely different peptide called Mod GRF 1-29.
+     ●​ Why the confusion? A supplement company years ago labeled it wrong, and the name
+        stuck. If you want to sound like a pro, call it "Mod GRF."
+In simple terms: It is a "Quick Text Message" to your brain. It says "Release Growth Hormone
+Now!" and then deletes the message so your body can rest.
+Anecdotal:
+     ●​ "The Rush": The most famous sign that it is real is the Head Rush. About 5–10 minutes
+        after the shot, researchers often feel a sudden wave of warmth in their face and temples.
+        It lasts about 20 minutes and is not dangerous—it just means the signal worked.
+     ●​ "The Stack": You will almost never see this used alone. It is the "Batman" to
+        Ipamorelin's "Robin." They work 5x better together than apart.
+
+ Beginner Protocol:
+      ●​ Dose: 0.1 mg (100 mcg)
+      ●​ Frequency: 1–2 times per day (SubQ).
+      ●​ Timing: Immediately before bed (empty stomach).
+      ●​ Cycle: 8–12 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 0.1 mg – 0.2 mg (100 mcg – 200 mcg)
+      ●​ Frequency: 2 times per day (Morning and Night).
+      ●​ Cycle: 8–12 weeks.
+ Advanced Protocol:
+      ●​ Dose: 0.2 mg – 0.3 mg (200 mcg – 300 mcg)
+      ●​ Frequency: 3 times per day (Morning, Post-Workout, Night).
+      ●​ Note: Doses higher than 100mcg per shot rarely give extra benefits because the
+         "doorbell" can only ring so loud. Frequency (ringing it more often) is better than a
+         bigger dose.
+
+
+
+
+29
+Supplements & diet:
+     ●​ The "Carb Rule": This signal is very fragile. If you have eaten carbs (sugar/bread) in the
+        last hour, the insulin in your blood will block the signal. You must be on an empty
+        stomach.
+     ●​ Magnesium: Helps with the sleep benefits.
+Cautions:
+     ●​ Flushing: As mentioned, the warm face is normal.
+     ●​ Water Retention: Much less common than with the "DAC" version, but still possible if the
+        dose is too high.
+
+
+
+
+Chonluten (bioregulator)
+What it is / research focus: Bioregulator complex for respiratory/bronchial mucosa
+support in legacy literature. Typically presented as short peptides aimed at epithelial
+integrity and mucociliary function. ​
+In simple terms: A peptide mix said to help the lining of your airways. ​
+Anecdotal: Breathing comfort in light activity. Some note benefits during seasonal
+triggers when paired with hydration and sleep. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg SubQ weekly · Cycle: 6–8 weeks.
+ Advanced: 30–40 mg SubQ weekly · Cycle: 8 weeks.
+
+Supplements & diet: Hydration; antioxidant foods.
+Cautions: Sparse modern human data.
+
+
+
+
+Cortagen (bioregulator)
+What it is / research focus: Bioregulator complex with neuronal support claims in
+historical sources. Proposed actions include modulation of neurotrophic factors and
+synaptic plasticity markers. ​
+
+
+
+
+30
+In simple terms: A peptide mix aimed at helping the brain handle stress and learning. ​
+Anecdotal: Focus/ alertness reports; sensitive users note sleep changes. Timing earlier
+in the day is a common practice to reduce insomnia.
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg SubQ weekly · Cycle: 6–8 weeks.
+ Advanced: 30–40 mg SubQ weekly · Cycle: 8 weeks.
+
+Supplements & diet: Choline‑rich foods, magnesium glycinate.
+Cautions: Monitor sleep quality.
+
+
+
+
+DSIP
+What it is / research focus: DSIP is a famous "old school" peptide discovered in 1974. It is
+unique because it helps the body enter "Delta Sleep" (Deep Sleep), which is the stage where the
+body heals itself and releases growth hormone.
+How it works (The Architect Story): Most sleeping pills act like a Sledgehammer—they just
+knock the brain out.
+     ●​ The Problem: When you are knocked out, you don't always get good quality sleep. You
+        just lose consciousness.
+     ●​ The Solution: DSIP acts like a Sleep Architect. It organizes the sleep stages. It tells the
+        brain, "Okay, now it is time for deep sleep," and helps you stay there longer naturally.
+The "Strange" Fact (The Vampire Rabbits): This peptide has one of the weirdest origin stories
+in science.
+     ●​ The Discovery: Scientists in the 1970s put rabbits to sleep and then filtered their blood
+        to see if there was a "magic ingredient" causing the sleep. They found DSIP.
+     ●​ The Secret: It wasn't just for sleep. In later studies, this same peptide was used to help
+        people stop taking strong pain medicines (opioids) without getting sick. It seems to
+        "reset" the brain's stress levels.
+In simple terms: It is a "Deep Sleep Signal." It doesn't force you to sleep; it just helps you sleep
+deeper once you close your eyes.
+Anecdotal:
+     ●​ "The Hit or Miss": This is the most controversial part. For some researchers, it is a
+        miracle that cures insomnia. For others, it does absolutely nothing. It seems to only work
+
+
+
+31
+        if your natural levels are low.
+     ●​ "The Heavy Head": If the dose is too high, users often report waking up feeling "heavy"
+        or groggy, like they can't wake up fully for an hour.
+     ●​ "The Calm": Many users take it during the day (in small doses) just to feel relaxed and
+        stop stressing, even if they aren't trying to sleep.
+
+ Beginner Protocol:
+      ●​ Dose: 0.1 mg – 0.25 mg (100 mcg – 250 mcg).
+      ●​ Frequency: Daily (SubQ).
+      ●​ Timing: Take 1–2 hours before you want to go to sleep.
+      ●​ Cycle: 2–4 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 0.25 mg – 0.5 mg (250 mcg – 500 mcg).
+      ●​ Frequency: Daily.
+      ●​ Cycle: 4–6 weeks.
+ Advanced Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg).
+      ●​ Frequency: Daily.
+      ●​ Warning: Doses this high often cause the "heavy morning" side effect.
+
+Supplements & diet:
+     ●​ Magnesium: This is the perfect partner for DSIP. It relaxes the body while the peptide
+        relaxes the brain.
+     ●​ No Caffeine: Caffeine stays in your blood for 8 hours. If you drink coffee at 4 PM, it fights
+        the DSIP at 10 PM.
+Cautions:
+     ●​ Timing: If you take it too early in the day, it can actually make you feel more awake (a
+        paradoxical reaction). It works best when the sun is down.
+     ●​ Groggy: Do not drive or operate machinery if you feel the "morning heaviness."
+
+
+
+
+Epithalon (Epitalon)
+What it is / research focus: Epithalon is perhaps the most famous "anti-aging" peptide in
+
+
+
+
+32
+history. It was discovered in the 1980s by a Russian scientist named Vladimir Khavinson.
+     ●​ The Goal: It was originally developed to help Soviet cosmonauts and military personnel
+        avoid "premature aging" caused by stress and radiation.
+How it works (The Shoelace Story): Inside your cells, your DNA is organized into twisted
+strings called chromosomes. At the very end of each string is a protective cap called a
+Telomere.
+     ●​ The Analogy: Think of a telomere like the plastic tip (aglet) on a shoelace.
+     ●​ The Problem: Every time your cells divide to repair your body, that plastic tip gets a little
+        bit shorter. When the tip is gone, the shoelace frays, and the cell dies of "old age."
+     ●​ The Fix: Epithalon tells the body to produce an enzyme called Telomerase, which
+        actually regrows the plastic tip. It is one of the only things known to lengthen these tips.
+The "Strange" Fact (The Third Eye): Epithalon works by waking up the Pineal Gland (often
+called the "Third Eye" deep in the brain).
+     ●​ The Result: Because the pineal gland controls your body clock, this peptide can reset
+        your sleep cycles. This is why it was used to treat elderly people whose internal clocks
+        had "broken," helping them sleep like teenagers again.
+In simple terms: It is a "Time Machine" for your cells. It repairs the protective caps on your DNA
+and resets your body's internal clock.
+Anecdotal:
+     ●​ "The Dream State": The most common report is extremely vivid dreams. Because it
+        reboots melatonin production, researchers often report dreaming in "4K resolution."
+     ●​ "The Deep Sleep": Many users report waking up feeling unusually refreshed, as if they
+        slept deeper than they have in years.
+     ●​ "The Pause": It doesn't "feel" like anything while taking it. It is a long-term play. You take
+        it now to look younger 10 years from now.
+Research Protocol (The "Russian Protocol"): Note: Unlike other peptides, Epithalon is not
+taken forever. It is taken in short "courses" just twice a year.
+
+ Beginner Protocol:
+      ●​ Dose: 5 mg – 10 mg
+      ●​ Frequency: Daily (SubQ).
+      ●​ Cycle: 10–20 days. Repeat this course every 6 months.
+ Intermediate Protocol:
+
+
+
+
+33
+      ●​ Dose: 10 mg
+      ●​ Frequency: Daily.
+      ●​ Cycle: 20 days. Repeat every 6 months.
+ Advanced Protocol:
+      ●​ Dose: 20 mg
+      ●​ Frequency: Daily.
+      ●​ Note: Most modern research suggests 10 mg is the "ceiling" and 20 mg offers no extra
+         benefit.
+
+Supplements & diet:
+     ●​ Melatonin: Do NOT take melatonin supplements while using Epithalon. The whole point
+        is to teach your pineal gland to make its own.
+     ●​ Sleep: You must give yourself an 8-hour sleep window to let the repair happen.
+Cautions:
+     ●​ Cancer Questions: While Russian studies show it prevents tumors, some Western
+        scientists worry that "immortal cells" (long telomeres) could theoretically protect cancer
+        cells, too.
+     ●​ No "Buzz": Do not expect to feel energy or fat loss. This is silent cellular repair.
+
+
+
+
+Follistatin‑315
+What it is / research focus: Myostatin‑binding protein fragment explored in muscle
+biology; data in humans are sparse. It may interact with activin A and related TGF‑β
+superfamily ligands, altering muscle growth signaling in models. ​
+In simple terms: A protein piece that blocks myostatin, the “brake” on muscle growth. ​
+Anecdotal: Strength/size pursuits; localized soreness noted. Some users report
+connective‑tissue stiffness and prefer shorter cycles with emphasis on mobility work. ​
+Research Protocol:
+
+ Beginner: 0.5–1.0 mg SubQ daily · Cycle: 10–20 days. ​
+ Intermediate: 1.0–1.5 mg SubQ daily · Cycle: 10–20 days. ​
+ Advanced: 1.5–2.0 mg SubQ daily · Cycle: 10–20 days.
+
+Supplements & diet: High‑protein diet; creatine; sleep. ​
+
+
+
+34
+Cautions: Potential for tendon stiffness anecdotally; unknown long‑term effects.
+
+
+
+Follistatin‑344
+What it is / research focus: Longer isoform of follistatin studied for myostatin
+interactions. Preclinical work indicates broad binding within the activin/myostatin axis with
+potential systemic effects. ​
+In simple terms: A longer version of the muscle‑growth “brake” blocker. ​
+Anecdotal: Similar aims to 315; more injection‑site sensitivity noted by some. Reports
+emphasize careful warm‑ups and tendon care during heavy strength phases. ​
+Research Protocol:
+
+ Beginner: 0.5–1.0 mg SubQ daily · Cycle: 10–20 days. ​
+ Intermediate: 1.0–1.5 mg SubQ daily · Cycle: 10–20 days. ​
+ Advanced: 1.5–2.0 mg SubQ daily · Cycle: 10–20 days.
+
+Supplements & diet: Protein 1.6–2.2 g/kg; collagen support if heavy lifting. ​
+Cautions: Potential for tendon stiffness anecdotally; unknown long‑term effects.
+
+
+
+
+FOXO4‑DRI (Proxofim)
+What it is / research focus: D‑retro‑inverso peptide antagonist of FOXO4‑p53 interaction
+studied for senescent cell apoptosis in preclinical work. Early research suggests selective
+targeting of senescent cells to restore tissue homeostasis. ​
+In simple terms: A designer peptide that tells worn‑out cells to shut down. ​
+Anecdotal: Interest in vitality; limited accessibility and tolerance data. Users often describe
+pulsed, short cycles with long breaks and careful monitoring.
+Research Protocol:
+
+ Beginner: 2–5 mg SubQ weekly · Cycle: 2–4 weeks. ​
+ Intermediate: 5–10 mg SubQ weekly · Cycle: 4–6 weeks. ​
+ Advanced: 10–15 mg SubQ weekly · Cycle: 6 weeks.
+
+Supplements & diet: Antioxidant‑rich diet; hydration. ​
+Cautions: Preclinical and anecdotal; proceed cautiously.
+
+
+
+
+35
+GHK Basic
+What it is / research focus: Tripeptide (gly‑his‑lys) studied for wound healing and skin
+remodeling; often used topically; injectable research uses exist. Proposed actions include
+modulation of metalloproteinases, collagen synthesis, and anti‑inflammatory signaling. In
+simple terms: A tiny peptide studied for helping skin repair and look healthier. Anecdotal:
+Tissue quality/cosmetic focus. Users sometimes report improved skin texture and healing
+appearance over multi‑week blocks. ​
+Research Protocol:
+
+ Beginner: 2–5 mg SubQ 2–3×/week · Cycle: 4–8 weeks. ​
+ Intermediate: 5–10 mg 2–3×/week · Cycle: 6–8 weeks. ​
+ Advanced: 10–15 mg 2–3×/week · Cycle: 8 weeks.
+
+Supplements & diet: Vitamin C, protein sufficiency. ​
+Cautions: Injection‑site irritation possible.
+
+
+
+
+GHK‑Cu
+What it is / research focus: GHK-Cu is a natural copper complex found in your own blood.
+When you are 20 years old, your blood is full of it. By age 60, levels drop by 60%.
+     ●​ The Goal: Scientists use it to "remind" older cells how to behave like young cells. It is
+        famous for tightening skin, healing wounds, and fixing damaged DNA.
+How it works (The Renovation Crew Story): Imagine your skin and organs are an old house.
+     ●​ The Signal: GHK-Cu acts like the General Contractor. It walks into the house and
+        shouts orders.
+     ●​ The Orders: It tells the workers to tear out the old, damaged drywall (scar tissue) and
+        replace it with brand new, flexible drywall (collagen).
+     ●​ The Result: It doesn't just "patch" the damage; it actually remodels the structure to look
+        new again.
+The "Strange" Fact (The Blue Blood): This peptide is naturally a Deep Sapphire Blue color.
+     ●​ The "Vampire" Effect: Because it helps grow new blood vessels (angiogenesis), it is
+
+
+
+
+36
+        often used in "Vampire Facials" to help the face heal instantly after microneedling.
+In simple terms: It is a "Youth Signal." It tricks your body into thinking it is young again so it
+starts producing fresh skin and hair.
+Anecdotal:
+     ●​ "The Burn": This shot is famous for stinging. It feels like a bee sting for about 30
+        seconds.
+     ●​ "The Glow": Users often report people asking if they "had work done" after 4–6 weeks
+        because their skin looks tighter.
+     ●​ The "Copper Uglies": (Important) If you take too much, too fast, your skin can actually
+        get loose and saggy. This happens because the "Renovation Crew" tears down the old
+        skin faster than it can build the new skin. Less is more with this peptide.
+
+ Beginner Protocol:
+      ●​ Dose: 1 mg – 2 mg
+      ●​ Frequency: 2–3 times per week (SubQ).
+      ●​ Cycle: 4–8 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 2 mg – 4 mg
+      ●​ Frequency: 2–3 times per week.
+      ●​ Cycle: 6–8 weeks.
+ Advanced Protocol:
+      ●​ Dose: 4 mg – 6 mg
+      ●​ Frequency: 2–3 times per week.
+      ●​ Cycle: 8 weeks max.
+
+Supplements & diet:
+     ●​ Zinc: This is mandatory. Copper pushes Zinc out of your body. You must take a Zinc
+        supplement (separated by a few hours) to keep the balance, or you might feel sick.
+     ●​ No Vitamin C: Do not take Vitamin C at the same time as the shot; it can break the
+        peptide.
+Cautions:
+     ●​ Toxicity: If you start tasting pennies in your mouth, you are overdosing. Stop
+        immediately.
+     ●​ Pain: Injecting into fatty areas (like the butt) hurts less than the stomach.
+
+
+
+37
+GHRH
+What it is / research focus: Native growth hormone–releasing hormone; research analogs
+often used due to stability. Pulsatile secretion patterns and sleep linkage are key features of
+physiologic GH release. ​
+In simple terms: The body’s own signal that tells the pituitary to make growth hormone.
+Anecdotal: Used similarly to Mod GRF. Some report subtle body composition improvements
+when combined with resistance training and sleep discipline. ​
+Research Protocol:
+
+ Beginner: 0.1 mg (100 mcg) SubQ 1–2×/day · Cycle: 8–12 weeks.
+ Intermediate: 0.1–0.2 mg 2×/day · Cycle: 8–12 weeks.
+ Advanced: 0.2–0.3 mg 2–3×/day · Cycle: 12 weeks.
+
+Supplements & diet: Zinc, magnesium, sleep.
+Cautions: As with other GHRH analogs.
+
+
+
+GHRP‑2
+What it is / research focus: GH secretagogue; stimulates GH release via ghrelin receptor.
+Distinct pharmacokinetics compared to GHRP‑6 with potentially less orexigenic drive. ​
+In simple terms: A peptide that nudges the body to release growth hormone and may boost
+appetite.
+Anecdotal: Appetite increases; tingling/flushing sometimes. Perceived synergy with Mod
+GRF when timed away from carbohydrate‑heavy meals. ​
+Research Protocol:
+
+ Beginner: 0.1 mg (100 mcg) SubQ 1–2×/day · Cycle: 8–12 weeks.
+ Intermediate: 0.2 mg (200 mcg) 2×/day · Cycle: 8–12 weeks.
+ Advanced: 0.3 mg (300 mcg) 2–3×/day · Cycle: 12 weeks.
+
+Supplements & diet: Time doses away from large carb/fat meals.
+Cautions: Appetite spikes; water retention in some.
+
+
+
+
+38
+GHRP‑6
+What it is / research focus: GH secretagogue; ghrelin receptor agonist with strong orexigenic
+effects. Often contrasted with hexarelin and ipamorelin regarding appetite and cortisol/prolactin
+spillover. ​
+In simple terms: Similar to GHRP‑2 but often causes a bigger increase in hunger. Anecdotal:
+Marked appetite increases common. Some report useful hunger for bulking phases; others find
+adherence harder during cuts.
+
+ Beginner: 0.1 mg (100 mcg) SubQ 1–2×/day · Cycle: 8–12 weeks.
+ Intermediate: 0.2 mg (200 mcg) 2×/day · Cycle: 8–12 weeks.
+ Advanced: 0.3 mg (300 mcg) 2–3×/day · Cycle: 12 weeks.
+
+Supplements & diet: Plan meals intentionally to manage appetite.
+Cautions: Appetite surge; potential water retention.
+
+
+
+Glutathione
+What it is / research focus: Glutathione is the "Master Antioxidant" of the human body. It is
+found in every single cell, but the highest concentrations are in the liver.
+     ●​ The Job: It is the body's primary trash collector. It is responsible for hunting down heavy
+        metals (like mercury), free radicals, and toxins, neutralizing them, and flushing them out.
+How it works (The Sticky Flypaper Story): Glutathione is made of three amino acids, but the
+secret weapon is Sulfur.
+     ●​ The Trap: Sulfur is a sticky, smelly molecule. In the body, it acts exactly like Flypaper.
+     ●​ The Action: Toxins, heavy metals, and free radicals get "stuck" to the sulfur. Once they
+        are stuck, they are neutralized and can be safely peed out.
+     ●​ The Trade-off: This is why Glutathione smells like rotten eggs—that sulfur smell is the
+        proof that it is potent and ready to work.
+The "Strange" Fact (The ER Secret): If you go to the Emergency Room for a Tylenol overdose,
+the doctors don't give you a fancy drug. They give you medicine (NAC) to massively boost your
+Glutathione. Why? Because Glutathione is the only thing strong enough to save your liver from
+that level of toxicity.
+In simple terms: It is the "Janitor" of your body. It cleans up the mess that stress, diet, and
+
+
+
+39
+pollution leave behind.
+Anecdotal:
+     ●​ "The Glow": The most famous side effect is cosmetic. High-dose users almost always
+        report their skin becomes brighter, "glowy," or lighter in tone. This is because Glutathione
+        switches the skin from making dark pigment (eumelanin) to light pigment (pheomelanin).
+     ●​ "The Taste": Immediately after an injection, many researchers taste pennies or garlic in
+        the back of their throat. This is normal—it means it is circulating in the blood.
+     ●​ The Hangover Hack: It is legendary in biohacker circles for preventing hangovers if
+        taken before (or after) drinking, as it helps the liver process alcohol.
+
+ Beginner Protocol (General Health):
+      ●​ Dose: 200 mg – 400 mg
+      ●​ Frequency: 1–2 times per week (IM).
+      ●​ Cycle: 4–8 weeks.
+ Intermediate Protocol (Detox/Recovery):
+      ●​ Dose: 400 mg – 600 mg
+      ●​ Frequency: 2 times per week.
+      ●​ Cycle: 6–12 weeks.
+ Advanced Protocol (Cosmetic/Skin Focus):
+      ●​ Dose: 600 mg – 1,200 mg
+      ●​ Frequency: 2–3 times per week.
+      ●​ Note: Doses this high are usually split into multiple shots to avoid muscle pain, as the
+         liquid is thick.
+
+Supplements & diet:
+     ●​ Vitamin C: This is the "Best Friend" of Glutathione. It keeps Glutathione active in the
+        body longer.
+     ●​ NAC: Helps the body make its own Glutathione between injections.
+Cautions:
+     ●​ Asthma Warning: This is critical. People with asthma may have a reaction to the sulfites
+        in the solution. Start with a tiny "test dose."
+     ●​ Zinc Depletion: Long-term use can lower zinc levels, so taking a multivitamin is smart.
+
+
+
+
+40
+Gonadorelin (GnRH)
+What it is / research focus: Synthetic GnRH used in pituitary axis testing and
+reproductive research. Short half‑life requires specific timing for axis assessments. ​
+In simple terms: The brain’s starter signal for sex hormones; mainly used to test the
+system. ​
+Anecdotal: Occasionally used to probe LH/FSH responsiveness. Users emphasize
+conservative, test‑style single administrations rather than chronic use.
+Research Protocol:
+
+ Beginner: 50–100 mcg SubQ single dose · Cycle: per protocol.
+ Intermediate: 100–200 mcg SubQ single dose.
+ Advanced: 200–400 mcg SubQ single dose.
+
+Supplements & diet: General micronutrient sufficiency.
+Cautions: Endocrine axis perturbations possible; research‑only use.
+
+
+
+
+hGH Fragment 176‑191
+What it is / research focus: See AOD‑9604 above; overlapping literature nomenclature.
+Mechanistic focus centers on lipolysis pathways separate from full‑length GH. ​
+In simple terms: A sliver of growth hormone studied mainly for fat‑loss signaling.
+Anecdotal: As per AOD‑9604. Users typically pair with calorie control and walking or incline
+cardio. ​
+Research Protocol:
+
+ Beginner: 0.25–0.5 mg (250–500 mcg) SubQ daily · Cycle: 8–12 weeks. ​
+ Intermediate: 0.5–0.8 mg daily · Cycle: 8–12 weeks.
+ Advanced: 0.8–1.2 mg daily · Cycle: 12 weeks.
+
+Supplements & diet: Protein‑forward diet; fiber.
+Cautions: GI discomfort anecdotally.
+
+
+
+
+41
+Hexarelin
+What it is / research focus: Potent GHS (ghrelin receptor agonist) with strong
+GH‑releasing effect. Some datasets suggest desensitization with continuous
+high‑frequency dosing. ​
+In simple terms: A strong growth‑hormone releaser that can build tolerance if
+used too often.
+Anecdotal: Joint comfort noted by some; appetite changes. Shorter cycles and lower
+frequencies are commonly discussed to mitigate tolerance.
+
+ Beginner: 0.05–0.1 mg (50–100 mcg) SubQ 1–2×/day · Cycle: 4–8
+ weeks. ​
+ Intermediate: 0.1–0.2 mg 2×/day · Cycle: 6–8 weeks.
+ Advanced: 0.2–0.3 mg 2–3×/day · Cycle: 8–12 weeks.
+
+Supplements & diet: As with other GHS peptides.
+Cautions: Desensitization risk discussed anecdotally.
+
+
+
+Humanin
+What it is / research focus: Mitochondria‑derived peptide studied for cytoprotective
+signaling. Investigations include apoptosis resistance, insulin sensitivity, and
+neuroprotective pathways in models. ​
+In simple terms: A tiny protein from mitochondria studied for protecting cells from stress. ​
+Anecdotal: Wellness/energy focus. Some note improved perceived resilience to intense
+training weeks with consistent dosing. ​
+Research Protocol:
+
+ Beginner: 2–5 mg SubQ 2×/week · Cycle: 4–8 weeks. ​
+ Intermediate: 5–10 mg 2×/week · Cycle: 6–8 weeks. ​
+ Advanced: 10–15 mg 2×/week · Cycle: 8–12 weeks.
+
+Supplements & diet: Polyphenol‑rich diet; exercise. ​
+Cautions: Limited human trials.
+
+
+
+
+42
+IGF‑1 DES
+What it is / research focus: Short‑acting IGF‑1 analog investigated for local tissue
+signaling. Its rapid clearance favors peri‑site microdosing strategies in research contexts. ​
+In simple terms: A very short‑acting IGF‑1 used right where you want the effect.
+Anecdotal: Target‑site micro‑dosing around training. Users emphasize careful carbohydrate
+intake to avoid hypoglycemic symptoms.
+Research Protocol:
+
+ Beginner: 10–20 mcg SubQ per site 1×/day · Cycle: 4–6 weeks.
+ Intermediate: 20–40 mcg per site 1–2×/day · Cycle: 4–6 weeks.
+ Advanced: 40–60 mcg per site 1–2×/day · Cycle: 6 weeks.
+
+Supplements & diet: Protein sufficiency; carb timing if training.
+Cautions: Hypoglycemia potential; research‑only.
+
+
+
+
+IGF‑1 LR3
+What it is / research focus: Long‑acting IGF‑1 analog studied for anabolic/insulin‑like
+pathways. Extended half‑life supports once‑daily systemic protocols in research settings. ​
+In simple terms: A long‑lasting form of IGF‑1 that circulates through the body. Anecdotal:
+Systemic dosing patterns vary widely. Appetite swings and pump sensation are frequently
+mentioned; hypoglycemia risk is a recurring caution. ​
+Research Protocol:
+
+ Beginner: 20–40 mcg SubQ daily · Cycle: 3–4 weeks.
+ Intermediate: 40–60 mcg SubQ daily · Cycle: 4–6 weeks.
+ Advanced: 60–100 mcg SubQ daily · Cycle: 4–6 weeks.
+
+Supplements & diet: Carbohydrate awareness protein targets.
+Cautions: Hypoglycemia risk; proceed carefully.
+
+
+
+
+43
+Ipamorelin
+What it is / research focus: Selective GH secretagogue with minimal prolactin/cortisol
+spillover in studies. Often chosen for gentle GH pulse support with fewer side effects than
+older GHRPs. ​
+In simple terms: A gentler growth‑hormone releaser with fewer side effects. ​
+Anecdotal: Commonly paired with Mod GRF for synergy. Users often dose pre‑sleep or upon
+waking to align with fasting windows. ​
+Research Protocol:
+
+ Beginner: 0.1 mg (100 mcg) SubQ 1–2×/day · Cycle: 8–12 weeks. ​
+ Intermediate: 0.2 mg (200 mcg) 2×/day · Cycle: 8–12 weeks. ​
+ Advanced: 0.3 mg (300 mcg) 2–3×/day · Cycle: 12 weeks.
+
+Supplements & diet: Sleep hygiene; zinc/magnesium; carb‑free window around injections. ​
+Cautions: Headache, flushing uncommon.
+
+
+
+
+Kisspeptin‑10
+What it is / research focus: Decapeptide regulating GnRH release; used in reproductive
+axis research. Short‑term tests can assess hypothalamic‑pituitary responsiveness. ​
+In simple terms: A hormone fragment that starts the chain that leads to sex hormones.
+Anecdotal: Limited; sometimes used for axis testing. Conservative single‑dose approaches
+are most common in logs. ​
+Research Protocol:
+
+ Beginner: 50–100 mcg SubQ single dose · Cycle: per protocol. ​
+ Intermediate: 100–200 mcg SubQ single dose. ​
+ Advanced: 200–400 mcg SubQ single dose.
+
+Supplements & diet: General.
+
+
+
+
+44
+KPV (Ac‑KPV‑NH2)
+What it is / research focus: KPV is a tiny, 3-amino acid fragment taken from the larger
+hormone alpha-MSH.
+     ●​ The Goal: Scientists wanted the incredible anti-inflammatory power of alpha-MSH
+        without the side effects (like darkening skin or causing erections). KPV is that isolated
+        "healing" signal.
+How it works (The Fire Extinguisher Story): Imagine inflammation in your body is a kitchen
+fire.
+     ●​ The "Master Switch" (NF-κB): In your cells, there is a switch called NF-κB. When it gets
+        flipped, it sprays "gasoline" (inflammation) everywhere to fight infection.
+     ●​ The Solution: KPV acts like a Fire Extinguisher. It walks into the cell and physically
+        holds the switch down so it cannot flip.
+     ●​ The Result: It stops the inflammation at the very start of the process, cooling down the
+        gut, skin, and joints.
+The "Strange" Fact (The Mold Killer): Most peptides just signal cells to "grow" or "heal." KPV
+is different because it is also Antimicrobial.
+     ●​ The Surprise: Research shows it can actually kill dangerous microbes like Staph
+        bacteria and Candida (yeast) on contact. This makes it a top choice for researchers
+        studying "Mold Toxicity" or Lyme disease, where the body is fighting a chronic invader.
+In simple terms: It is a "Cooling Agent." It turns off the inflammation switch in your cells and
+fights off bad bacteria/fungus at the same time.
+Anecdotal:
+     ●​ Oral vs. Injectable: Because KPV is so tiny, it is one of the few peptides that survives
+        digestion. Many researchers prefer Oral Capsules for gut issues (Crohn's/IBS) because
+        the pill goes straight to the inflamed stomach lining.
+     ●​ "The Psoriasis Fix": Users often report that stubborn skin red patches fade within
+        weeks. It is often mixed into creams for this reason.
+     ●​ "The Calm": Unlike steroids that make you jittery, KPV is reported to have a subtle
+        calming effect on the mood.
+
+ Beginner Protocol:
+
+
+
+
+45
+      ●​ Dose: 0.1 mg – 0.2 mg (100 mcg – 200 mcg).
+      ●​ Frequency: Daily (SubQ).
+      ●​ Cycle: 4–8 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 0.2 mg – 0.4 mg (200 mcg – 400 mcg).
+      ●​ Frequency: Daily.
+      ●​ Cycle: 6–8 weeks.
+ Advanced Protocol:
+      ●​ Dose: 0.4 mg – 0.6 mg (400 mcg – 600 mcg).
+      ●​ Frequency: Daily.
+      ●​ Note: For severe autoimmune flares (like Lyme or Colitis), researchers often split this
+         into two doses (morning and night).
+
+Supplements & diet:
+     ●​ Omega-3s: KPV stops the fire; Omega-3s clean up the smoke damage. They work
+        perfectly together.
+     ●​ Curcumin: Another natural NF-κB blocker that stacks well with KPV.
+Cautions:
+     ●​ Very Safe: Because it is a natural fragment found in the body, side effects are extremely
+        rare.
+     ●​ Injection Pain: It can sting slightly, but much less than other peptides.
+
+
+
+
+Liraglutide
+  What it is / research focus: Liraglutide is the "older brother" to Semaglutide. It was one of the​
+                                       first successful daily injections for weight loss and diabetes.
+     ●​ The Goal: It mimics the GLP-1 hormone to control blood sugar and appetite, but
+        because it is an older version, it doesn't last as long in the body, so it must be taken
+        every day.
+How it works (The Traffic Cop Story): Think of your stomach like a busy highway tunnel.
+Usually, food zooms through it at 60 mph.
+     ●​ The Problem: When food zooms through fast, you get hungry again quickly.
+
+
+
+
+46
+     ●​ The Traffic Cop: Liraglutide stands at the entrance of the tunnel holding a Stop Sign.
+     ●​ The Result: It forces the food to slow down to 5 mph. Because the "tunnel" (stomach)
+        stays full of cars (food) for hours, your brain thinks, "I am stuffed," and you stop eating.
+The "Strange" Fact (The Anglerfish Origin): Before scientists found similar hormones in Gila
+Monsters, the original research for GLP-1 actually started with Anglerfish!
+     ●​ The Discovery: In the 1980s, scientists went fishing for Anglerfish because they have a
+        special organ that produces massive amounts of hormones. This research helped
+        identify the very first GLP-1 signals that eventually led to the invention of Liraglutide.
+In simple terms: It is a "Daily Diet Shot." It slows down your digestion so you feel full all day, but
+you have to take it every morning.
+Anecdotal:
+     ●​ "The Needle Fatigue": Because this requires a shot every single day, many
+        researchers eventually switch to Semaglutide (weekly) just to avoid the daily poke.
+     ●​ "The Gentle Start": Some users report that Liraglutide feels "gentler" or easier to control
+        than Semaglutide. Because it leaves the body faster (13 hours vs. 7 days), if you get
+        sick/nauseous, you can just stop taking it and feel better the next day. With Semaglutide,
+        you are stuck with the sickness for a week.
+     ●​ "The Alcohol Eraser": Like other GLP-1s, researchers often report losing the taste for
+        alcohol entirely.
+
+ Beginner Protocol (The Staircase):
+      ●​ Note: You must follow the "Staircase" to avoid getting sick. Do not jump ahead.
+      ●​ Dose: 0.6 mg
+      ●​ Frequency: Daily (SubQ)
+      ●​ Cycle: Week 1
+ Intermediate Protocol:
+      ●​ Dose: 1.2 mg – 1.8 mg
+      ●​ Frequency: Daily
+      ●​ Cycle: Increase by 0.6 mg each week. (Week 2 = 1.2 mg, Week 3 = 1.8 mg).
+      ●​ Note: Many researchers stop at 1.8 mg (the Victoza dose) if they are still losing
+         weight.
+ Advanced Protocol:
+      ●​ Dose: 2.4 mg – 3.0 mg
+
+
+
+
+47
+      ●​ Frequency: Daily
+      ●​ Note: 3.0 mg is the maximum dose (Saxenda dose). Going higher does not help and
+         only increases nausea.
+
+Supplements & diet:
+     ●​ Fiber: This is mandatory. Since the "Traffic Cop" slows down your gut, things can get
+        backed up (constipation). You need fiber to keep traffic moving.
+     ●​ Protein Shakes: You might not feel like chewing food. Drinking your protein ensures you
+        don't lose muscle.
+Cautions:
+     ●​ Thyroid Tumors: Like all drugs in this family, it caused thyroid tumors in rats. People
+        with a family history of Medullary Thyroid Cancer should not use it.
+     ●​ Pancreatitis: If you feel a sharp pain in your stomach that goes through to your back,
+        stop immediately.
+
+
+
+
+Livagen (bioregulator)
+What it is / research focus: Bioregulator complex associated with liver tissue in regional
+literature. Proposed benefits include support of hepatocyte peptide synthesis and
+antioxidative defenses. ​
+In simple terms: A peptide mix meant to support the liver’s normal work. ​
+Anecdotal: Digestive comfort reports. Users sometimes combine with reduced alcohol intake
+and a nutrient‑dense diet. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly · Cycle: 6–8 weeks.
+ Advanced: 30–40 mg weekly · Cycle: 8 weeks.
+
+Supplements & diet: Emphasize whole‑food diet; limit alcohol.
+Cautions: Sparse modern human trials.
+
+
+
+
+48
+LL‑37 (CAP‑18)
+What it is / research focus: Human cathelicidin antimicrobial peptide; studied for innate
+immunity and wound models. Research examines biofilm disruption and immunomodulatory
+roles in mucosa and skin. ​
+In simple terms: One of the body’s natural germ‑fighting peptides.
+Anecdotal: Skin support interest; injection‑site burning reported. Some users experience
+transient flares before improvement when used in skin‑adjacent protocols. ​
+Research Protocol:
+
+ Beginner: 0.1–0.25 mg (100–250 mcg) SubQ 2–3×/week · Cycle: 3–4 weeks. ​
+ Intermediate: 0.25–0.5 mg 2–3×/week · Cycle: 4–6 weeks.
+ Advanced: 0.5–1.0 mg 2–3×/week · Cycle: 6 weeks.
+
+Supplements & diet: Vitamin D sufficiency; zinc status.
+Cautions: Inflammation or flares reported in sensitive users.
+
+
+
+
+Melanotan II (MT‑2)
+What it is / research focus: Melanotan II is a synthetic version of a hormone naturally produced
+in the brain (alpha-MSH). It was originally designed to protect fair-skinned people from skin
+cancer by giving them a protective tan without needing to burn in the sun first.
+How it works (The Internal Sunblock): Usually, your skin only creates melanin (pigment) after
+it has been damaged by the sun. It's a defense mechanism.
+     ●​ The Hack: MT-2 tricks your skin cells into thinking they are under attack from UV rays,
+        even if the subject is sitting in a dark room.
+     ●​ The Result: The body pumps out massive amounts of melanin to "build a shield." When
+        the subject finally does go in the sun, they turn brown almost instantly instead of burning
+        red.
+The "Strange" Fact (The Barbie Drug): This peptide is famous for two weird side effects that
+earned it the nickname "The Barbie Drug": it makes you tan, and it suppresses your appetite so
+you get thin.
+     ●​ The Accident: During early testing, a scientist accidentally injected himself with double
+        the intended dose. He didn't just get a tan—he got an 8-hour erection. This accidental
+
+
+
+49
+        discovery eventually led to the creation of PT-141 (the sex peptide) by removing the
+        tanning part of the molecule!
+In simple terms: It is a "Sunless Tan Shot." It forces your body to produce a deep, natural tan
+while also crushing your appetite and boosting libido.
+Anecdotal:
+     ●​ "The Tax": Almost every new researcher pays a "tax" for the tan: Nausea. It hits 15
+        minutes after the shot and can feel like motion sickness.
+     ●​ "The Dirty Tan": If you take too much too fast, your moles and freckles will turn black
+        before your skin gets tan. This is why the modern trend is "Low and Slow."
+     ●​ "The Glow": Users often report a flushed, red face for an hour after injecting.
+
+ Beginner Protocol (The "Low & Slow" Approach):
+      ●​ Goal: To avoid turning moles black.
+      ●​ Dose: 0.1 mg – 0.25 mg (100 mcg – 250 mcg).
+      ●​ Frequency: Daily for 1–2 weeks.
+      ●​ Note: Do not increase the dose until you have zero nausea.
+ Intermediate Protocol:
+      ●​ Dose: 0.25 mg – 0.5 mg (250 mcg – 500 mcg).
+      ●​ Frequency: Daily until desired tan is reached.
+      ●​ Maintenance: Once the subject is tan enough, 0.5 mg once a week is usually enough
+         to keep it.
+ Advanced Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg).
+      ●​ Warning: Doses this high almost guaranteed severe nausea and extremely dark
+         moles. Most modern researchers agree that 1 mg is unnecessary.
+
+Supplements & diet:
+     ●​ Antihistamine: Taking a Zyrtec or Claritin 30 minutes before the shot is a common hack
+        to stop the nausea.
+     ●​ Ginger: Chewing raw ginger helps the stomach settle.
+Cautions:
+     ●​ Priapism: Men may experience painful, unwanted erections that last for hours.
+     ●​ Mole Changes: If a mole changes shape or gets irregular borders, stop immediately.
+        MT-2 darkens moles, but it can make it hard to spot actual skin cancer.
+
+
+
+50
+MGF IGF‑1 Ec
+What it is / research focus: Mechano‑growth factor splice variant of IGF‑1; studied in
+muscle repair models. Hypothesized to act during early repair windows following
+mechanical overload. ​
+In simple terms: An IGF‑1 variant linked to early muscle repair after hard workouts.
+Anecdotal: Localized micro‑dosing post‑training. Athletes often limit total exposure and
+emphasize technique to avoid overuse injuries. ​
+Research Protocol:
+
+ Beginner: 50–100 mcg SubQ per site post‑training · Cycle: 3–4 weeks. ​
+ Intermediate: 100–150 mcg per site · Cycle: 4–6 weeks.
+ Advanced: 150–200 mcg per site · Cycle: 4–6 weeks.
+
+Supplements & diet: Protein + carbs post‑training.
+Cautions: Hypoglycemia potential with IGF‑axis peptides.
+
+
+
+
+MOTS‑c
+What it is / research focus: MOTS-c is unique because it doesn't come from your cell's main
+DNA; it comes from the DNA inside your mitochondria. It is often called an "exercise mimetic"
+because it activates the same signals (like AMPK) that lifting weights or running does.
+     ●​ The Goal: To trick the body into burning fat and clearing sugar from the blood, even
+        without a workout.
+How it works (The "Backup Generator" Story): Your body has two ways to make energy: the
+main power grid (food) and the backup generators (mitochondria).
+     ●​ The Signal: When you exercise hard, your mitochondria send a text message to the rest
+        of the body saying, "We are working hard, send more fuel!"
+     ●​ The Hack: MOTS-c is that text message. Injecting it tells your muscles to open their
+        doors for sugar and burn fat, even if the subject is sitting on the couch.
+The "Strange" Fact (The Alien DNA): This peptide wasn't even discovered until 2015 because
+scientists were looking in the wrong place. It is encoded in the Mitochondrial DNA, not the
+
+
+
+51
+Human Nucleus. Since mitochondria were originally ancient bacteria that started living inside
+humans, you could say this is a signal from our "inner alien" to keep us fit.
+In simple terms: It is "Exercise in a Bottle." It turns on the body's metabolism heaters to burn
+fuel exactly like a hard workout does.
+Anecdotal:
+     ●​ "The Sting": This is the most famous part of MOTS-c. It burns when injected.
+        Researchers call it "spicy water." The pain only lasts a minute, but it is surprising if you
+        aren't ready for it.
+     ●​ The "Third Lung": Endurance athletes (runners/cyclists) report that they simply don't
+        get winded as easily. It feels like they have an extra lung during cardio.
+
+
+
+ Beginner Protocol:
+      ●​ Dose: 5 mg
+      ●​ Frequency: 2 times per week (SubQ)
+      ●​ Cycle: 4 weeks.
+      ●​ Note: Taking it right before a workout is the most popular timing to maximize the
+         "energy" effect.
+ Intermediate Protocol:
+      ●​ Dose: 10 mg
+      ●​ Frequency: 2–3 times per week.
+      ●​ Cycle: 4–6 weeks.
+ Advanced Protocol:
+      ●​ Dose: 15 mg – 20 mg
+      ●​ Frequency: 3 times per week.
+      ●​ Warning: The "sting" gets worse as the dose gets higher. Many researchers split this
+         into two different shots to reduce the pain.
+
+Supplements & diet:
+     ●​ B-Vitamins (Folate): This is critical. MOTS-c uses up your body's folate (Vitamin B9).
+        You must take a B-Complex or Methyl-Folate supplement, or you might get a headache
+        or feel "off."
+Cautions:
+     ●​ Injection Pain: As mentioned, the burning sensation is normal and does not mean it is
+
+
+
+52
+        infected.
+     ●​ Insulin Drop: Because it clears sugar from the blood so fast, it can cause low blood
+        sugar (hypoglycemia) if you haven't eaten.
+
+
+
+
+53
+N‑Acetyl Epithalon Amidate
+What it is / research focus: Epithalon analog with similar telomere/circadian‑related
+research history; human evidence remains limited. Amidation may alter stability and
+tissue distribution compared with the parent tetrapeptide. ​
+In simple terms: A tiny peptide like Epithalon, linked to body‑clock and aging research. ​
+Anecdotal: As with Epithalon—short blocks, vivid dreams reported by some. ​
+Research Protocol:
+
+ Beginner: 5–10 mg SubQ daily · Cycle: 10–20 days. ​
+ Intermediate: 10–15 mg daily. ​
+ Advanced: 15–20 mg daily.
+
+Supplements & diet: Sleep hygiene. ​
+Cautions: Limited modern RCTs.
+
+
+
+N‑Acetyl Selank Amidate
+What it is / research focus: Selank derivative; published studies largely intranasal;
+SubQ/IM data are sparse. Interest focuses on GABAergic modulation and anxiolytic‑like
+effects in models. ​
+In simple terms: A calmer‑mood peptide mostly tested as a nose spray; shots are less
+studied. ​
+Anecdotal: Calm‑focus reports; some sedation when dosed late. ​
+Research Protocol:​
+Route note: SubQ/IM research data limited.
+
+ Beginner: 0.2–0.5 mg (200–500 mcg) SubQ daily · Cycle: 2–4 weeks. ​
+ Intermediate: 0.5–1.0 mg daily. ​
+ Advanced: 1.0–1.5 mg daily.
+
+Supplements & diet: Magnesium, L‑theanine PRN.
+Cautions: Sedation in some.
+
+
+
+
+54
+N‑Acetyl Semax Amidate
+What it is / research focus: Semax derivative; literature concentrates on intranasal routes;
+SubQ/IM uses are exploratory. Targets include neurotrophic factor expression and
+stress‑response modulation. ​
+In simple terms: A focus/learning peptide mostly tested as a spray; shots are less explored.
+Anecdotal: Focus/mood notes; SubQ use is less common.
+Research Protocol: Route note: SubQ/IM research data limited.
+
+ Beginner:0.2–0.5 mg daily · Cycle: 2–4 weeks.
+ Intermediate: 0.5–1.0 mg daily.
+ Advanced: 1.0–1.5 mg daily.
+
+Supplements & diet: DHA/EPA; magnesium.
+Cautions: Headache possible.
+
+
+
+
+NAD+
+What it is / research focus: NAD+ is found in every single living cell. It is the fuel that powers
+the engines (mitochondria) inside your cells.
+     ●​ The "Aging" Problem: Research shows that by age 50, most people have lost 50% of
+        their natural NAD+.
+     ●​ The Result: Without it, the cells can't make energy, and they can't repair broken DNA.
+        This is why scientists believe we get "slower" and "older."
+How it works (The Spark Plug Story): Imagine your body is a sports car.
+     ●​ The Fuel: Food is the gasoline.
+     ●​ The Problem: You can fill the tank with gas, but if the Spark Plugs are dead, the car
+        won't start.
+     ●​ The Solution: NAD+ is the spark. It takes the food you eat and actually turns it into the
+        electricity that keeps your heart beating and brain thinking.
+In simple terms: It is a "Battery Charger" for your cells. It refills the energy tank so your body
+can fix itself like it did when you were younger.
+The "Strange" Fact (The Addiction Killer): NAD+ is famous in rehab centers. High doses are
+
+
+
+
+55
+used to help people stop drinking alcohol or using drugs. It seems to "scrub" the crave-receptors
+in the brain, helping people feel normal again without withdrawals. It’s like a reset button for bad
+habits.
+Anecdotal:
+     ●​ "The Spicy Shot": This is notorious for the "burn." Injecting NAD+ often feels like a bee
+          sting or "spicy water" going in. This is normal.
+     ●​ "The Clarity": Users rarely report a caffeine-like "buzz." Instead, they describe it as a
+          "lifting of the fog"—colors seem brighter, and complex tasks feel easier.
+     ●​ "The Flush": If injected too fast, it can cause a sudden wave of heat or a heavy feeling
+          in the chest/stomach. This passes in minutes.
+
+ Beginner Protocol:
+      ●​ Dose: 50 mg – 100 mg
+      ●​ Frequency: Weekly (IM is preferred to reduce burning).
+      ●​ Cycle: 4–6 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 100 mg – 250 mg
+      ●​ Frequency: Weekly.
+      ●​ Note: At this dose, many researchers split the shot into two smaller doses to avoid the
+           "heavy chest" feeling.
+ Advanced Protocol:
+      ●​ Dose: 250 mg – 500 mg
+      ●​ Frequency: Weekly.
+      ●​ Warning: 500 mg is a very high volume. This is often better handled as two separate
+           shots or a slow IV drip.
+
+Supplements & diet:
+     ●​ TMG (The Sidekick): Taking NAD+ uses up your body's "methyl" groups. Adding a TMG
+          supplement is the standard "best practice" to prevent headaches or fatigue.
+     ●​ Resveratrol: Often stacked with NAD+ to help activate the "longevity genes" (sirtuins).
+Cautions:
+     ●​ The "Stomach Cramp": If the dose hits the blood too fast, it causes smooth muscles
+          (like the stomach and intestines) to contract. This feels like a sudden, deep cramp.
+          Solution: Inject very slowly.
+
+
+
+56
+     ●​ Heart Rate: A temporary increase in heart rate is common immediately after dosing.
+
+
+
+
+Oxytocin
+What it is / research focus: Oxytocin is famous as the "Love Hormone" because it is released
+during hugging, bonding, and childbirth. However, researchers are studying it for much more
+than just romance. It is being investigated to help with social anxiety, autism, and even to lower
+cortisol (stress) levels in the body.
+How it works (The Wi-Fi Story): Think of two people like two separate computers. Usually, they
+are disconnected.
+     ●​ The Connection: Oxytocin acts like the Wi-Fi Password.
+     ●​ The Result: When the brain has enough of it, it drops the "firewall" (fear/suspicion) and
+         allows a strong connection to form. It makes the subject feel safe, understood, and "in
+         sync" with the people around them.
+The "Strange" Fact (The Us vs. Them Paradox): Most people think Oxytocin makes you love
+everyone. That is false.
+     ●​ The Truth: Research suggests it only increases trust for your "Tribe" (friends and family).
+         It can actually make you more suspicious or competitive toward "Outsiders" or strangers.
+         It’s not just a "Love Drug"—it’s a "Loyalty Drug."
+In simple terms: It is a "Liquid Hug." It lowers social fear and helps you feel close to people you
+trust.
+Anecdotal:
+     ●​ The "Warmth": Users often report a physical sensation of warmth in the chest within
+         15–20 minutes of a SubQ shot.
+     ●​ The "Glow": It is frequently used before social events to kill "social anxiety" without the
+         sloppiness of alcohol.
+     ●​ SubQ vs. Nasal: While nasal sprays are common, many researchers prefer the SubQ
+         shot because they claim the effects are more consistent and "hit" faster (usually within
+         10–15 minutes), whereas sprays can be hit-or-miss depending on a stuffy nose.
+
+ Beginner Protocol:
+      ●​ Dose: 5 IU – 10 IU
+      ●​ Frequency: As needed (PRN).
+
+
+
+57
+      ●​ Timing: 20–30 minutes before a social event or stressful situation.
+ Intermediate Protocol:
+      ●​ Dose: 10 IU – 20 IU
+      ●​ Frequency: As needed.
+ Advanced Protocol:
+      ●​ Dose: 20 IU – 40 IU
+      ●​ Frequency: As needed.
+      ●​ Note: Doses above 20 IU can sometimes cause a "weepy" or overly emotional feeling
+         in some researchers.
+
+Supplements & diet:
+     ●​ Magnesium: Helps relax the muscles to match the relaxed mind.
+     ●​ No Alcohol: Alcohol can numb the effects of Oxytocin, making the research pointless.
+Cautions:
+     ●​ The "Flush": A sudden warm flushing of the face is very common immediately after
+        injection.
+     ●​ Emotional Sensitivity: Because it opens you up emotionally, do not use this around
+        toxic people or during an argument. You may feel hurt more easily than usual.
+
+
+
+
+Ovagen (bioregulator)
+What it is / research focus: Bioregulator associated with liver/GI support in regional
+literature; claims include normalization of peptide metabolism and antioxidant defenses. In
+simple terms: A peptide mix meant to support liver and digestion. ​
+Anecdotal: Digestive comfort. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly.
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Whole‑food diet.
+Cautions: Limited modern trials.
+
+
+
+
+58
+Pancragen (bioregulator)
+What it is / research focus: Bioregulator with pancreatic tissue focus; aims to support
+endocrine/exocrine peptide signaling balance. ​
+In simple terms: A peptide mix aimed at helping the pancreas work normally. Anecdotal:
+Appetite normalization reports. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks. ​
+ Intermediate: 20–30 mg weekly. ​
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Balanced macros; fiber.
+Cautions: As above.
+
+
+
+PE‑22‑28
+What it is / research focus: Peptide investigated for neurotrophic properties in early
+research, including BDNF‑adjacent signaling hypotheses. ​
+In simple terms: A small peptide studied for helping brain cells grow and connect.
+Anecdotal: Mood/drive notes. ​
+Research Protocol:
+
+ Beginner: 0.2–0.5 mg (200–500 mcg) SubQ daily · Cycle: 2–4 weeks.
+ Intermediate: 0.5–1.0 mg daily.
+ Advanced: 1.0–1.5 mg daily.
+
+Supplements & diet: DHA/EPA, sleep hygiene.
+Cautions: Limited human data.
+
+
+
+
+PEG‑MGF
+What it is / research focus: Pegylated MGF for extended half‑life; studied in muscle
+repair models with systemic exposure. ​
+In simple terms: A longer‑lasting muscle‑repair signal used a couple of times per week. ​
+
+
+
+59
+Anecdotal: Systemic dosing post‑training. ​
+Research Protocol:
+
+ Beginner: 100–200 mcg SubQ 2×/week · Cycle: 4–6 weeks.
+ Intermediate: 200–300 mcg 2×/week.
+ Advanced: 300–400 mcg 2×/week.
+
+Supplements & diet: Protein/carbs post‑training
+Cautions: As with IGF‑axis peptides.
+
+
+
+
+Pinealon (bioregulator)
+What it is / research focus: Bioregulator with CNS emphasis in legacy literature; posited to
+support synaptic plasticity and antioxidant defenses.
+In simple terms: A peptide mix aimed at calm focus and brain health.
+Anecdotal: Calm focus.
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly.
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Magnesium; sleep.
+Cautions: Minimal modern trials.
+
+
+
+
+PNC‑27
+What it is / research focus: Peptide researched for tumor‑selective membrane
+disruption in preclinical work; binds to overexpressed receptors on certain cancer cell
+lines. ​
+In simple terms: A lab peptide that targets certain cancer cells in dishes and animals. ​
+Anecdotal: Very limited. ​
+Research Protocol:
+
+ Beginner: 0.5–1.0 mg SubQ 2–3×/week · Cycle: 4–6 weeks.
+ Intermediate: 1.0–2.0 mg 2–3×/week.
+ Advanced: 2.0–3.0 mg 2–3×/week.
+
+
+
+
+60
+Supplements & diet: Antioxidants from food.
+Cautions: Strictly research; safety unknown.
+
+
+
+
+Prostamax (bioregulator)
+What it is / research focus: Bioregulator linked with prostate tissue; proposed to support
+epithelial health and peptide metabolism. ​
+In simple terms: A peptide mix meant to support normal prostate function. ​
+Anecdotal: Urinary comfort noted. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks. ​
+ Intermediate: 20–30 mg weekly. ​
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Hydration; avoid unproven herb stacks here; stick to basics.
+Cautions: Monitor tolerance.
+
+
+
+
+PT‑141 (Bremelanotide)
+What it is / research focus: This is the only peptide on the market that is FDA-approved
+specifically to boost sexual desire. Unlike pills (like Viagra) that just fix "blood flow," PT-141
+works directly on the brain.
+The "Strange" Story (How it was found): This was originally invented as a sunless tanning
+drug (Melanotan II).
+     ●​ The Accident: During the tanning experiments, the male researchers noticed a very
+        unexpected side effect: they were getting spontaneous erections that lasted for hours.
+     ●​ The Pivot: Scientists realized they had found a "switch" in the brain for arousal. They
+        removed the tanning part of the molecule and kept the "fun" part, creating PT-141.
+In simple terms: It is a "Brain Switch" for libido. It tells your brain "I am in the mood," which then
+tells your body to get ready.
+Anecdotal:
+     ●​ The "Tax": There is a price to pay for the fun—Nausea. almost every researcher reports
+        feeling sick to their stomach for the first 20–30 minutes after the shot.
+
+
+
+61
+     ●​ The Timing: It is not instant. It usually takes 2 to 4 hours to kick in, so researchers have
+        to plan ahead.
+     ●​ The "Blue Lip" Effect: It effectively lowers blood pressure in some people, which can
+        make lips look slightly blue or purple for a short time.
+
+ Beginner Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg)
+      ●​ Frequency: As needed (only when you plan to use it).
+      ●​ Timing: Take it 2–4 hours before the planned activity.
+ Intermediate Protocol:
+      ●​ Dose: 1.0 mg – 1.75 mg
+      ●​ Frequency: As needed.
+      ●​ Note: 1.75 mg is the standard dose in the official medical version (Vyleesi).
+ Advanced Protocol:
+      ●​ Dose: 1.75 mg – 2.0 mg
+      ●​ Frequency: As needed.
+      ●​ Warning: Going higher than 2 mg usually just makes the nausea worse, not the
+         benefits better.
+
+Supplements & diet:
+     ●​ Ginger & Dramamine: Since nausea is almost guaranteed for new users, taking a
+        ginger pill or motion-sickness pill 30 minutes before the shot is a common researcher
+        hack.
+Cautions:
+     ●​ Blood Pressure: It can temporarily raise blood pressure after the initial drop.
+     ●​ Frequency: Do not use this more than 8 times a month. Your brain gets used to it very
+        fast, and it will stop working if you abuse it.
+
+
+
+
+P21 (P021)
+What it is / research focus: Peptide studied for neurotrophic/neuroprotective pathways in
+early investigations; interacts with BDNF‑linked signaling. ​
+In simple terms: A peptide being studied to help brain cells grow and protect themselves. ​
+Anecdotal: Focus and memory discussion threads. ​
+
+
+
+62
+Research Protocol:
+
+ Beginner: 0.2–0.5 mg (200–500 mcg) SubQ daily · Cycle: 2–4 weeks.
+ Intermediate: 0.5–1.0 mg daily. ​
+ Advanced: 1.0–1.5 mg daily.
+
+Supplements & diet: Omega‑3s; sleep.
+Cautions: Insufficient human data.
+
+
+
+Retatrutide
+What it is / research focus: Retatrutide is currently the most powerful metabolic drug in
+existence. It is nicknamed "Triple G" because it targets three separate hunger and metabolism
+signals (GLP-1, GIP, and Glucagon).
+     ●​ The Goal: While other drugs just lower appetite, Retatrutide is designed to actively burn
+        energy.
+How it works (The "Three Engine" Story): Imagine your metabolism is a spaceship.
+     ●​ Engine 1 (GLP-1): The "Brakes." It slows down digestion so you feel full. (This is what
+        Ozempic does).
+     ●​ Engine 2 (GIP): The "Storage Manager." It helps your body handle sugar so it doesn't
+        get stored as fat. (This is what Mounjaro adds).
+     ●​ Engine 3 (Glucagon): The "Afterburner." This is unique to Retatrutide. It turns up the
+        body's thermostat, forcing it to burn calories for heat, even while you are sleeping.
+The "Strange" Fact (The Glucagon Paradox): You might know that Glucagon normally raises
+blood sugar (it’s the opposite of insulin). So why is it in a diabetes drug?
+     ●​ The Magic Trick: The other two ingredients (GLP-1 and GIP) are so good at lowering
+        sugar that they cancel out the sugar-spike from the Glucagon. This leaves only the
+        fat-burning benefits behind. It’s like drinking an energy drink that somehow helps you
+        sleep.
+Anecdotal:
+     ●​ "The Melt": Researchers report weight loss happens much faster than with other
+        compounds, often calling it "scary fast."
+     ●​ Skin Sensitivity: A very strange but common side effect is "Allodynia"—the skin on the
+        back, arms, or neck might feel sensitive, like a mild sunburn, even though nothing is
+        there.
+
+
+
+63
+     ●​ Heart Rate: Because of the "Afterburner" effect, it is normal for the resting heart rate to
+        go up by 10–15 beats per minute.
+
+ Beginner Protocol (The "Test Flight"):
+      ●​ Dose: 1 mg – 2 mg
+             ○​ Note: Clinical trials start at 2 mg, but many researchers start at 1 mg to be safe.
+      ●​ Frequency: Weekly (SubQ)
+      ●​ Cycle: 4 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 4 mg – 6 mg
+      ●​ Frequency: Weekly
+      ●​ Cycle: 4 weeks at each dose.
+ Advanced Protocol (The Clinical Standard):
+      ●​ Dose: 9 mg – 12 mg
+      ●​ Frequency: Weekly
+      ●​ Note: The maximum dose in clinical trials is 12 mg. Most researchers never need to
+         go this high because the lower doses are so strong.
+
+Supplements & diet:
+     ●​ Electrolytes: The rapid weight loss flushes water out of the body. You must replace salt
+        and potassium or you will feel dizzy.
+     ●​ Calorie Tracking: The appetite suppression is so strong that you might accidentally
+        starve yourself. You must eat to keep the metabolism running.
+Cautions:
+     ●​ Heart Rate: If resting heart rate stays too high (over 100 bpm while sitting), research
+        usually stops.
+     ●​ Muscle Loss: Because it burns energy so fast, it will burn muscle if you don't eat enough
+        protein.
+
+
+
+
+Selank
+What it is / research focus: Selank is a famous anti-anxiety peptide from Russia. It was
+created by taking a natural peptide produced by your spleen (called Tuftsin) and adding a "tail"
+
+
+
+
+64
+to it so it could survive in the body.
+     ●​ The Goal: Scientists wanted a medicine that could stop fear and anxiety without making
+         soldiers or pilots feel sleepy or slow.
+How it works (The Noise Canceling Headphones): Think of anxiety like a loud, static noise in
+your head that makes it hard to think.
+     ●​ Old Medicine (Valium/Xanax): These work like "earplugs." They block the noise, but
+         they also block everything else, making you feel numb or tired.
+     ●​ The Upgrade (Selank): Selank acts like Noise Canceling Headphones. It actively
+         filters out the static (stress) but lets the music (clear thinking) come through perfectly.
+     ●​ The "Bodyguard": It also stops your body from breaking down its own natural painkillers
+         (enkephalins), so you feel safer and calmer naturally.
+In simple terms: It effectively turns down the "stress volume" in your brain so you can focus, but
+it doesn't make you feel like a zombie.
+The "Strange" Bonus: Believe it or not, this peptide is actually an Immune System booster.
+Because it is based on a peptide from the spleen, research shows it may actually help fight off
+viruses (like the flu) while it calms you down. It’s like a stress-reliever and a vitamin C shot in
+one.
+Anecdotal:
+     ●​ The "Metalic Taste": Since this is almost always taken as a Nasal Spray, users often
+         report a metallic or coin-like taste in the back of their throat. This is normal and means it
+         worked.
+     ●​ The Feeling: Reports rarely mention a "buzz." Instead, users describe it as simply
+         realizing they aren't worried anymore. It is often described as "smooth" or "glassy" mental
+         clarity.
+Research Protocol (Nasal vs. Shot): Note: While most peptides are injected, Selank is famous
+for being a Nasal Spray. This is because it travels up the nose nerves directly into the brain.
+
+ Beginner Protocol (Nasal Spray):
+       ●​ Dose: 1–2 sprays in each nostril.
+       ●​ Frequency: 2 to 3 times per day.
+       ●​ Cycle: 2 weeks on, 1 week off.
+ Intermediate Protocol (SubQ Injection):
+       ●​ Dose: 250 mcg – 300 mcg (0.25 mg – 0.3 mg).
+
+
+
+
+65
+      ●​ Frequency: Daily (usually morning).
+      ●​ Note: Some researchers believe injections are stronger, but the nasal spray is the
+         "classic" Russian method.
+ Advanced Protocol:
+      ●​ Dose: 300 mcg – 1,000 mcg (1 mg).
+      ●​ Frequency: Daily.
+      ●​ Cycle: Up to 4 weeks.
+
+Supplements & diet:
+     ●​ Magnesium: Helps the body relax and pairs perfectly with Selank.
+     ●​ Avoid Alcohol: Alcohol erases the benefits of this peptide.
+Cautions:
+     ●​ Hair Shedding: A small number of researchers report temporary hair shedding with
+        long-term use (similar to Semax), though this stops when the cycle ends.
+     ●​ Drowsiness: While rare, some people react to the "calm" by wanting to nap. First doses
+        should always be taken at home.
+
+
+
+
+Semaglutide
+What it is / research focus: Semaglutide is a man-made copy of a natural hormone called
+GLP-1. Your body releases GLP-1 after you eat to tell your brain, "Okay, that's enough."
+     ●​ The Problem: In many people, this natural signal is too quiet or goes away too fast, so
+        they keep feeling hungry.
+     ●​ The Solution: Semaglutide is a much louder, longer-lasting version of that signal.
+How it works (The "Food Noise" Story): Imagine your brain is a radio that is constantly
+playing a song called "I'm Hungry / What Should I Eat?" This is called "Food Noise."
+     ●​ The Volume Knob: For many people, this radio is stuck on maximum volume all day
+        long.
+     ●​ The Action: Semaglutide reaches up and turns the volume knob down to zero.
+     ●​ The Result: The subject doesn't just feel "full"—they actually stop thinking about food.
+        They can walk past a donut and not even care.
+In simple terms: It turns off the "obsessive thoughts" about food in your brain and slows down
+your stomach so you stay full for hours.
+
+
+
+66
+The "Strange" Bonus: Researchers are noticing something weird: it doesn't just stop food
+cravings. Many people report they also stop wanting to drink alcohol, smoke, or even shop
+online. It seems to turn off the "craving switch" for many bad habits, not just eating!
+Anecdotal:
+     ●​ The "Sulfur Burps": Because food sits in the stomach for a long time, it can sometimes
+        ferment, causing burps that smell like eggs. (Tip: Pepto-Bismol helps).
+     ●​ The "Freeze": A very common but strange report is feeling freezing cold, even in a warm
+        room. This is a sign the body is losing fat.
+
+ Beginner Protocol:
+      ●​ Dose: 0.25 mg
+      ●​ Frequency: Once per week (SubQ)
+      ●​ Cycle: 4 weeks.
+      ●​ Important: Do not rush this. Even if you feel nothing, you must let the body get used
+         to it, or you will get very sick.
+ Intermediate Protocol:
+      ●​ Dose: 0.5 mg
+      ●​ Frequency: Once per week
+      ●​ Cycle: 4 weeks.
+ Advanced Protocol:
+      ●​ Dose: 1.0 mg – 2.4 mg
+      ●​ Frequency: Once per week
+      ●​ Note: Many researchers never need to go above 1.0 mg. If it is still working, stay at
+         the lowest effective dose to save money and reduce side effects.
+
+Supplements & diet:
+     ●​ The "Protein Rule": You will not be hungry, so you might forget to eat. You must eat
+        protein first, or you will lose muscle instead of fat.
+     ●​ Magnesium & Fiber: This medicine slows down everything, including the bathroom. You
+        need help to keep things moving.
+Cautions:
+     ●​ Nausea: This is the #1 enemy. It usually happens if you eat too much grease or sugar.
+     ●​ Muscle Loss: If you don't eat enough protein, your body will eat your muscles for
+        energy.
+
+
+
+67
+Semax
+What it is / research focus: Semax is a legendary Russian "smart drug" originally developed by
+the Soviet Academy of Sciences. It was designed to keep astronauts and military personnel
+laser-focused during high-stress missions without making them jittery.
+     ●​ The "Ambulance" Fact: In Russia, this is not just a study drug; it is an essential
+        medicine carried in ambulances. It is used immediately after a stroke to stop brain
+        damage and help neurons survive.
+How it works (The Brain Fertilizer Story): Most stimulants (like caffeine or Adderall) work by
+shouting at your brain cells to work harder. Semax is different—it feeds them.
+     ●​ The Fertilizer (BDNF): Semax rapidly increases a protein called BDNF (Brain-Derived
+        Neurotrophic Factor). Think of BDNF as "Miracle-Gro" for your brain. It helps existing
+        neurons survive and encourages new connections to grow.
+     ●​ The Shield: It also breaks down enkephalins (natural painkillers), which helps the brain
+        stay calm and clear under pressure.
+In simple terms: It is "Brain Fertilizer." It helps you focus and learn faster by feeding your brain
+cells instead of just stimulating them.
+Anecdotal: Researchers love Semax because it provides "clean" energy. There are no jitters,
+no crash, and no anxiety—just a feeling of effortless clarity.
+     ●​ The "Route" Debate: While almost all clinical research uses Nasal Drops (because it
+        travels directly from the nose to the brain), many biohackers prefer SubQ injections for
+        a more potent, systemic effect.
+
+ Beginner Protocol:
+      ●​ Dose: 0.1 mg – 0.3 mg (100 mcg – 300 mcg)
+      ●​ Frequency: Daily
+      ●​ Method: Nasal Spray (standard) or SubQ (advanced).
+      ●​ Cycle: 2–4 weeks.
+ Intermediate Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg)
+      ●​ Frequency: Daily
+      ●​ Note: Most researchers take this in the morning, as it can be too stimulating for sleep.
+
+
+
+68
+ Advanced Protocol:
+      ●​ Dose: 1.0 mg – 1.5 mg (1,000 mcg – 1,500 mcg)
+      ●​ Frequency: Daily
+      ●​ Cycle: 4–6 weeks.
+
+Supplements & diet:
+     ●​ Fish Oil (DHA/EPA): This is non-negotiable. Semax increases the demand for building
+        new brain cell connections, and Omega-3s are the raw material needed to build them.
+     ●​ Sleep: Your brain physically repairs itself while you sleep; Semax makes this process
+        more efficient.
+Cautions:
+     ●​ Headaches: The most common side effect. This is usually due to increased blood flow in
+        the brain.
+     ●​ Hair Shedding: A rare but persistent rumor in researcher communities suggests
+        long-term, high-dose use might trigger temporary hair shedding (linked to BDNF levels),
+        though this is not clinically proven.
+
+
+
+
+Sermorelin
+What it is / research focus: Sermorelin is a "secretagogue," which is a fancy word for a signal.
+It is a man-made version of the natural brain signal (GHRH) that tells your pituitary gland to
+release Growth Hormone.
+How it works (The Night Shift Manager): Imagine your pituitary gland is a factory that makes
+Growth Hormone, but the workers are asleep.
+     ●​ The Problem: As we get older, the "manager" (your natural GHRH) stops showing up to
+        work, so the factory stops producing.
+     ●​ The Solution: Sermorelin acts like a replacement manager. It walks into the factory right
+        before you go to sleep and flips the "ON" switch.
+     ●​ The Result: The factory workers wake up and make your own natural Growth Hormone
+        while you sleep. This is different from injecting HGH, which is like ordering pizza instead
+        of cooking—it’s easier, but it makes the factory lazy.
+In simple terms: It is a "Wake Up Call" for your pituitary gland. It tells your body to make its own
+
+
+
+
+69
+growth hormone again, naturally.
+Anecdotal: This is the "Sleep & Skin" favorite. Almost every researcher reports the same
+timeline:
+     ●​ Weeks 1–2: Deep, restorative sleep improves (vivid dreams are common).
+     ●​ Weeks 4–6: Skin looks "glowy" or tighter; recovery from gym sessions gets faster.
+     ●​ Months 3–6: Leaning out and fat loss becomes noticeable.
+     ●​ Note: It is famous for causing a "histamine reaction"—a red, itchy bump at the injection
+        site that looks like a mosquito bite. This usually goes away in 15–30 minutes.
+
+ Beginner Protocol:
+      ●​ Dose: 0.1 mg – 0.2 mg (100 mcg – 200 mcg)
+      ●​ Frequency: Daily (SubQ)
+      ●​ Timing: Strictly Pre-Bed. Take it 30 minutes before sleep.
+ Intermediate Protocol:
+      ●​ Dose: 0.2 mg – 0.3 mg (200 mcg – 300 mcg)
+      ●​ Frequency: Daily
+      ●​ Timing: Pre-Bed.
+ Advanced Protocol:
+      ●​ Dose: 0.3 mg – 0.5 mg (300 mcg – 500 mcg)
+      ●​ Frequency: Daily
+      ●​ Note: Going higher than 500 mcg is usually a waste of money because the pituitary
+            gland can only make so much at once (saturation point).
+
+Supplements & diet:
+     ●​ The "Empty Stomach" Law: This is critical. Insulin kills Sermorelin. You must wait at
+        least 2 hours after your last meal to inject. If you eat right before bed, the shot will not
+        work.
+     ●​ ZMA (Zinc & Magnesium): Takes the sleep benefits to the next level.
+Cautions:
+     ●​ The "Flush": Many people feel a warm "rush" to their face for a minute after injecting.
+        This is a good sign—it means it hit the bloodstream.
+     ●​ Injection Site: As mentioned, red itchy bumps are very common and not an allergic
+        reaction, just a local irritation.
+
+
+
+
+70
+SS‑31 (Elamipretide)
+What it is / research focus: SS-31 is a history-making peptide. In September 2025, it became
+the first-ever mitochondria-targeted therapy to receive FDA approval (under the brand
+name Forzinity) for treating Barth syndrome. It is a "cell-penetrating" peptide designed to repair
+the inner machinery of the cell’s power plants (mitochondria). Unlike stimulants that just press
+the gas pedal, SS-31 fixes the engine.
+How it works (The Loose Wire Story): Your mitochondria produce energy by passing electrons
+along a chain, like electricity flowing through a wire.
+     ●​ The Problem (Cardiolipin): To keep this electricity flowing smoothly, the inner wall of the
+        mitochondria needs a special fat called "Cardiolipin." Think of Cardiolipin as the
+        insulation around the wire. As we age, this insulation gets frayed and slippery.
+     ●​ The "Leak": When the insulation breaks, electrons leak out. This causes two problems:
+        you lose energy (fatigue), and the leaking electricity sparks fires (oxidative
+        stress/inflammation).
+     ●​ The Fix: SS-31 acts like Electrical Tape. It binds directly to the frayed Cardiolipin,
+        sealing the leak. This restores the flow of energy and stops the sparks.
+In simple terms: It tightens the loose connections in your cells' batteries so they hold a charge
+better and don't overheat.
+Anecdotal: Because it fixes the "source" of energy rather than acting like caffeine, researchers
+report a "clean" endurance boost. It is highly popular among endurance athletes
+(cyclists/runners) and the longevity community.
+     ●​ The "Sting": The most consistent report is that SS-31 burns when injected. It is often
+        mixed with BPC-157 or diluted to reduce the irritation.
+
+ Beginner Protocol:
+      ●​ Dose: 2 mg – 4 mg
+      ●​ Frequency: Daily (or 4 mg every other day)
+      ●​ Cycle: 4–6 weeks
+      ●​ Note: Consistent daily exposure is often preferred over large infrequent doses for
+         mitochondrial repair.
+ Intermediate Protocol:
+
+
+
+
+71
+      ●​ Dose: 4 mg – 8 mg
+      ●​ Frequency: Daily (or split doses)
+      ●​ Cycle: 6–8 weeks
+ Advanced Protocol:
+      ●​ Dose: 10 mg – 15 mg
+      ●​ Frequency: Daily
+      ●​ Note: Clinical trials for Barth syndrome used extremely high doses (up to 40mg daily),
+         suggesting a very high safety ceiling, but cost usually limits researchers to lower
+         ranges.
+
+Supplements & diet:
+     ●​ Mitochondrial Stack: Works best when paired with CoQ10, PQQ, and NAD+ precursors
+        (like Nicotinamide Riboside) to give the repaired mitochondria plenty of fuel.
+     ●​ Diet: A diet rich in healthy fats (Omega-3s) supports the cell membranes.
+Cautions:
+     ●​ Injection Pain: This is famous for causing red, itchy, or stinging welts at the injection
+        site. Rotating sites is mandatory.
+     ●​ FDA Note: While approved for Barth syndrome, its use for anti-aging is still considered
+        "off-label" research.
+
+
+
+
+TB‑500 (Thymosin β‑4)
+What it is / research focus: This is the synthetic version of a major healing protein that occurs
+naturally in humans, horses, and other mammals. While BPC-157 works on the gut and tendons,
+TB-500 is found in high concentrations in blood platelets and wound fluid.
+How it works (The General Contractor Story): Think of your injury (a tear in the muscle or
+skin) as a construction site that has stalled because the workers can't move around.
+     ●​ The Problem: The cells are stuck in traffic.
+     ●​ The Solution (Actin Sequestering): TB-500 acts like a traffic controller. It changes the
+        structure of the cell's skeleton (actin) so the cells become more flexible and mobile.
+     ●​ The Result: Good cells can travel to the injury site much faster. It also builds new
+        "roads" (blood vessels) to bring fresh nutrients to the damage.
+In simple terms: It makes your cells "slippery" so they can slide quickly to where the injury is
+
+
+
+72
+and fix it. It also builds new blood vessels to feed the repair.
+Anecdotal: This is often called the "Wolverine Peptide" in bodybuilder forums. Users report it
+works best for muscle tears and flexibility, whereas BPC-157 is favored for tendons/ligaments.
+     ●​ The "Loading" Phase: Unlike most peptides, TB-500 is almost always "loaded" (high
+        dose for 4–6 weeks) to saturate the tissue, followed by a much lower "maintenance"
+        dose.
+
+ Beginner Protocol:
+      ●​ Load: 2 mg – 4 mg per week (split into 2 shots, e.g., Monday/Thursday).
+             ○​ Duration: 4–6 weeks.
+      ●​ Maintenance: 2 mg – 4 mg once every 2 weeks.
+ Intermediate Protocol:
+      ●​ Load: 4 mg – 6 mg per week (split into 2 shots).
+             ○​ Duration: 4–6 weeks.
+      ●​ Maintenance: 4 mg once every 2 weeks.
+ Advanced Protocol:
+      ●​ Load: 6 mg – 8 mg per week (split into 2 or 3 shots).
+             ○​ Duration: 6–8 weeks.
+      ●​ Maintenance: 4 mg – 6 mg once every 2 weeks.
+
+Supplements & diet:
+     ●​ The Building Blocks: Since you are building new tissue, you need raw materials.
+        Vitamin C and Collagen are critical during the loading phase.
+     ●​ Protein: Keep protein intake high to support muscle repair.
+Cautions:
+     ●​ Water Retention: This is the #1 reported side effect. Because it builds new blood
+        vessels, the body holds extra water. This usually goes away when the loading phase
+        ends.
+     ●​ Fatigue: Many researchers report feeling surprisingly tired or lethargic on the day of
+        injection.
+     ●​ The "Cancer" Question: Because it helps blood vessels grow (angiogenesis), there is a
+        theoretical risk that it could help existing tumors grow. Researchers with a history of
+        cancer usually avoid this compound.
+
+
+
+
+73
+TB‑500 Fragment (17–23)
+What it is / research focus: This is a small, sliced-off piece of the larger Thymosin Beta-4
+protein. Scientists found that this specific section (amino acids 17–23) is the "active site"
+responsible for fixing damaged tissue and preventing scar tissue.
+How it works (The Car Key Story): Think of the full TB-500 (Thymosin Beta-4) molecule as a
+Luxury Car. It has a radio, air conditioning, and comfortable seats (immune system help, hair
+growth, etc.).
+     ●​ The Fragment: This is just the Key to the car.
+     ●​ The Action: The key starts the engine. It turns on the "healing mode" in the cells just like
+        the full car does.
+     ●​ The Trade-off: You get the engine power (tissue repair), but you don't get the radio or
+        AC (other immune benefits). Because it is smaller, your body breaks it down much faster,
+        so you have to "turn the key" (take a dose) more often.
+In simple terms: The "Short-Cut" version of TB-500. It focuses only on fixing tears in skin and
+muscle but leaves the body very quickly.
+Anecdotal: Researchers usually choose this for one of two reasons: it is often cheaper, or they
+only care about a specific muscle injury and don't need immune system support. It is almost
+always paired with BPC-157. Because it is so small, some reports claim it works better when
+injected closer to the injury (local), whereas the full TB-500 works anywhere (systemic).
+
+ Beginner Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg)
+      ●​ Frequency: 3 times per week (SubQ)
+      ●​ Cycle: 4–6 weeks
+ Intermediate Protocol:
+      ●​ Dose: 1.0 mg – 1.5 mg (1,000 mcg – 1,500 mcg)
+      ●​ Frequency: 3 times per week
+      ●​ Note: Due to its short half-life, some researchers prefer smaller daily doses (e.g., 500
+         mcg daily) instead of larger doses 3x/week.
+ Advanced Protocol:
+
+
+
+
+74
+      ●​ Dose: 1.5 mg – 2.0 mg (1,500 mcg – 2,000 mcg)
+      ●​ Frequency: 3 times per week
+      ●​ Cycle: 6 weeks max
+
+Supplements & diet:
+     ●​ Collagen & Vitamin C: These are the "bricks" the body needs to rebuild the tissue this
+        peptide is signaling to fix.
+     ●​ Hydration: Essential for tissue elasticity.
+Cautions:
+     ●​ Frequency Matters: Because this fragment is "cleared" from the body so fast, missing a
+        dose makes it much less effective than the full TB-500.
+     ●​ Confusion: Many vials labeled "TB-500" are actually this fragment. It is important to
+        know which one is being researched to get the dosing right.
+
+
+
+
+Tesamorelin
+What it is / research focus: Tesamorelin is a man-made version of a hormone your brain
+already uses. It is famous because it is the only peptide FDA-approved specifically to reduce
+"visceral fat" (the hard, dangerous fat around the stomach organs) in HIV patients.
+How it works (The Sniper Story): Think of regular Growth Hormone as a "Shotgun"—it sprays
+energy everywhere, making muscles grow but also causing water retention and swelling.
+     ●​ The Specialist: Tesamorelin is like a "Sniper."
+     ●​ The Target: It travels to the brain and tells it to release Growth Hormone in a very
+        specific pattern (pulsatile).
+     ●​ The Result: This specific pattern seems to tell the body to burn stomach fat first, without
+        the nasty side effects (like swollen wrists) that come from other growth hormone
+        treatments.
+In simple terms: The "Belly Fat Specialist." It tells your body to release natural growth hormone
+to burn deep stomach fat.
+Anecdotal: This is considered the "Gold Standard" for fat loss by researchers, but it is
+expensive. The most common report is a significant tightening of the waistline after 2–3 months.
+Users often take it right before bed because it works best while sleeping.
+
+
+
+
+75
+ Beginner Protocol:
+      ●​ Dose: 1 mg (1,000 mcg)
+      ●​ Frequency: Daily (SubQ)
+      ●​ Timing: Take on an empty stomach (at least 2 hours after eating), usually right before
+         bed.
+      ●​ Cycle: 8–12 weeks
+ Intermediate Protocol (The Clinical Standard):
+      ●​ Dose: 2 mg (2,000 mcg)
+      ●​ Frequency: Daily
+      ●​ Note: This is the dose used in most successful medical studies.
+ Advanced Protocol:
+      ●​ Dose: 2 mg – 2.5 mg
+      ●​ Frequency: Daily
+      ●​ Note: Going higher than 2 mg rarely gives better results and costs a lot more money.
+
+Supplements & diet:
+     ●​ The "Empty Stomach" Rule: This peptide is fragile. If you inject it while there is food
+        (insulin) in your blood, it will not work. You must be fasted.
+     ●​ Sleep: It works by amplifying your body's natural night-time pulses, so good sleep is
+        required.
+Cautions:
+     ●​ The "Mosquito Bite": Tesamorelin is known for leaving a red, itchy bump (like a bug
+        bite) at the injection site for about 15 minutes. This is normal.
+     ●​ Blood Sugar: While safer than HGH, it can still slightly raise blood sugar, so monitoring
+        is smart.
+
+
+
+Testagen (bioregulator)
+What it is / research focus: Bioregulator associated with testicular tissue; posited to
+support peptide synthesis and antioxidant defenses locally. ​
+In simple terms: A peptide mix aimed at supporting normal testicular function.
+Anecdotal: Vitality notes. ​
+Research Protocol:
+
+
+
+
+76
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly.
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Zinc‑rich foods; sleep.
+Cautions: Endocrine sensitivity considerations.
+
+
+
+
+Thymagen (bioregulator)
+What it is / research focus: Bioregulator linked to immune tissue; proposed to modulate
+T‑cell function and inflammatory tone. ​
+In simple terms: A peptide mix aimed at helping immune balance.
+Anecdotal: Immune resilience discussions. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly.
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Vitamin D sufficiency; zinc.
+Cautions: Monitor inflammatory responses.
+
+
+
+
+Thymosin Alpha‑1
+What it is / research focus: Thymosin Alpha-1 is a natural peptide that your body already
+makes. It comes from a small organ in your chest called the thymus gland.
+How it works (The Soldier School Story): Think of your immune system as an army of
+soldiers. Before these soldiers can go out and fight germs, they have to go to "Basic Training" to
+learn what to attack.
+     ●​ The School (The Thymus): This is where the baby white blood cells go to learn.
+     ●​ The Teacher (Thymosin Alpha-1): This peptide is the drill sergeant. It teaches the
+        soldiers two things:
+            1.​ Attack the Bad Guys: It helps them spot viruses and bacteria.
+            2.​ Don't Shoot the Good Guys: It teaches them not to attack your own body (which
+
+
+
+
+77
+                is what happens in allergies or autoimmune issues).
+Why is this unique? Most immune boosters just scream "ATTACK!" which can make
+inflammation worse. Thymosin Alpha-1 is a "modulator"—it turns the volume up if it's too low,
+and turns it down if it's too loud.
+In simple terms: It is the "Brain" of the immune system. It doesn't just make the immune system
+stronger; it makes it smarter so it knows exactly what to fight.
+Anecdotal: This is known as the "Feel Good" peptide because side effects are almost
+non-existent for most researchers. It is often used during flu season or when a subject feels run
+down. It doesn't give a "buzz" or energy spike; the report is usually just "I didn't get sick."
+
+ Beginner Protocol:
+      ●​ Dose: 0.5 mg – 1.0 mg (500 mcg – 1,000 mcg)
+      ●​ Frequency: 2 times per week (SubQ)
+      ●​ Cycle: 4–8 weeks
+ Intermediate Protocol:
+      ●​ Dose: 1.0 mg – 1.5 mg
+      ●​ Frequency: 2 times per week
+      ●​ Cycle: 4–8 weeks
+ Advanced Protocol:
+      ●​ Dose: 1.5 mg – 2.0 mg
+      ●​ Frequency: 2 times per week
+      ●​ Cycle: 4–8 weeks
+
+Supplements & diet:
+     ●​ The Building Blocks: Since the body is making new immune cells, it needs raw
+        materials. Vitamin C, Vitamin D, and Zinc are the standard stack to help this peptide
+        work.
+     ●​ Sleep: The immune system repairs itself at night.
+Cautions:
+     ●​ Very Safe: Because this is natural to the body, it is considered one of the safest peptides
+        to research.
+     ●​ Injection Site: The only common complaint is a little red itchy spot where the needle
+        went in.
+
+
+
+
+78
+Thymalin (bioregulator)
+What it is / research focus: Thymic bioregulator referenced in historical literature;
+posited effects on immune tone and aging markers. ​
+In simple terms: A peptide mix studied for immune balance and healthy aging.
+Anecdotal: Immune tone. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly.
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Vitamin D; zinc.
+Cautions: Limited modern trials.
+
+
+
+
+Thyrotropin TRH (Protirelin)
+What it is / research focus: Tripeptide releasing hormone used in thyroid axis testing;
+evokes TSH release for diagnostic purposes. ​
+In simple terms: A quick test signal that tells the body to release thyroid‑stimulating
+hormone. ​
+Anecdotal: Acute testing only.​
+Research Protocol:
+
+ Beginner: 50–100 mcg SubQ single dose. ​
+ Intermediate: 100–200 mcg single dose. ​
+ Advanced: 200–400 mcg single dose.
+
+Supplements & diet: None specific. ​
+Cautions: Transient nausea/flushing.
+
+
+
+
+Tirzepatide
+What it is / research focus: This is currently considered the strongest weight-control medicine
+
+
+
+
+79
+available. While older medicines copy just one signal in the body, Tirzepatide copies two signals
+at the same time.
+How it works (The "Two Button" Story): Imagine your body has two buttons that control how
+you handle food.
+     ●​ Button 1 (GLP-1): Tells your brain "I am full" and tells your stomach to slow down so you
+        don't get hungry again.
+     ●​ Button 2 (GIP): Helps your body handle sugar and fat so they don't get stored as easily.
+     ●​ The Result: Most medicines only push Button 1. Tirzepatide pushes both buttons. This
+        makes the "stop eating" signal twice as strong.
+In simple terms: It is a "Double Action" shot. It hits two targets instead of one to stop hunger
+and fix how the body uses sugar.
+Anecdotal: Researchers often report this works much faster than anything else. The appetite
+suppression is very strong—sometimes too strong. The most common report is feeling "too full"
+or nauseous if the subject tries to eat a normal-sized meal.
+
+ Beginner Protocol:
+      ●​ Dose: 2.5 mg – 5.0 mg
+      ●​ Frequency: Once per week (SubQ)
+      ●​ Cycle: Stay here for 8–12 weeks. Do not move up if it is still working.
+ Intermediate Protocol:
+      ●​ Dose: 5.0 mg – 10 mg
+      ●​ Frequency: Once per week
+      ●​ Note: Only move up slowly (adding 2.5 mg at a time).
+ Advanced Protocol:
+      ●​ Dose: 10 mg – 15 mg
+      ●​ Frequency: Once per week
+      ●​ Note: 15 mg is the maximum researched dose.
+
+Supplements & diet:
+     ●​ Protein First: Because appetite is so low, the subject might forget to eat. You must
+        prioritize protein to stop muscle loss.
+     ●​ Hydration: Drink water even if not thirsty to prevent headaches.
+Cautions:
+     ●​ The "Sulfur Burps": Because food sits in the stomach longer, it can cause burping or
+
+
+
+80
+        indigestion.
+     ●​ Nausea: If the dose is raised too fast, severe nausea is almost guaranteed. Slow and
+        steady is the only way.
+
+
+
+
+Vesilute (bioregulator)
+What it is / research focus: Bioregulator often linked to bladder tissue in legacy
+references; posited effects on epithelial integrity. ​
+In simple terms: A peptide mix aimed at bladder comfort.
+Anecdotal: Urinary comfort notes.
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks.
+ Intermediate: 20–30 mg weekly.
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Hydration.
+Cautions: Limited modern trials.
+
+
+
+
+Vesugen (bioregulator)
+What it is / research focus: Vascular tissue‑oriented bioregulator; proposed to support
+endothelial function and microcirculation. ​
+In simple terms: A peptide mix aimed at helping blood vessels stay healthy. Anecdotal:
+Circulation comfort notes. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks. ​
+ Intermediate: 20–30 mg weekly. ​
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Cardio‑friendly diet. ​
+Cautions: As above.
+
+
+
+
+81
+Vilon (bioregulator)
+What it is / research focus: Thymic/immune‑related bioregulator in older literature;
+posited to support peptide synthesis and immune balance. ​
+In simple terms: A peptide mix studied for general immune support. ​
+Anecdotal: General vitality notes. ​
+Research Protocol:
+
+ Beginner: 10–20 mg SubQ weekly · Cycle: 4–6 weeks. ​
+ Intermediate: 20–30 mg weekly. ​
+ Advanced: 30–40 mg weekly.
+
+Supplements & diet: Vitamin D, zinc. ​
+Cautions: Limited modern trials.
+
+
+
+VIP (Vasoactive Intestinal Peptide)
+What it is / research focus: Neuro‑gastrointestinal peptide studied for smooth muscle
+relaxation and immune signaling; also examined in respiratory pathways. ​
+In simple terms: A body peptide that relaxes muscles in the gut and lungs. ​
+Anecdotal: Respiratory comfort notes. ​
+Research Protocol:
+
+ Beginner: 50–100 mcg SubQ 2–3×/week · Cycle: 4–6 weeks.
+ Intermediate: 100–200 mcg 2–3×/week.
+ Advanced: 200–400 mcg 2–3×/week.
+
+Supplements & diet: Hydration; sleep.
+Cautions: Flushing, hypotension‑like sensations possible.
+
+
+
+
+82
+

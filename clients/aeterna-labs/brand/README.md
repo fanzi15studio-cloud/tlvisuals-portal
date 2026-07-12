@@ -25,19 +25,21 @@ et appliquée au guide.
 - **Texte courant** : *Montserrat* (sans-serif) — 300 à 700.
 - Chargées via Google Fonts.
 
-## Logo (vectorisé)
+## Logo (vectorisé, 100% tracés — sans dépendance de police)
 
 Le logo du site étant composé en texte CSS (pas de fichier vectoriel réutilisable),
-il a été **reconstruit en SVG** avec la police de marque (Cormorant Garamond) et les
-couleurs exactes. Deux versions :
+il a été **reconstruit en SVG puis converti en tracés** (chaque lettre est un `<path>`
+figé, extrait des polices de marque exactes — Cormorant Garamond 700/600, Montserrat 500 —
+via `opentype.js`). Le fichier ne charge donc **aucune police externe** : rendu identique
+partout (Lovable, Figma, impression, tout logiciel), aucun risque de police de repli.
 
 | Fichier | Usage |
 |---|---|
 | `logo/aeterna-labs-logo.svg` | Fond clair (Æ navy à liseré or) |
 | `logo/aeterna-labs-logo-blanc.svg` | Fond foncé (Æ blanc à liseré or) |
 
-> **Vectorisation « au trait » de l'artwork original :** pour un tracé automatique
-> fidèle au fichier d'origine (bevel doré, lettrage exact), il suffit de **déposer le
-> PNG/JPG haute résolution du logo** dans ce dossier ou dans le chat — je le passe alors
-> au vectoriseur. La version actuelle est une reconstruction typographique propre,
-> suffisante pour l'impression et le web.
+> **Vectorisation « au trait » de l'artwork original du client :** si tu veux calquer le
+> fichier logo original pixel par pixel (bevel doré exact, empattements précis), dépose le
+> **PNG/JPG haute résolution** ici ou dans le chat. La version actuelle est une
+> reconstruction fidèle à la charte (couleurs/polices exactes du site), déjà vectorielle
+> et autonome.

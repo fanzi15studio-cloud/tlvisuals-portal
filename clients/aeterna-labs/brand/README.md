@@ -1,23 +1,43 @@
 # Éléments de marque — Aeterna Labs
 
-Déposer ici les éléments d'identité pour que le guide soit **aux couleurs du client** :
+Charte **extraite du site officiel** d'Aeterna Labs (`index.html` fourni par le client)
+et appliquée au guide.
 
-- `logo/` — logo Aeterna Labs (SVG de préférence, sinon PNG transparent haute résolution)
-- **Codes couleurs** (hex) : principale, secondaire, accents
-- **Polices** (titres + texte courant) si une charte existe
+## Palette officielle
 
-## Palette provisoire utilisée (à remplacer par la vraie charte)
+| Rôle | Variable | Hex |
+|---|---|---|
+| Navy (principale) | `--navy` | `#1A3F55` |
+| Navy clair | `--navy-light` | `#234F6A` |
+| Navy foncé | `--navy-dark` | `#0F2535` |
+| Or (accent) | `--gold` | `#C9A84C` |
+| Or clair | `--gold-light` | `#E0BE78` |
+| Or pâle | `--gold-pale` | `#F5EDDA` |
+| Blanc cassé (fond) | `--off-white` | `#F8F6F2` |
+| Texte foncé | `--text-dark` | `#1A1A1A` |
+| Texte intermédiaire | `--text-mid` | `#4A5568` |
+| Bordure | `--border` | `#E2DDD6` |
+| Vert (succès) | `--green` | `#059669` |
 
-En l'absence du logo/charte, le guide utilise une identité premium « laboratoire /
-longévité » facilement remplaçable (variables CSS `--ink`, `--gold`, `--ivory`, `--navy`) :
+## Typographie
 
-| Rôle | Hex provisoire |
+- **Titres** : *Cormorant Garamond* (serif) — 400 à 700, italique disponible.
+- **Texte courant** : *Montserrat* (sans-serif) — 300 à 700.
+- Chargées via Google Fonts.
+
+## Logo (vectorisé)
+
+Le logo du site étant composé en texte CSS (pas de fichier vectoriel réutilisable),
+il a été **reconstruit en SVG** avec la police de marque (Cormorant Garamond) et les
+couleurs exactes. Deux versions :
+
+| Fichier | Usage |
 |---|---|
-| Bleu nuit (fond/typo) | `#0E1B3A` |
-| Bleu encre scientifique | `#1E3A8A` |
-| Or / champagne (accent) | `#C9A24B` |
-| Ivoire (fond clair) | `#F7F4EC` |
-| Gris ardoise (texte) | `#2A3244` |
+| `logo/aeterna-labs-logo.svg` | Fond clair (Æ navy à liseré or) |
+| `logo/aeterna-labs-logo-blanc.svg` | Fond foncé (Æ blanc à liseré or) |
 
-> Dès réception du logo + codes couleurs exacts, il suffit de remplacer ces variables :
-> tout le design se met à jour automatiquement.
+> **Vectorisation « au trait » de l'artwork original :** pour un tracé automatique
+> fidèle au fichier d'origine (bevel doré, lettrage exact), il suffit de **déposer le
+> PNG/JPG haute résolution du logo** dans ce dossier ou dans le chat — je le passe alors
+> au vectoriseur. La version actuelle est une reconstruction typographique propre,
+> suffisante pour l'impression et le web.

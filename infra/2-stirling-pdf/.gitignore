@@ -1,0 +1,7 @@
+# Donnees locales : ne jamais envoyer sur GitHub
+stirling-data/
+serveur/stirling-data/
+serveur/caddy-data/
+serveur/caddy-config/
+test-pdf/
+.env

@@ -1,0 +1,59 @@
+# =============================================================================
+#  Stirling PDF - VERSION MACBOOK (usage personnel, sans mot de passe)
+#  Thomas Loiseau Visuals
+#
+#  A utiliser sur votre MacBook Pro M4 Max uniquement.
+#  Vos PDF ne quittent jamais la machine : aucun envoi vers l'exterieur.
+#
+#  Lancer  :  docker compose up -d
+#  Ouvrir  :  http://localhost:8080
+#  Arreter :  docker compose down
+#  Logs    :  docker compose logs -f
+# =============================================================================
+services:
+  stirling-pdf:
+    image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
+    container_name: stirling-pdf
+    restart: unless-stopped
+
+    ports:
+      # 127.0.0.1 = accessible UNIQUEMENT depuis votre Mac.
+      # Meme sur le wifi d'un client, personne d'autre ne peut y acceder.
+      - "127.0.0.1:8080:8080"
+
+    environment:
+      # --- Langue de l'interface ---
+      SYSTEM_DEFAULTLOCALE: fr-FR
+
+      # --- Connexion desactivee : c'est votre ordinateur personnel ---
+      # Ne JAMAIS mettre false sur un serveur accessible depuis internet.
+      SECURITY_ENABLELOGIN: "false"
+
+      # --- Confidentialite ---
+      # Pas d'indexation par les moteurs de recherche, pas de sondage,
+      # pas de statistiques d'usage envoyees.
+      SYSTEM_GOOGLEVISIBILITY: "false"
+      SHOW_SURVEY: "false"
+      METRICS_ENABLED: "false"
+
+      # --- Taille maximale d'un fichier envoye, en Mo ---
+      # 500 Mo : confortable pour des dossiers de tournage et des books photo.
+      SYSTEM_MAXFILESIZE: "500"
+
+      # --- Nom affiche dans l'interface ---
+      UI_APPNAME: TLV - Outils PDF
+      UI_APPNAMENAVBAR: TLV PDF
+
+    volumes:
+      # Chemins internes verifies dans le Dockerfile officiel de Stirling PDF.
+      - ./stirling-data/configs:/configs         # reglages, comptes, parametres
+      - ./stirling-data/tessdata:/usr/share/tessdata  # langues de l'OCR
+      - ./stirling-data/logs:/logs              # journaux
+      - ./stirling-data/pipeline:/pipeline      # traitements automatises
+
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api/v1/info/status | grep -q 'UP'"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 120s   # la premiere ouverture est lente : Java demarre

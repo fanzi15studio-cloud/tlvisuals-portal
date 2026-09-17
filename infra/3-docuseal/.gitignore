@@ -1,0 +1,7 @@
+# Donnees et secrets : jamais sur GitHub
+.env
+autonome/.env
+via-dokploy/.env
+autonome/docuseal-data/
+autonome/pg_data/
+autonome/caddy/

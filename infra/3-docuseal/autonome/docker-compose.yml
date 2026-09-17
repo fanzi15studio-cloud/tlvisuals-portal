@@ -1,0 +1,79 @@
+# =============================================================================
+#  DocuSeal - VERSION AUTONOME (serveur SANS Dokploy)
+#  Thomas Loiseau Visuals
+#
+#  A n'utiliser QUE si Dokploy n'est pas installe sur cette machine, car
+#  Caddy a besoin des ports 80 et 443, que le Traefik de Dokploy occupe deja.
+#  Si Dokploy est present : utilisez ../via-dokploy/ a la place.
+#
+#  Base sur le fichier officiel du depot docusealco/docuseal, avec trois
+#  differences volontaires :
+#    1. le port 3000 n'est PAS publie sur internet (le fichier officiel le
+#       publie ; ici seul Caddy y accede, par le reseau interne) ;
+#    2. le mot de passe PostgreSQL n'est plus "postgres" mais le votre ;
+#    3. SECRET_KEY_BASE est fournie explicitement, pour maitriser et
+#       sauvegarder la cle de chiffrement.
+#
+#  Lancer :  docker compose up -d
+# =============================================================================
+services:
+  app:
+    image: docuseal/docuseal:latest
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - "3000"
+    environment:
+      HOST: ${DOCUSEAL_HOST}
+      FORCE_SSL: ${DOCUSEAL_HOST}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+      DATABASE_URL: postgresql://docuseal:${POSTGRES_PASSWORD}@postgres:5432/docuseal
+      SMTP_ADDRESS: ${SMTP_ADDRESS}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_DOMAIN: ${SMTP_DOMAIN}
+      SMTP_AUTHENTICATION: login
+      SMTP_ENABLE_STARTTLS: "true"
+    volumes:
+      - ./docuseal-data:/data/docuseal
+    networks:
+      - docuseal-interne
+
+  postgres:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: docuseal
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: docuseal
+    volumes:
+      - ./pg_data:/var/lib/postgresql/18/docker
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docuseal -d docuseal"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - docuseal-interne
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    command: caddy reverse-proxy --from ${DOCUSEAL_HOST} --to app:3000
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./caddy:/data/caddy   # certificats HTTPS : a conserver
+    networks:
+      - docuseal-interne
+
+networks:
+  docuseal-interne:
+    driver: bridge

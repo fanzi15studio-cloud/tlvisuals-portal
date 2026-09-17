@@ -1,0 +1,28 @@
+# Caddy demande et renouvelle tout seul le certificat HTTPS Let's Encrypt.
+# Prerequis : l'enregistrement DNS de {$HOST} doit pointer sur l'IP du serveur.
+{$HOST} {
+	encode zstd gzip
+
+	# Fichiers volumineux : on laisse le temps aux gros PDF
+	request_body {
+		max_size 200MB
+	}
+
+	reverse_proxy stirling-pdf:8080
+
+	# En-tetes de securite de base
+	header {
+		Strict-Transport-Security "max-age=31536000;"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	log {
+		output file /data/access.log {
+			roll_size 10MB
+			roll_keep 5
+		}
+	}
+}

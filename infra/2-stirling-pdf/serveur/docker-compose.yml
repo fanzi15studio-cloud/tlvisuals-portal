@@ -1,0 +1,83 @@
+# =============================================================================
+#  Stirling PDF - VERSION SERVEUR EXPOSE SUR INTERNET
+#  Thomas Loiseau Visuals
+#
+#  A n'utiliser QUE si vous decidez un jour de publier Stirling PDF
+#  sur un domaine. Differences avec la version MacBook :
+#    - la connexion par mot de passe reste ACTIVEE
+#    - le port 8080 n'est PAS publie sur internet (uniquement en interne)
+#    - Caddy est devant, il gere le HTTPS automatiquement
+#
+#  ATTENTION : Caddy a besoin des ports 80 et 443. Si Dokploy est installe
+#  sur le meme serveur, ses ports 80/443 sont deja pris par Traefik :
+#  dans ce cas, deployez Stirling PDF DEPUIS l'interface Dokploy
+#  (voir ../../3-docuseal/via-dokploy/ pour le meme principe).
+#
+#  Lancer : HOST=pdf.thomasloiseauvisuals.com docker compose up -d
+# =============================================================================
+services:
+  stirling-pdf:
+    image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
+    container_name: stirling-pdf
+    restart: unless-stopped
+
+    # Aucun "ports:" ici : volontaire.
+    # Le conteneur est joignable seulement par Caddy, via le reseau interne.
+    expose:
+      - "8080"
+
+    environment:
+      SYSTEM_DEFAULTLOCALE: fr-FR
+
+      # Connexion OBLIGATOIRE : le service est accessible depuis internet.
+      SECURITY_ENABLELOGIN: "true"
+
+      # Compte initial. Identifiants par defaut de Stirling = admin / stirling :
+      # on les remplace des le depart par les votres via ces variables.
+      SECURITY_INITIALLOGIN_USERNAME: ${STIRLING_ADMIN_USER}
+      SECURITY_INITIALLOGIN_PASSWORD: ${STIRLING_ADMIN_PASSWORD}
+
+      SYSTEM_GOOGLEVISIBILITY: "false"
+      SHOW_SURVEY: "false"
+      METRICS_ENABLED: "false"
+      SYSTEM_MAXFILESIZE: "200"
+      UI_APPNAME: TLV - Outils PDF
+
+    volumes:
+      - ./stirling-data/configs:/configs
+      - ./stirling-data/tessdata:/usr/share/tessdata
+      - ./stirling-data/logs:/logs
+      - ./stirling-data/pipeline:/pipeline
+
+    networks:
+      - stirling-interne
+
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api/v1/info/status | grep -q 'UP'"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 120s
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: stirling-caddy
+    restart: unless-stopped
+    depends_on:
+      - stirling-pdf
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"   # HTTP/3
+    environment:
+      HOST: ${HOST}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./caddy-data:/data      # certificats HTTPS : a conserver !
+      - ./caddy-config:/config
+    networks:
+      - stirling-interne
+
+networks:
+  stirling-interne:
+    driver: bridge

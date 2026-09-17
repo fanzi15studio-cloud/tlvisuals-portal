@@ -1,0 +1,102 @@
+# =============================================================================
+#  DocuSeal - VERSION RECOMMANDEE : deployee DEPUIS Dokploy
+#  Thomas Loiseau Visuals
+#
+#  POURQUOI CETTE VERSION ?
+#  Dokploy installe Traefik, qui occupe deja les ports 80 et 443 du serveur.
+#  Le fichier officiel de DocuSeal lance son propre Caddy sur 80/443 :
+#  les deux ne peuvent pas cohabiter sur la meme machine.
+#  Ici, on supprime Caddy et on laisse le Traefik de Dokploy s'occuper du
+#  HTTPS. C'est plus simple, et il n'y a qu'un seul certificat a gerer.
+#
+#  COMMENT L'UTILISER
+#  Dans Dokploy : Projet > Create Service > Compose, collez ce fichier,
+#  renseignez les variables d'environnement, puis onglet "Domains" :
+#  ajoutez sign.thomasloiseauvisuals.com -> service "app", port 3000,
+#  HTTPS/Let's Encrypt active. Dokploy genere lui-meme les regles Traefik.
+#
+#  Le port 3000 n'est JAMAIS publie sur internet : seul Traefik y accede,
+#  par le reseau interne.
+# =============================================================================
+services:
+  app:
+    image: docuseal/docuseal:latest
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    # Volontairement PAS de "ports:". Traefik joint le conteneur par le
+    # reseau dokploy-network. Publier 3000 exposerait DocuSeal sans HTTPS.
+    expose:
+      - "3000"
+
+    environment:
+      # Domaine public : sert a construire les liens dans les emails
+      # de demande de signature. Doit etre exact, sinon vos clients
+      # recoivent des liens inutilisables.
+      HOST: ${DOCUSEAL_HOST}
+
+      # Force les URL en https (verifie dans le code : toute valeur non vide
+      # et differente de "false" active force_ssl cote Rails).
+      FORCE_SSL: ${DOCUSEAL_HOST}
+
+      # CLE DE CHIFFREMENT - LE POINT LE PLUS IMPORTANT DE CE FICHIER.
+      # Si on ne la fournit pas, DocuSeal en genere une au premier demarrage
+      # dans /data/docuseal/docuseal.env. Elle sert a chiffrer les donnees
+      # sensibles en base. La perdre = base illisible, definitivement.
+      # On la fixe donc ici, dans un fichier .env que vous sauvegardez.
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+
+      DATABASE_URL: postgresql://docuseal:${POSTGRES_PASSWORD}@postgres:5432/docuseal
+
+      # --- Envoi des emails (Brevo) ---
+      # Peut aussi se regler dans l'interface : Parametres > Email.
+      # Renseigne ici, c'est reproductible si vous changez de serveur.
+      SMTP_ADDRESS: ${SMTP_ADDRESS}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_DOMAIN: ${SMTP_DOMAIN}
+      SMTP_AUTHENTICATION: login
+      SMTP_ENABLE_STARTTLS: "true"
+
+    volumes:
+      # Documents signes, pieces jointes ET la cle de chiffrement si elle
+      # a ete generee automatiquement. A SAUVEGARDER.
+      - docuseal-data:/data/docuseal
+
+    networks:
+      - docuseal-interne
+      - dokploy-network   # indispensable pour que Traefik puisse router
+
+  postgres:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: docuseal
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: docuseal
+    volumes:
+      # Chemin repris du fichier officiel DocuSeal : l'image postgres:18
+      # place ses donnees dans /var/lib/postgresql/18/docker.
+      - docuseal-pgdata:/var/lib/postgresql/18/docker
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docuseal -d docuseal"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - docuseal-interne
+      # Pas sur dokploy-network : la base n'a aucune raison d'etre
+      # joignable par les autres applications du serveur.
+
+volumes:
+  docuseal-data:
+  docuseal-pgdata:
+
+networks:
+  docuseal-interne:
+    driver: bridge
+  dokploy-network:
+    external: true

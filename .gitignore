@@ -13,3 +13,6 @@ out/
 # misc
 .DS_Store
 *.log
+
+# dossier temporaire du script de build statique
+.api-mise-de-cote/

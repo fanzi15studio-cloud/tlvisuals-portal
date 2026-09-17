@@ -21,9 +21,9 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV BUILD_TARGET=server
+# La cible serveur est portee par le script npm ci-dessous.
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN npm run build:server
 
 # --- Etape 3 : image finale, la plus legere possible -----------------------
 FROM node:20-alpine AS runner

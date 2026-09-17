@@ -230,16 +230,21 @@ fonctionner.
 
 **Ce que j'ai préparé et vérifié :**
 
-1. `next.config.mjs` accepte désormais une variable `BUILD_TARGET` :
-   - sans rien (comportement actuel, inchangé) → export statique pour Hostinger
-   - `BUILD_TARGET=server` → application Next.js complète avec serveur Node.js
-2. Un `Dockerfile` à la racine, qui construit en mode serveur.
+1. Deux commandes de construction distinctes :
+   - `npm run build` → export statique pour Hostinger. Un script
+     (`scripts/build-static.mjs`) met la route API de côté le temps du build,
+     puis la remet en place — ce qui répare le build cassé. Le nom de la
+     commande est inchangé, donc votre workflow GitHub fonctionne tel quel.
+   - `npm run build:server` → application Next.js avec serveur Node.js, la
+     cible utilisée par Dokploy.
+2. Un `Dockerfile` à la racine, qui appelle `npm run build:server`.
 
 **Vérifications effectuées de mon côté :**
 
 | Test | Résultat |
 |---|---|
-| `BUILD_TARGET=server npm run build` | ✅ réussit ; `/api/client` devient une route dynamique Node.js |
+| `npm run build` (statique, Hostinger) | ✅ réussit à nouveau ; `out/` contient 23 fichiers dont le CV |
+| `npm run build:server` | ✅ réussit ; `/api/client` devient une route dynamique Node.js |
 | Démarrage du serveur produit | ✅ page d'accueil en HTTP 200 |
 | Appel de `/api/client?code=TEST` | ✅ répond `{"error":"Configuration serveur manquante."}` — la route s'exécute bien côté serveur, il ne lui manque que `GOOGLE_SHEET_ID` |
 | Lecture du `Dockerfile` par Docker | ✅ se parse sans erreur |

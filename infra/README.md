@@ -97,17 +97,33 @@ dossier de fichiers : il ne peut pas exécuter de code. Next.js refuse donc de
 construire, votre workflow GitHub casse avant l'envoi FTP, et le portail client
 ne peut de toute façon pas fonctionner en statique.
 
-**Ce que j'ai préparé sur cette branche** (rien n'est encore fusionné dans
+**Ce qui est corrigé sur cette branche** (rien n'est encore fusionné dans
 `main`, votre site actuel n'est pas touché) :
 
-- `next.config.mjs` accepte une variable `BUILD_TARGET` — sans elle, le
-  comportement est **exactement celui d'aujourd'hui** ; avec
-  `BUILD_TARGET=server`, l'application se construit avec un serveur Node.js.
+- `scripts/build-static.mjs` : met la route API de côté le temps du build
+  statique, puis la remet en place — y compris si le build échoue ou si vous
+  interrompez la commande. Le build Hostinger repasse donc au vert.
+- `npm run build` → export statique pour Hostinger (nom de commande inchangé,
+  le workflow GitHub continue de fonctionner tel quel).
+- `npm run build:server` → application avec serveur Node.js, pour Dokploy.
+- `next.config.mjs` choisit la cible selon `BUILD_TARGET`.
 - un `Dockerfile` à la racine pour le déploiement Dokploy.
 
-**Vérifié :** le build serveur réussit, le serveur démarre, la page d'accueil
-répond 200, et `/api/client` s'exécute bien côté serveur (elle réclame
-`GOOGLE_SHEET_ID`). Détails dans `1-dokploy/GUIDE.md`, étape 9.
+**Vérifié de bout en bout :**
+
+| Test | Résultat |
+|---|---|
+| `npm run build` (statique) | ✅ réussit ; `out/` contient 23 fichiers dont le CV RetroMuscle |
+| `npm run build:server` | ✅ réussit ; `/api/client` devient une route dynamique Node.js |
+| Démarrage du serveur produit | ✅ page d'accueil HTTP 200 |
+| `/api/client?code=TEST` | ✅ répond `{"error":"Configuration serveur manquante."}` — la route s'exécute côté serveur, il ne lui manque que `GOOGLE_SHEET_ID` |
+| Reprise après build interrompu | ✅ `app/api` restauré automatiquement, aucun résidu |
+| Construction réelle de l'image Docker | ❌ non testée : registries Docker bloqués dans ma session |
+
+**Reste à décider plus tard :** sur Hostinger, la page de connexion du portail
+sera toujours présente mais inopérante (elle appelle une API qui n'existe pas
+en statique). Quand le sous-domaine Dokploy sera choisi, on pourra y faire
+pointer une redirection. Le CV, lui, fonctionne normalement.
 
 ---
 

@@ -1,388 +1,333 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-/* ====== SVG ICONS ====== */
-const VideoIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
-    <path d="m10 8 6 4-6 4V8z" />
-  </svg>
-);
+/* ====== Drive ====== */
+const fichierUrl = (id) => `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t`;
+const vignetteUrl = (id) => `https://lh3.googleusercontent.com/d/${id}=w1280`;
+const dossierUrl = (id) => `https://drive.google.com/drive/folders/${id}`;
+const lecteurUrl = (id) => `https://drive.google.com/file/d/${id}/preview`;
 
-const DocIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-    <polyline points="14 2 14 8 20 8" />
-    <line x1="16" y1="13" x2="8" y2="13" />
-    <line x1="16" y1="17" x2="8" y2="17" />
-  </svg>
-);
+/* ====== Formats ====== */
+const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
+const duree = (s) => (s >= 60 ? `${Math.floor(s / 60)} min ${String(Math.round(s % 60)).padStart(2, '0')}` : `${Math.round(s)} s`);
+const taille = (o) => (o >= 1e9 ? `${(o / 1e9).toFixed(1).replace('.', ',')} Go` : `${Math.max(1, Math.round(o / 1e6))} Mo`);
+const joli = (t) => (/\s/.test(t) ? t : t.replace(/[-_]+/g, ' ').replace(/^./, (c) => c.toUpperCase()));
+const groupeJoli = (g) => g.replace(/^(\d+)\s*-\s*/, '$1 · ');
+const slug = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-const PayIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-    <line x1="1" y1="10" x2="23" y2="10" />
-  </svg>
-);
+function dateDe(s) {
+  const m = String(s || '').match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+  const d = m ? new Date(+m[3], m[2] - 1, +m[1]) : s ? new Date(s) : null;
+  return d && !isNaN(d) ? d : null;
+}
+const dateLongue = (s) => dateDe(s)?.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) || s || '';
 
-const DownloadIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-    <polyline points="7 10 12 15 17 10" />
-    <line x1="12" y1="15" x2="12" y2="3" />
-  </svg>
-);
+function montant(m, devise) {
+  const n = parseFloat(String(m).replace(/[^\d.,-]/g, '').replace(',', '.'));
+  return isNaN(n) ? `${m} ${devise}` : `${n.toLocaleString('fr-CH', { maximumFractionDigits: 2 })} ${devise === 'EUR' ? '€' : devise}`;
+}
 
-const SignIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
-  </svg>
-);
+function pastille(statut) {
+  const s = statut.toLowerCase();
+  if (/pay|sign|dispon/.test(s)) return ['ok', s.startsWith('pay') ? 'Payé' : s.startsWith('sign') ? 'Signé' : 'Disponible'];
+  if (/envoy/.test(s)) return ['sent', 'Envoyé'];
+  return ['wait', s.replace(/_/g, ' ').replace(/^./, (c) => c.toUpperCase())];
+}
 
-const CheckSmall = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
+function couleurTexte(hex) {
+  const m = String(hex).replace('#', '').match(/^([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i);
+  if (!m) return '#1b1c3a';
+  const [r, g, b] = m.slice(1).map((x) => parseInt(x, 16));
+  return 0.299 * r + 0.587 * g + 0.114 * b > 150 ? '#1b1c3a' : '#f3eee4';
+}
 
-const ClockSmall = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10" />
-    <polyline points="12 6 12 12 16 14" />
-  </svg>
-);
+const ETAPES = ['Tournage', 'Montage', 'Musique', 'Validation', 'Livraison'];
 
-const LogoutIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-    <polyline points="16 17 21 12 16 7" />
-    <line x1="21" y1="12" x2="9" y2="12" />
-  </svg>
-);
+/* ====== Icônes ====== */
+const IcoDl = () => (<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M8 2v8m0 0 3.5-3.5M8 10 4.5 6.5M2.5 13.5h11" /></svg>);
+const IcoLock = () => (<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="7" width="10" height="7" rx="1.5" /><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" /></svg>);
 
-/* ====== STATUS BADGE ====== */
-function StatusBadge({ status }) {
-  const isGreen = ['disponible', 'signé', 'signe', 'payé', 'paye'].includes(status);
-  const labels = {
-    disponible: 'Disponible',
-    en_cours: 'En cours',
-    signé: 'Signé',
-    signe: 'Signé',
-    en_attente: 'En attente',
-    payé: 'Payé',
-    paye: 'Payé',
-  };
-
+/* ====== Cartes ====== */
+function Carte({ item, onOpen }) {
+  const v = item.versions[0];
+  const m = item.titre.match(/^(.+?)\s+·\s+(.+)$/);
   return (
-    <span className={`badge ${isGreen ? 'green' : 'orange'}`}>
-      {isGreen ? <CheckSmall /> : <ClockSmall />}
-      {labels[status] || status}
-    </span>
+    <button className="card" onClick={() => onOpen(item)}>
+      <span className={`shot${v.vertical ? ' v' : ''}`}>
+        <img src={vignetteUrl(v.poster)} alt="" loading="lazy" />
+        <span className="play"><i /></span>
+        {v.duree > 0 && <span className="dur mono">{mmss(v.duree)}</span>}
+      </span>
+      {m && !v.vertical && <span className="num">{m[1].toUpperCase()}</span>}
+      <span className="t">{joli(m ? m[2] : item.titre)}</span>
+      {!v.vertical && (
+        <span className="sub">
+          {item.versions.length > 1 && <span className="tag">{item.versions.length} versions</span>}
+          {item.srt && <span className="tag">Sous-titres FR</span>}
+        </span>
+      )}
+    </button>
   );
 }
 
-/* ====== FORMAT HELPERS ====== */
-function formatDate(dateStr) {
-  if (!dateStr) return '';
-  // Try parsing various formats
-  const d = new Date(dateStr);
-  if (isNaN(d.getTime())) return dateStr;
-  return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+function Collection({ p, onOpen, verrou }) {
+  const [groupe, setGroupe] = useState(null);
+  const { items, groupes } = p.collection;
+  const vus = items.filter((i) => !groupe || i.groupe === groupe);
+  const paysage = vus.filter((i) => !i.versions[0].vertical);
+  const vertical = vus.filter((i) => i.versions[0].vertical);
+  return (
+    <section className="block wrap" id={slug(p.nom)}>
+      <div className="head">
+        <div><span className="lbl">{vertical.length && !paysage.length ? 'Vidéos verticales' : 'Vidéos'}</span><h2>{p.nom}</h2></div>
+        {!verrou && <a className="btn dl" href={dossierUrl(p.ref.dossier)} target="_blank" rel="noopener"><IcoDl /> Tout télécharger</a>}
+      </div>
+      {groupes.length > 0 && (
+        <div className="chips">
+          {[null, ...groupes].map((g) => (
+            <button key={g || 'tout'} className={`chip${g === groupe ? ' on' : ''}`} onClick={() => setGroupe(g)}>
+              {g ? groupeJoli(g) : 'Tout'}<small>{items.filter((i) => !g || i.groupe === g).length}</small>
+            </button>
+          ))}
+        </div>
+      )}
+      {paysage.length > 0 && <div className="grid">{paysage.map((i) => <Carte key={i.versions[0].id} item={i} onOpen={onOpen} />)}</div>}
+      {vertical.length > 0 && <div className="vgrid">{vertical.map((i) => <Carte key={i.versions[0].id} item={i} onOpen={onOpen} />)}</div>}
+    </section>
+  );
 }
 
-function formatMontant(montant, devise) {
-  const num = parseFloat(String(montant).replace(/[^\d.,\-]/g, '').replace(',', '.'));
-  if (isNaN(num)) return `${montant} ${devise}`;
-  return `${num.toLocaleString('fr-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${devise}`;
+/* ====== Lecteur ====== */
+function Lecteur({ item, verrou, onClose }) {
+  const [n, setN] = useState(0);
+  const v = item.versions[n];
+  const m = item.titre.match(/^(.+?)\s+·\s+(.+)$/);
+  useEffect(() => {
+    const k = (e) => e.key === 'Escape' && onClose();
+    document.addEventListener('keydown', k);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', k); document.body.style.overflow = ''; };
+  }, [onClose]);
+  return (
+    <div className="modal" onClick={(e) => e.target === e.currentTarget && onClose()}>
+      <div className={`player${v.vertical ? ' vert' : ''}`} role="dialog" aria-modal="true" aria-label={item.titre}>
+        <div className="screen">
+          {/* lecteur intégrable de Drive : Drive refuse la lecture directe depuis un autre site, et adapte ici la qualité au débit */}
+          <iframe key={v.id} src={lecteurUrl(v.id)} title={item.titre} allow="autoplay; fullscreen" allowFullScreen />
+        </div>
+        <div className="side">
+          <div><span className="lbl">{m ? m[1] : item.groupe ? groupeJoli(item.groupe) : 'Vidéo'}</span><h2>{joli(m ? m[2] : item.titre)}</h2></div>
+          {item.versions.length > 1 && (
+            <div className="seg"><span className="lbl">Version</span>
+              {item.versions.map((x, i) => <button key={x.id} className={i === n ? 'on' : ''} onClick={() => setN(i)}>{x.label ? x.label.replace(/^./, (c) => c.toUpperCase()) : 'Version principale'}</button>)}
+            </div>
+          )}
+          <dl className="fiche mono">
+            {v.duree > 0 && <><dt>Durée</dt><dd>{duree(v.duree)}</dd></>}
+            <dt>Format</dt><dd>{v.vertical ? 'Vertical 9:16' : 'Paysage 16:9'}</dd>
+            {item.srt && <><dt>Sous-titres</dt><dd>Français (.srt)</dd></>}
+            {v.taille > 0 && <><dt>Fichier</dt><dd>MP4 · {taille(v.taille)}</dd></>}
+          </dl>
+          <div className="dlbox"><span className="lbl">Télécharger</span>
+            {verrou ? (
+              <div className="locked"><IcoLock /> Le téléchargement s'ouvre dès le règlement de la facture en attente. La lecture reste libre.</div>
+            ) : (
+              <>
+                <a className="dlopt" href={fichierUrl(v.id)}><b>{joli(item.titre)}{v.label ? ` (${v.label})` : ''}</b><small>MP4{v.taille ? ` · ${taille(v.taille)}` : ''} · qualité de livraison</small><span><IcoDl /></span></a>
+                {item.srt && <a className="dlopt" href={fichierUrl(item.srt)}><b>Sous-titres .srt</b><small>Français · pour YouTube</small><span><IcoDl /></span></a>}
+              </>
+            )}
+          </div>
+        </div>
+        <button className="x" onClick={onClose} aria-label="Fermer le lecteur">×</button>
+      </div>
+    </div>
+  );
 }
 
-function getInitials(name) {
-  if (!name) return '?';
-  return name
-    .split(' ')
-    .map((w) => w[0])
-    .join('')
-    .toUpperCase()
-    .slice(0, 2);
-}
-
-/* ====== TABS ====== */
-const TABS = [
-  { id: 'livrables', label: 'Livrables', icon: <VideoIcon /> },
-  { id: 'documents', label: 'Documents', icon: <DocIcon /> },
-  { id: 'paiements', label: 'Paiements', icon: <PayIcon /> },
-];
-
-/* ====== PORTAL PAGE ====== */
+/* ====== Page ====== */
 export default function PortalPage() {
   const router = useRouter();
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-  const [activeTab, setActiveTab] = useState('livrables');
+  const [ouvert, setOuvert] = useState(null);
+  const [logoOk, setLogoOk] = useState(true);
 
   useEffect(() => {
     const code = sessionStorage.getItem('tlv_code');
-    if (!code) {
-      router.replace('/');
-      return;
-    }
-
-    fetch(`/api/client?code=${encodeURIComponent(code)}`)
-      .then((res) => {
-        if (!res.ok) throw new Error('invalid');
-        return res.json();
-      })
-      .then((d) => {
-        setData(d);
-        setLoading(false);
-      })
-      .catch(() => {
-        sessionStorage.removeItem('tlv_code');
-        router.replace('/');
-      });
+    if (!code) return router.replace('/');
+    fetch('/api/client?code=' + encodeURIComponent(code))
+      .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
+      .then(setData)
+      .catch(() => { sessionStorage.removeItem('tlv_code'); router.replace('/'); });
   }, [router]);
 
-  function handleLogout() {
-    sessionStorage.removeItem('tlv_code');
-    router.replace('/');
-  }
+  const vue = useMemo(() => {
+    if (!data) return null;
+    const { projets, paiements, client } = data;
+    const enCours = projets.filter((p) => p.statut === 'en_cours');
+    const dispo = projets.filter((p) => p.statut !== 'en_cours');
+    const collections = dispo.filter((p) => p.collection?.items.length);
+    const filmsP = dispo.filter((p) => !p.collection && p.ref?.fichier && (p.media ? p.media.mime?.startsWith('video/') : /vid/i.test(p.type)));
+    const films = filmsP.map((p) => ({ titre: p.nom, date: p.date, srt: null,
+      versions: [{ id: p.ref.fichier, poster: p.ref.fichier, label: null, duree: p.media?.duree || 0, taille: p.media?.taille || 0, vertical: p.media?.vertical || false }] }));
+    const liens = dispo.filter((p) => !collections.includes(p) && !filmsP.includes(p));
+    // à la une : la livraison la plus récente (film seul, ou dernière vidéo paysage du dossier le plus récent)
+    const candidats = [
+      ...films.filter((f) => !f.versions[0].vertical).map((f) => [dateDe(f.date), f]),
+      ...collections.map((c) => [dateDe(c.date), c.collection.items.filter((i) => !i.versions[0].vertical).at(-1)]),
+    ].filter(([, it]) => it).sort((a, b) => (b[0] || 0) - (a[0] || 0));
+    const toutes = [...films, ...collections.flatMap((c) => c.collection.items)];
+    return {
+      enCours, collections, films, liens,
+      une: candidats[0] ? { item: candidats[0][1], date: candidats[0][0] } : null,
+      verrou: client.telechargement.startsWith('apr') && paiements.some((p) => !/pay/i.test(p.statut)),
+      nbPaysage: toutes.filter((i) => !i.versions[0].vertical).length,
+      nbVertical: toutes.filter((i) => i.versions[0].vertical).length,
+    };
+  }, [data]);
 
-  if (loading) {
-    return (
-      <div className="loading-page">
-        <div className="spinner" />
-      </div>
-    );
-  }
+  if (!vue) return <div className="etat"><span className="spin" aria-label="Chargement" /></div>;
 
-  if (error) {
-    return (
-      <div className="loading-page">
-        <p style={{ color: '#888' }}>{error}</p>
-      </div>
-    );
-  }
-
-  if (!data) return null;
-
-  const { client, projets, documents, paiements } = data;
-  const disponibles = projets.filter((p) => p.statut === 'disponible').length;
-
-  // Calculate total
-  const total = paiements.reduce((sum, p) => {
-    const num = parseFloat(String(p.montant).replace(/[^\d.,\-]/g, '').replace(',', '.'));
-    return sum + (isNaN(num) ? 0 : num);
-  }, 0);
-  const devise = paiements[0]?.devise || 'CHF';
+  const { client, documents, paiements } = data;
+  const { enCours, collections, films, liens, une, verrou } = vue;
+  const fond = client.couleur || '#f3eee4';
+  const idLogo = client.logo && client.logo.match(/[\w-]{25,}/)?.[0];
+  const logo = !client.logo ? `/logos/${slug(client.entreprise)}.png` : /drive\.google/.test(client.logo) && idLogo ? vignetteUrl(idLogo) : client.logo;
+  const nav = [films.length && ['films', 'Films'], ...collections.map((c) => [slug(c.nom), c.nom]),
+    enCours.length && ['en-cours', 'En cours'], (documents.length || paiements.length) && ['documents', 'Documents']].filter(Boolean);
+  const prenom = (client.contact || '').split(/\s+/)[0];
+  const initiales = (client.contact || client.entreprise).split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
 
   return (
-    <div className="portal-page">
-      {/* HEADER */}
-      <header className="portal-header">
-        <div className="portal-header-inner">
-          <div className="portal-brand">
-            <div className="portal-brand-logo">TL</div>
-            <span className="portal-brand-name">Thomas Loiseau Visuals</span>
-          </div>
-          <div className="portal-user">
-            <div className="portal-user-avatar">{getInitials(client.contact)}</div>
-            <span>{client.contact}</span>
-            <button
-              onClick={handleLogout}
-              title="Se déconnecter"
-              style={{
-                background: 'none',
-                border: 'none',
-                color: '#aaa',
-                padding: 4,
-                marginLeft: 4,
-                cursor: 'pointer',
-              }}
-            >
-              <LogoutIcon />
-            </button>
+    <>
+      <header className="top">
+        <div className="wrap">
+          <a className="brand" href="#haut"><img src="/tlv.png" alt="TL Visuals" /><span>Espace client</span></a>
+          <nav className="nav">{nav.map(([id, l]) => <a key={id} href={`#${id}`}>{l}</a>)}</nav>
+          <div className="me">
+            <span className="avatar" aria-hidden="true">{initiales}</span><span className="who">{client.contact}</span>
+            <button className="ghost" onClick={() => { sessionStorage.removeItem('tlv_code'); router.replace('/'); }}>Déconnexion</button>
           </div>
         </div>
       </header>
 
-      {/* MAIN */}
-      <main className="portal-main">
-        {/* Welcome */}
-        <div className="portal-welcome">
-          <h1>Bonjour, {(client.contact || '').split(' ')[0]} 👋</h1>
-          <p>
-            Bienvenue sur votre espace projet — <strong>{client.entreprise}</strong>
-          </p>
-        </div>
-
-        {/* Progress */}
-        {projets.length > 0 && (
-          <div className="progress-card">
-            <div className="progress-header">
-              <span className="progress-label">Avancement des livrables</span>
-              <span className="progress-count">
-                {disponibles}/{projets.length} terminés
-              </span>
-            </div>
-            <div className="progress-track">
-              <div
-                className="progress-fill"
-                style={{ width: `${(disponibles / projets.length) * 100}%` }}
-              />
+      <main id="haut">
+        <section className="cover" style={{ background: fond, color: couleurTexte(fond), '--fond': fond, '--txt': couleurTexte(fond) }}>
+          <div className={`wrap${logoOk ? '' : ' nologo'}`}>
+            {logoOk && <img src={logo} alt={client.entreprise} onError={() => setLogoOk(false)} />}
+            <div>
+              {prenom && <span className="lbl">Bonjour {prenom}</span>}
+              <h1>{client.entreprise}</h1>
+              <p>Tout ce que nous avons réalisé pour vous, à regarder ici ou à télécharger.</p>
+              <div className="counts">
+                {vue.nbPaysage > 0 && <span><b>{vue.nbPaysage}</b>{vue.nbPaysage > 1 ? 'vidéos' : 'vidéo'}</span>}
+                {vue.nbVertical > 0 && <span><b>{vue.nbVertical}</b>{vue.nbVertical > 1 ? 'vidéos verticales' : 'vidéo verticale'}</span>}
+                {enCours.length > 0 && <span className="live"><b>{enCours.length}</b>en cours</span>}
+              </div>
             </div>
           </div>
+        </section>
+
+        {une && (
+          <section className="hero wrap" aria-label="Dernière livraison">
+            <div className="hero-card">
+              <button className="hero-shot" onClick={() => setOuvert(une.item)} aria-label={`Lire ${une.item.titre}`}>
+                <img src={vignetteUrl(une.item.versions[0].poster)} alt="" /><span className="play"><i /></span>
+              </button>
+              <div className="hero-txt">
+                <span className="lbl new">Dernière livraison{une.date ? ` · ${une.date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}</span>
+                <h2>{joli(une.item.titre)}</h2>
+                <dl className="fiche mono">
+                  {une.item.versions[0].duree > 0 && <><dt>Durée</dt><dd>{duree(une.item.versions[0].duree)}</dd></>}
+                  {une.item.versions.length > 1 && <><dt>Versions</dt><dd>{une.item.versions.length} versions à choisir dans le lecteur</dd></>}
+                  {une.item.srt && <><dt>Sous-titres</dt><dd>Français</dd></>}
+                </dl>
+                <div className="row"><button className="btn go" onClick={() => setOuvert(une.item)}>▶ Regarder</button></div>
+              </div>
+            </div>
+          </section>
         )}
 
-        {/* Tabs */}
-        <div className="tabs">
-          {TABS.map((tab) => (
-            <button
-              key={tab.id}
-              className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
-              onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.icon}
-              {tab.label}
-            </button>
-          ))}
-        </div>
+        {films.length > 0 && (
+          <section className="block wrap" id="films">
+            <div className="head"><div><span className="lbl">Films</span><h2>Vos films</h2></div></div>
+            <div className="grid">{films.map((f) => <Carte key={f.versions[0].id} item={f} onOpen={setOuvert} />)}</div>
+          </section>
+        )}
 
-        {/* Content */}
-        <div className="content-card">
-          {/* ====== LIVRABLES ====== */}
-          {activeTab === 'livrables' && (
-            <>
-              <div className="content-header">Vos vidéos</div>
-              {projets.length === 0 ? (
-                <div className="empty-state">Aucun livrable pour le moment.</div>
-              ) : (
-                projets.map((p) => (
-                  <div key={p.id} className="content-row">
-                    <div className="row-left">
-                      <div className={`row-icon ${p.statut === 'disponible' ? 'green' : 'orange'}`}>
-                        <VideoIcon />
-                      </div>
-                      <div className="row-info">
-                        <div className="row-title">{p.nom}</div>
-                        <div className="row-sub">{p.type}</div>
-                      </div>
-                    </div>
-                    <div className="row-right">
-                      <StatusBadge status={p.statut} />
-                      {p.statut === 'disponible' && p.lien && (
-                        <a href={p.lien} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                          <DownloadIcon /> Télécharger
-                        </a>
-                      )}
-                    </div>
+        {collections.map((p) => <Collection key={p.nom} p={p} onOpen={setOuvert} verrou={verrou} />)}
+
+        {enCours.length > 0 && (
+          <section className="block wrap" id="en-cours">
+            <div className="head"><div><span className="lbl">En cours</span><h2>Ce qui arrive</h2></div></div>
+            <div className="wips">
+              {enCours.map((p) => {
+                const e = p.etape ? ETAPES.findIndex((x) => x.toLowerCase().startsWith(p.etape.toLowerCase().slice(0, 4))) : -1;
+                return (
+                  <div className={`wip${e >= 0 ? '' : ' seul'}`} key={p.nom}>
+                    <div><span className="lbl new">En production</span><h3>{p.nom || 'Projet en préparation'}</h3>{p.date && <p>Prévu pour le {dateLongue(p.date)}</p>}</div>
+                    {e >= 0 && (
+                      <ol className="steps">
+                        {ETAPES.map((x, i) => (
+                          <li key={x} className={i < e ? 'done' : i === e ? 'now' : ''}>
+                            <span className="dot">{i < e ? '✓' : ''}</span><span>{x}</span><span className="mono">{i < e ? 'fait' : i === e ? 'en cours' : 'à venir'}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                   </div>
-                ))
-              )}
-            </>
-          )}
+                );
+              })}
+            </div>
+          </section>
+        )}
 
-          {/* ====== DOCUMENTS ====== */}
-          {activeTab === 'documents' && (
-            <>
-              <div className="content-header">Documents contractuels</div>
-              {documents.length === 0 ? (
-                <div className="empty-state">Aucun document pour le moment.</div>
-              ) : (
-                documents.map((d) => {
-                  const isSigned = ['signé', 'signe'].includes(d.statut);
-                  return (
-                    <div key={d.id} className="content-row">
-                      <div className="row-left">
-                        <div className={`row-icon ${isSigned ? 'green' : 'neutral'}`}>
-                          <DocIcon />
-                        </div>
-                        <div className="row-info">
-                          <div className="row-title">{d.nom}</div>
-                          <div className="row-sub">
-                            {d.date ? `Ajouté le ${formatDate(d.date)}` : ''}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row-right">
-                        <StatusBadge status={d.statut} />
-                        {d.statut === 'en_attente' && d.lien ? (
-                          <a href={d.lien} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                            <SignIcon /> Signer
-                          </a>
-                        ) : d.lien ? (
-                          <a href={d.lien} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-                            <DownloadIcon /> PDF
-                          </a>
-                        ) : null}
-                      </div>
-                    </div>
-                  );
-                })
-              )}
-            </>
-          )}
+        {liens.length > 0 && (
+          <section className="block wrap" id="liens">
+            <div className="head"><div><span className="lbl">Autres livrables</span><h2>Liens et fichiers</h2></div></div>
+            <div className="docs">
+              {liens.map((p, i) => (
+                <div className="doc" key={i}>
+                  <span className="ico">{(p.type || 'lien').slice(0, 4).toUpperCase()}</span>
+                  <span><b>{p.nom}</b><small>{[p.type, dateLongue(p.date)].filter(Boolean).join(' · ')}</small></span>
+                  <span />
+                  {p.lien ? <a className="btn dl" href={p.lien} target="_blank" rel="noopener">Ouvrir ↗</a> : <span />}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
-          {/* ====== PAIEMENTS ====== */}
-          {activeTab === 'paiements' && (
-            <>
-              <div className="content-header">Facturation</div>
-              {paiements.length === 0 ? (
-                <div className="empty-state">Aucune facture pour le moment.</div>
-              ) : (
-                <>
-                  {paiements.map((p) => {
-                    const isPaid = ['payé', 'paye'].includes(p.statut);
-                    return (
-                      <div key={p.id} className="content-row">
-                        <div className="row-left">
-                          <div className={`row-icon ${isPaid ? 'green' : 'orange'}`}>
-                            <PayIcon />
-                          </div>
-                          <div className="row-info">
-                            <div className="row-title">{p.label}</div>
-                            <div className="row-sub">
-                              {p.date ? `Échéance : ${formatDate(p.date)}` : ''}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row-right">
-                          <span className="amount">
-                            {formatMontant(p.montant, p.devise)}
-                          </span>
-                          <StatusBadge status={p.statut} />
-                          {!isPaid && p.lien && (
-                            <a href={p.lien} target="_blank" rel="noopener noreferrer" className="btn btn-success">
-                              Payer maintenant
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    );
-                  })}
-                  <div className="total-bar">
-                    <span className="total-label">Total projet</span>
-                    <span className="total-amount">
-                      {formatMontant(total, devise)}
-                    </span>
-                  </div>
-                </>
-              )}
-            </>
-          )}
-        </div>
-
-        {/* Footer */}
-        <div className="portal-footer">
-          <div className="portal-footer-logo">TL</div>
-          <span>© 2026 Thomas Loiseau Visuals — Lausanne, Suisse</span>
-          <a href="https://thomasloiseauvisuals.com" target="_blank" rel="noopener">
-            thomasloiseauvisuals.com
-          </a>
-        </div>
+        {(documents.length > 0 || paiements.length > 0) && (
+          <section className="block wrap" id="documents">
+            <div className="head"><div><span className="lbl">Documents</span><h2>Contrats et factures</h2></div></div>
+            <div className="docs">
+              {documents.map((d) => { const [c, l] = pastille(d.statut); return (
+                <div className="doc" key={'d' + d.id}>
+                  <span className="ico">PDF</span>
+                  <span><b>{d.nom}</b><small>{[d.type, dateLongue(d.date)].filter(Boolean).join(' · ')}</small></span>
+                  <span className={`pill ${c}`}>{l}</span>
+                  {d.lien ? <a className="btn dl" href={d.lien} target="_blank" rel="noopener">Ouvrir ↗</a> : <span />}
+                </div>
+              ); })}
+              {paiements.map((p) => { const [c, l] = pastille(p.statut); return (
+                <div className="doc" key={'p' + p.id}>
+                  <span className="ico">{p.devise === 'EUR' ? '€' : p.devise}</span>
+                  <span><b>{p.label}</b><small>{[montant(p.montant, p.devise), dateLongue(p.date)].filter(Boolean).join(' · ')}</small></span>
+                  <span className={`pill ${c}`}>{l}</span>
+                  {p.lien ? <a className="btn dl" href={p.lien} target="_blank" rel="noopener">Ouvrir ↗</a> : <span />}
+                </div>
+              ); })}
+            </div>
+          </section>
+        )}
       </main>
-    </div>
+
+      <footer><div className="wrap"><span>TL Visuals · Thomas Loiseau · <a href="https://thomasloiseauvisuals.com" target="_blank" rel="noopener">thomasloiseauvisuals.com</a></span><span>Une question sur une livraison ? Écrivez-moi, je réponds vite.</span></div></footer>
+
+      {ouvert && <Lecteur item={ouvert} verrou={verrou} onClose={() => setOuvert(null)} />}
+    </>
   );
 }

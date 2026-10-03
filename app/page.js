@@ -33,12 +33,12 @@ export default function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-card">
-        <div className="login-logo">TL</div>
+        <img src="/tlv.png" alt="TL Visuals" />
         <h1 className="login-title">Espace Client</h1>
-        <p className="login-subtitle">Accédez à vos livrables, documents et factures</p>
+        <p className="login-subtitle">Vos vidéos à regarder et à télécharger, vos contrats et vos factures.</p>
         <form className="login-form" onSubmit={handleSubmit}>
           <input className="login-input" type="text" placeholder="Votre code d'accès" value={code} onChange={(e) => { setCode(e.target.value.toUpperCase()); setError(''); }} autoFocus autoComplete="off" spellCheck="false" />
-          <button className="login-button" type="submit" disabled={loading || !code.trim()}>{loading ? 'Connexion...' : 'Accéder à mon espace'}</button>
+          <button className="btn go" type="submit" disabled={loading || !code.trim()}>{loading ? 'Connexion...' : 'Accéder à mon espace'}</button>
         </form>
         {error && <p className="login-error">{error}</p>}
         <div className="login-footer">

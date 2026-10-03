@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { idDrive, collection, fichier, driveActif } from '@/lib/drive';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 
@@ -52,6 +53,17 @@ function getVal(row, headers, name, fallbackIndex) {
   return '';
 }
 
+// Ajoute le contenu Drive : un dossier de vidéos devient une collection, un fichier vidéo reçoit durée, taille et format.
+async function enrichir(p) {
+  if (!p.ref || !driveActif || p.statut === 'en_cours') return;
+  try {
+    if (p.ref.dossier && /vid/i.test(p.type)) p.collection = await collection(p.ref.dossier);
+    else if (p.ref.fichier) p.media = await fichier(p.ref.fichier);
+  } catch (e) {
+    console.error('Drive', p.nom, e.message);
+  }
+}
+
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const code = (searchParams.get('code') || '').trim().toUpperCase();
@@ -98,6 +110,9 @@ export async function GET(request) {
           entreprise: getVal(row, cH, 'entreprise', 1),
           contact: getVal(row, cH, 'contact', 2),
           email: getVal(row, cH, 'email', 3),
+          logo: getVal(row, cH, 'logo'),
+          couleur: getVal(row, cH, 'couleur'),
+          telechargement: getVal(row, cH, 'telechargement').toLowerCase(),
         };
         break;
       }
@@ -121,7 +136,10 @@ export async function GET(request) {
         statut: getVal(row, pH, 'statut', 3).toLowerCase() || 'en_cours',
         date: getVal(row, pH, 'date', 4),
         lien: getVal(row, pH, 'lien', 5),
+        etape: getVal(row, pH, 'etape'),
+        ref: idDrive(getVal(row, pH, 'lien', 5)),
       }));
+    await Promise.all(clientProjets.map(enrichir));
 
     // Filter documents
     const dH = documentsData.headers;

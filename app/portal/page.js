@@ -45,7 +45,7 @@ function couleurTexte(hex) {
 
 const ETAPES = ['Tournage', 'Montage', 'Musique', 'Validation', 'Livraison'];
 
-// Couleur du bandeau d'après le logo : un fond opaque est prolongé, un logo clair sur transparent passe sur fond sombre.
+// Couleur du bandeau d'après le logo : un fond opaque est prolongé, un logo clair passe sur fond sombre.
 function fondDuLogo(img) {
   try {
     const c = document.createElement('canvas');
@@ -55,9 +55,15 @@ function fondDuLogo(img) {
     x.drawImage(img, 0, 0, c.width, c.height);
     const d = x.getImageData(0, 0, c.width, c.height).data;
     if (d[3] > 250) return '#' + [d[0], d[1], d[2]].map((v) => v.toString(16).padStart(2, '0')).join('');
-    let s = 0, n = 0;
-    for (let i = 0; i < d.length; i += 4) if (d[i + 3] > 128) { s += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2]; n++; }
-    return n && s / n > 170 ? '#141412' : null;
+    // plus de 10 % de blanc ou d'argent : le logo se lit mal sur le crème, il passe sur fond sombre
+    let clair = 0, n = 0;
+    for (let i = 0; i < d.length; i += 4) {
+      if (d[i + 3] <= 128) continue;
+      n++;
+      const [r, g, b] = [d[i], d[i + 1], d[i + 2]];
+      if (0.299 * r + 0.587 * g + 0.114 * b > 185 && Math.max(r, g, b) - Math.min(r, g, b) < 40) clair++;
+    }
+    return n && clair / n > 0.1 ? '#141412' : null;
   } catch {
     return null; // logo hébergé ailleurs : illisible pour le canvas, on garde le fond par défaut
   }

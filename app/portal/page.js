@@ -45,6 +45,24 @@ function couleurTexte(hex) {
 
 const ETAPES = ['Tournage', 'Montage', 'Musique', 'Validation', 'Livraison'];
 
+// Couleur du bandeau d'après le logo : un fond opaque est prolongé, un logo clair sur transparent passe sur fond sombre.
+function fondDuLogo(img) {
+  try {
+    const c = document.createElement('canvas');
+    c.width = 48;
+    c.height = Math.max(1, Math.round((48 * img.naturalHeight) / img.naturalWidth) || 48);
+    const x = c.getContext('2d');
+    x.drawImage(img, 0, 0, c.width, c.height);
+    const d = x.getImageData(0, 0, c.width, c.height).data;
+    if (d[3] > 250) return '#' + [d[0], d[1], d[2]].map((v) => v.toString(16).padStart(2, '0')).join('');
+    let s = 0, n = 0;
+    for (let i = 0; i < d.length; i += 4) if (d[i + 3] > 128) { s += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2]; n++; }
+    return n && s / n > 170 ? '#141412' : null;
+  } catch {
+    return null; // logo hébergé ailleurs : illisible pour le canvas, on garde le fond par défaut
+  }
+}
+
 /* ====== Icônes ====== */
 const IcoDl = () => (<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M8 2v8m0 0 3.5-3.5M8 10 4.5 6.5M2.5 13.5h11" /></svg>);
 const IcoLock = () => (<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="7" width="10" height="7" rx="1.5" /><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" /></svg>);
@@ -152,7 +170,8 @@ export default function PortalPage() {
   const router = useRouter();
   const [data, setData] = useState(null);
   const [ouvert, setOuvert] = useState(null);
-  const [logoOk, setLogoOk] = useState(true);
+  const [essaiLogo, setEssaiLogo] = useState(0);
+  const [fondAuto, setFondAuto] = useState(null);
 
   useEffect(() => {
     const code = sessionStorage.getItem('tlv_code');
@@ -192,9 +211,11 @@ export default function PortalPage() {
 
   const { client, documents, paiements } = data;
   const { enCours, collections, films, liens, une, verrou } = vue;
-  const fond = client.couleur || '#f3eee4';
+  const fond = client.couleur || fondAuto || '#f3eee4';
   const idLogo = client.logo && client.logo.match(/[\w-]{25,}/)?.[0];
-  const logo = !client.logo ? `/logos/${slug(client.entreprise)}.png` : /drive\.google/.test(client.logo) && idLogo ? vignetteUrl(idLogo) : client.logo;
+  const logos = !client.logo ? ['png', 'svg'].map((e) => `/logos/${slug(client.entreprise)}.${e}`)
+    : [/drive\.google/.test(client.logo) && idLogo ? vignetteUrl(idLogo) : client.logo];
+  const logo = logos[essaiLogo];
   const nav = [films.length && ['films', 'Films'], ...collections.map((c) => [slug(c.nom), c.nom]),
     enCours.length && ['en-cours', 'En cours'], (documents.length || paiements.length) && ['documents', 'Documents']].filter(Boolean);
   const prenom = (client.contact || '').split(/\s+/)[0];
@@ -215,8 +236,8 @@ export default function PortalPage() {
 
       <main id="haut">
         <section className="cover" style={{ background: fond, color: couleurTexte(fond), '--fond': fond, '--txt': couleurTexte(fond) }}>
-          <div className={`wrap${logoOk ? '' : ' nologo'}`}>
-            {logoOk && <img src={logo} alt={client.entreprise} onError={() => setLogoOk(false)} />}
+          <div className={`wrap${logo ? '' : ' nologo'}`}>
+            {logo && <img key={logo} src={logo} alt={client.entreprise} onError={() => setEssaiLogo((n) => n + 1)} onLoad={(e) => setFondAuto(fondDuLogo(e.currentTarget))} />}
             <div>
               {prenom && <span className="lbl">Bonjour {prenom}</span>}
               <h1>{client.entreprise}</h1>

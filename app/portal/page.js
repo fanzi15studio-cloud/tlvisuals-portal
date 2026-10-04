@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 /* ====== Drive ====== */
 const fichierUrl = (id) => `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t`;
-const vignetteUrl = (id) => `https://lh3.googleusercontent.com/d/${id}=w1280`;
+const vignetteUrl = (id) => `/api/vignette?id=${id}`;
 const dossierUrl = (id) => `https://drive.google.com/drive/folders/${id}`;
 const lecteurUrl = (id) => `https://drive.google.com/file/d/${id}/preview`;
 

@@ -201,7 +201,11 @@ export default function PortalPage() {
     // à la une : la livraison la plus récente (film seul, ou dernière vidéo paysage du dossier le plus récent)
     const candidats = [
       ...films.filter((f) => !f.versions[0].vertical).map((f) => [dateDe(f.date), f]),
-      ...collections.map((c) => [dateDe(c.date), c.collection.items.filter((i) => !i.versions[0].vertical).at(-1)]),
+      ...collections.map((c) => {
+        // vidéos du dossier lui-même d'abord : un sous-dossier (ex. ambiance) ne doit pas passer « à la une »
+        const h = c.collection.items.filter((i) => !i.versions[0].vertical);
+        return [dateDe(c.date), h.filter((i) => !i.groupe).at(-1) || h.at(-1)];
+      }),
     ].filter(([, it]) => it).sort((a, b) => (b[0] || 0) - (a[0] || 0));
     const toutes = [...films, ...collections.flatMap((c) => c.collection.items)];
     return {

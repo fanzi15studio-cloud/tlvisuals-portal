@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 /* ====== Drive ====== */
@@ -128,6 +128,20 @@ function Lecteur({ item, verrou, onClose }) {
   const [n, setN] = useState(0);
   const v = item.versions[n];
   const m = item.titre.match(/^(.+?)\s+·\s+(.+)$/);
+  // Les commandes de Drive ont besoin d'une place minimale, sinon elles sortent du cadre : au doigt, 460 px de large
+  // (cadre vertical) ou 420 px de haut (cadre horizontal) ; à la souris, 400 × 300. Plus petit, Drive est dessiné à
+  // cette taille puis réduit pour tenir dans le cadre.
+  const cadre = useRef(null);
+  const [echelle, setEchelle] = useState(1);
+  useEffect(() => {
+    const ro = new ResizeObserver(([e]) => {
+      const { width: l, height: h } = e.contentRect;
+      const s = matchMedia('(pointer: coarse)').matches ? (h >= l ? l / 460 : h / 420) : Math.min(l / 400, h / 300);
+      setEchelle(Math.min(1, s));
+    });
+    ro.observe(cadre.current);
+    return () => ro.disconnect();
+  }, []);
   useEffect(() => {
     const k = (e) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', k);
@@ -139,7 +153,10 @@ function Lecteur({ item, verrou, onClose }) {
       <div className={`player${v.vertical ? ' vert' : ''}`} role="dialog" aria-modal="true" aria-label={item.titre}>
         <div className="screen">
           {/* lecteur intégrable de Drive : Drive refuse la lecture directe depuis un autre site, et adapte ici la qualité au débit */}
-          <iframe key={v.id} src={lecteurUrl(v.id)} title={item.titre} allow="autoplay; fullscreen" allowFullScreen />
+          <div className="cadre" ref={cadre}>
+            <iframe key={v.id} src={lecteurUrl(v.id)} title={item.titre} allow="autoplay; fullscreen" allowFullScreen
+              style={echelle < 1 ? { width: `${100 / echelle}%`, height: `${100 / echelle}%`, transform: `scale(${echelle})` } : undefined} />
+          </div>
         </div>
         <div className="side">
           <div><span className="lbl">{m ? m[1] : item.groupe ? groupeJoli(item.groupe) : 'Vidéo'}</span><h2>{joli(m ? m[2] : item.titre)}</h2></div>

@@ -31,10 +31,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: .02e
 /* barre du haut */
 .top { position: sticky; top: 0; z-index: 30; background: rgba(11, 11, 10, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; gap: 16px; padding-block: 10px; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex: none; } /* ne rétrécit pas : sinon « Espace client » passe sous le menu */
 .brand img { height: 30px; width: auto; }
 .brand span { white-space: nowrap; font-family: var(--display); font-size: 20px; letter-spacing: .08em; padding-left: 12px; border-left: 1px solid var(--line); }
-.nav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; margin-left: auto; } /* menu long : passe à la ligne plutôt que de cacher des liens */
 .nav a { color: var(--mute); text-decoration: none; font-weight: 500; font-size: 14px; padding: 8px 10px; border-radius: 999px; white-space: nowrap; }
 .nav a:hover { color: var(--fg); background: var(--raise); }
 .me { display: flex; align-items: center; gap: 10px; margin-left: auto; }
@@ -156,8 +156,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
 .seg { display: grid; gap: 6px; }
 .seg button { text-align: left; background: var(--raise); border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; font-size: 13px; color: var(--mute); }
 .seg button.on { border-color: var(--neon); color: var(--fg); }
-.x { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); font-size: 20px; line-height: 1; }
-@media (pointer: coarse) { .x { width: 44px; height: 44px; } } /* au doigt : 44 px minimum */
+.x { position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); font-size: 20px; line-height: 1; }
 .dlbox { display: grid; gap: 8px; }
 .dlopt { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; align-items: center; background: var(--raise); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; text-decoration: none; }
 .dlopt:hover { border-color: var(--neon); }
@@ -189,7 +188,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
   .nav + .me { margin-left: auto; } /* menu masqué : Déconnexion reste calée à droite */
   .player.vert .cadre { max-height: 70vh; width: auto; height: 70vh; min-width: min(320px, 100%); }
   /* fermer : au-dessus du lecteur, pour ne pas couvrir le bouton « nouvelle fenêtre » de Drive */
-  .x { position: static; order: -1; justify-self: end; width: 44px; height: 44px; margin: 4px 4px 0 0; }
+  .x { position: static; order: -1; justify-self: end; margin: 4px 4px 0 0; }
   .doc { grid-template-columns: 40px minmax(0, 1fr) auto; }
   .doc > :last-child { grid-column: 2 / -1; justify-self: start; }
 }

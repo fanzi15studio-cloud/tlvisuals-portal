@@ -147,7 +147,7 @@ export async function GET(request) {
     const dRows = dSkip ? documentsData.rows.slice(1) : documentsData.rows;
     
     const clientDocs = dRows
-      .filter((row) => getVal(row, dH, 'code', 0).toUpperCase() === code)
+      .filter((row) => getVal(row, dH, 'code', 0).toUpperCase() === code && getVal(row, dH, 'nom', 1)) // ligne sans nom (code seul) : ignorée
       .map((row, i) => ({
         id: i + 1,
         nom: getVal(row, dH, 'nom', 1),
@@ -163,7 +163,7 @@ export async function GET(request) {
     const paRows = paSkip ? paiementsData.rows.slice(1) : paiementsData.rows;
     
     const clientPaiements = paRows
-      .filter((row) => getVal(row, paH, 'code', 0).toUpperCase() === code)
+      .filter((row) => getVal(row, paH, 'code', 0).toUpperCase() === code && (getVal(row, paH, 'label', 1) || getVal(row, paH, 'montant', 2))) // ligne vide : ignorée (sinon « en attente » verrouille les téléchargements)
       .map((row, i) => ({
         id: i + 1,
         label: getVal(row, paH, 'label', 1),

@@ -10,7 +10,8 @@ export async function GET(request) {
   if (!/^[\w-]{10,}$/.test(id)) return new Response('id invalide', { status: 400 });
   if (!KEY) return NextResponse.redirect(`https://lh3.googleusercontent.com/d/${id}=w1280`);
 
-  const meta = await fetch(`${API}/${id}?fields=mimeType,thumbnailLink&key=${KEY}`, { next: { revalidate: 86400 } });
+  // jamais mis en cache : thumbnailLink expire au bout de quelques heures (la réponse finale, elle, est gardée par le CDN)
+  const meta = await fetch(`${API}/${id}?fields=mimeType,thumbnailLink&key=${KEY}`, { cache: 'no-store' });
   if (!meta.ok) return new Response('introuvable', { status: 404 });
   const { mimeType, thumbnailLink } = await meta.json();
   // une image (.jpg posée à côté de la vidéo) est servie telle quelle, sinon la miniature calculée par Drive

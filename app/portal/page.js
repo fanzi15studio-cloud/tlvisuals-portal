@@ -284,7 +284,9 @@ export default function PortalPage() {
         {films.length > 0 && (
           <section className="block wrap" id="films">
             <div className="head"><div><span className="lbl">Films</span><h2>Vos films</h2></div></div>
-            <div className="grid">{films.map((f) => <Carte key={f.versions[0].id} item={f} onOpen={setOuvert} />)}</div>
+            {/* films verticaux en vignettes 9:16 comme les shorts, pas en cartes géantes */}
+            {films.some((f) => !f.versions[0].vertical) && <div className="grid">{films.filter((f) => !f.versions[0].vertical).map((f) => <Carte key={f.versions[0].id} item={f} onOpen={setOuvert} />)}</div>}
+            {films.some((f) => f.versions[0].vertical) && <div className="vgrid">{films.filter((f) => f.versions[0].vertical).map((f) => <Carte key={f.versions[0].id} item={f} onOpen={setOuvert} />)}</div>}
           </section>
         )}
 

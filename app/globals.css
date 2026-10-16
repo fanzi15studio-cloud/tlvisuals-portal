@@ -92,6 +92,7 @@ section.block { padding-block: 44px 8px; scroll-margin-top: 70px; }
 .card:hover .shot img { transform: scale(1.03); }
 .card .play { opacity: 0; }
 .card:hover .play, .card:focus-visible .play { opacity: 1; }
+@media (hover: none) { .card .play { opacity: 1; } } /* écran tactile : pas de survol, le bouton lecture reste affiché */
 .card .play i { width: 48px; height: 48px; }
 .card .play i::after { border-left-width: 14px; border-top-width: 9px; border-bottom-width: 9px; margin-left: 4px; }
 .dur { position: absolute; right: 8px; bottom: 8px; background: rgba(0, 0, 0, .72); padding: 3px 7px; border-radius: 5px; }
@@ -138,11 +139,12 @@ footer { margin-top: 60px; border-top: 1px solid var(--line); padding-block: 28p
 footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
 
 /* lecteur */
-.modal { position: fixed; inset: 0; z-index: 60; background: var(--veil); backdrop-filter: blur(6px); display: grid; place-items: center; padding: 16px; overflow-y: auto; }
-.player { position: relative; width: min(1120px, 100%); background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) 300px; }
+.modal { position: fixed; inset: 0; z-index: 60; background: var(--veil); backdrop-filter: blur(6px); display: flex; padding: 16px; overflow-y: auto; }
+.player { position: relative; margin: auto; width: min(1120px, 100%); background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) 300px; }
 .player.vert { width: min(780px, 100%); grid-template-columns: minmax(0, 360px) minmax(0, 1fr); }
 .screen { background: #000; display: grid; place-items: center; min-width: 0; }
-.screen iframe { display: block; width: 100%; aspect-ratio: 16/9; max-height: 80vh; border: 0; background: #000; }
+/* le lecteur Drive se dessine sur 320 × 300 px minimum : plus petit, il déborde du cadre et ses commandes sont coupées */
+.screen iframe { display: block; width: 100%; aspect-ratio: 16/9; max-height: 80vh; min-height: 300px; border: 0; background: #000; }
 .player.vert .screen iframe { aspect-ratio: 9/16; }
 .side { padding: 22px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .side h2 { font-size: 34px; margin-top: 4px; padding-right: 36px; }
@@ -178,7 +180,9 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
   .cover .wrap, .hero-card, .wip, .player, .player.vert { grid-template-columns: minmax(0, 1fr); }
   .cover img { max-width: 240px; }
   .nav, .who { display: none; }
-  .player.vert .screen iframe { max-height: 70vh; width: auto; height: 70vh; }
+  .player.vert .screen iframe { max-height: 70vh; width: auto; height: 70vh; min-width: min(320px, 100%); }
+  /* fermer : au-dessus du lecteur, pour ne pas couvrir le bouton « nouvelle fenêtre » de Drive */
+  .x { position: static; order: -1; justify-self: end; width: 44px; height: 44px; margin: 4px 4px 0 0; }
   .doc { grid-template-columns: 40px minmax(0, 1fr) auto; }
   .doc > :last-child { grid-column: 2 / -1; justify-self: start; }
 }

@@ -35,7 +35,7 @@ export default function LoginPage() {
       <div className="login-card">
         <img src="/tlv.png" alt="TL Visuals" />
         <h1 className="login-title">Espace Client</h1>
-        <p className="login-subtitle">Vos vidéos à regarder et à télécharger, vos contrats et vos factures.</p>
+        <p className="login-subtitle">Tous vos livrables au même endroit : films, photos, contrats et factures, à regarder et à télécharger.</p>
         <form className="login-form" onSubmit={handleSubmit}>
           <input className="login-input" type="text" placeholder="Votre code d'accès" value={code} onChange={(e) => { setCode(e.target.value.toUpperCase()); setError(''); }} autoFocus autoComplete="off" spellCheck="false" />
           <button className="btn go" type="submit" disabled={loading || !code.trim()}>{loading ? 'Connexion...' : 'Accéder à mon espace'}</button>

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { idDrive, collection, fichier, driveActif } from '@/lib/drive';
+import { idDrive, collection, photos, fichier, driveActif } from '@/lib/drive';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 
@@ -53,11 +53,13 @@ function getVal(row, headers, name, fallbackIndex) {
   return '';
 }
 
-// Ajoute le contenu Drive : un dossier de vidéos devient une collection, un fichier vidéo reçoit durée, taille et format.
+// Ajoute le contenu Drive : un dossier de vidéos devient une collection, un dossier de photos une galerie,
+// un fichier vidéo reçoit durée, taille et format.
 async function enrichir(p) {
   if (!p.ref || !driveActif || p.statut === 'en_cours') return;
   try {
     if (p.ref.dossier && /vid/i.test(p.type)) p.collection = await collection(p.ref.dossier);
+    else if (p.ref.dossier && /photo/i.test(p.type)) p.photos = await photos(p.ref.dossier);
     else if (p.ref.fichier) p.media = await fichier(p.ref.fichier);
   } catch (e) {
     console.error('Drive', p.nom, e.message);

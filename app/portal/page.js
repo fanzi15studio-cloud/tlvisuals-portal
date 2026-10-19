@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 /* ====== Drive ====== */
 const fichierUrl = (id) => `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t`;
 const vignetteUrl = (id) => `/api/vignette?id=${id}`;
+const miniUrl = (id) => `/api/vignette?id=${id}&mini=1`;
 const dossierUrl = (id) => `https://drive.google.com/drive/folders/${id}`;
 const lecteurUrl = (id) => `https://drive.google.com/file/d/${id}/preview`;
 
@@ -123,6 +124,61 @@ function Collection({ p, onOpen, verrou }) {
   );
 }
 
+/* ====== Photos ====== */
+function Galerie({ p, onOpen, verrou }) {
+  return (
+    <section className="block wrap" id={slug(p.nom)}>
+      <div className="head">
+        <div><span className="lbl">Photos · {p.photos.length}</span><h2>{p.nom}</h2></div>
+        {!verrou && <a className="btn dl" href={dossierUrl(p.ref.dossier)} target="_blank" rel="noopener"><IcoDl /> Tout télécharger</a>}
+      </div>
+      <div className="pgrid">
+        {p.photos.map((f, i) => (
+          <button key={f.id} className={`ph${f.vertical ? ' v' : ''}`} onClick={() => onOpen({ liste: p.photos, i })} aria-label={`Voir la photo ${i + 1} sur ${p.photos.length}`}>
+            <img src={miniUrl(f.id)} alt="" loading="lazy" />
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// Visionneuse plein écran : photo HD, flèches (clavier ←/→, glisser au doigt), téléchargement de la photo affichée.
+function Visionneuse({ liste, depart, verrou, onClose }) {
+  const [i, setI] = useState(depart);
+  const f = liste[i];
+  const aller = (d) => setI((n) => (n + d + liste.length) % liste.length);
+  const doigt = useRef(null);
+  useEffect(() => {
+    const k = (e) => { if (e.key === 'Escape') onClose(); if (e.key === 'ArrowRight') aller(1); if (e.key === 'ArrowLeft') aller(-1); };
+    document.addEventListener('keydown', k);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', k); document.body.style.overflow = ''; };
+  }, [onClose]); // eslint-disable-line react-hooks/exhaustive-deps
+  // la photo suivante se charge en arrière-plan : le passage de l'une à l'autre est immédiat
+  useEffect(() => { new Image().src = vignetteUrl(liste[(i + 1) % liste.length].id); }, [i, liste]);
+  return (
+    <div className="lb" role="dialog" aria-modal="true" aria-label={`Photo ${i + 1} sur ${liste.length}`}
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+      onTouchStart={(e) => { doigt.current = e.touches[0].clientX; }}
+      onTouchEnd={(e) => { const dx = e.changedTouches[0].clientX - (doigt.current ?? 0); if (Math.abs(dx) > 50) aller(dx < 0 ? 1 : -1); }}>
+      <div className="lb-top">
+        <span className="mono">{String(i + 1).padStart(2, '0')} / {String(liste.length).padStart(2, '0')}</span>
+        <div className="row">
+          {verrou ? <span className="locked"><IcoLock /> Téléchargement après règlement</span>
+            : <a className="btn go" href={fichierUrl(f.id)}><IcoDl /> Télécharger{f.taille ? ` · ${taille(f.taille)}` : ''}</a>}
+          <button className="x lb-x" onClick={onClose} aria-label="Fermer">×</button>
+        </div>
+      </div>
+      <img key={f.id} className="lb-img" src={vignetteUrl(f.id)} alt={`Photo ${i + 1}`} onClick={(e) => e.stopPropagation()} />
+      {liste.length > 1 && <>
+        <button className="lb-nav prev" onClick={() => aller(-1)} aria-label="Photo précédente">‹</button>
+        <button className="lb-nav next" onClick={() => aller(1)} aria-label="Photo suivante">›</button>
+      </>}
+    </div>
+  );
+}
+
 /* ====== Lecteur ====== */
 function Lecteur({ item, verrou, onClose }) {
   const [n, setN] = useState(0);
@@ -193,6 +249,7 @@ export default function PortalPage() {
   const router = useRouter();
   const [data, setData] = useState(null);
   const [ouvert, setOuvert] = useState(null);
+  const [photo, setPhoto] = useState(null);
   const [essaiLogo, setEssaiLogo] = useState(0);
   const [fondAuto, setFondAuto] = useState(null);
 
@@ -214,7 +271,8 @@ export default function PortalPage() {
     const filmsP = dispo.filter((p) => !p.collection && p.ref?.fichier && (p.media ? p.media.mime?.startsWith('video/') : /vid/i.test(p.type)));
     const films = filmsP.map((p) => ({ titre: p.nom, date: p.date, srt: null,
       versions: [{ id: p.ref.fichier, poster: p.ref.fichier, label: null, duree: p.media?.duree || 0, taille: p.media?.taille || 0, vertical: p.media?.vertical || false }] }));
-    const liens = dispo.filter((p) => !collections.includes(p) && !filmsP.includes(p));
+    const galeries = dispo.filter((p) => p.photos?.length);
+    const liens = dispo.filter((p) => !collections.includes(p) && !filmsP.includes(p) && !galeries.includes(p));
     // à la une : la livraison la plus récente (film seul, ou dernière vidéo paysage du dossier le plus récent)
     const candidats = [
       ...films.filter((f) => !f.versions[0].vertical).map((f) => [dateDe(f.date), f]),
@@ -226,7 +284,8 @@ export default function PortalPage() {
     ].filter(([, it]) => it).sort((a, b) => (b[0] || 0) - (a[0] || 0));
     const toutes = [...films, ...collections.flatMap((c) => c.collection.items)];
     return {
-      enCours, collections, films, liens,
+      enCours, collections, films, liens, galeries,
+      nbPhotos: galeries.reduce((n, g) => n + g.photos.length, 0),
       une: candidats[0] ? { item: candidats[0][1], date: candidats[0][0] } : null,
       verrou: client.telechargement.startsWith('apr') && paiements.some((p) => !/pay/i.test(p.statut)),
       nbPaysage: toutes.filter((i) => !i.versions[0].vertical).length,
@@ -237,13 +296,13 @@ export default function PortalPage() {
   if (!vue) return <div className="etat"><span className="spin" aria-label="Chargement" /></div>;
 
   const { client, documents, paiements } = data;
-  const { enCours, collections, films, liens, une, verrou } = vue;
+  const { enCours, collections, films, liens, galeries, une, verrou } = vue;
   const fond = client.couleur || fondAuto || '#f3eee4';
   const idLogo = client.logo && client.logo.match(/[\w-]{25,}/)?.[0];
   const logos = !client.logo ? ['png', 'svg'].map((e) => `/logos/${slug(client.entreprise)}.${e}`)
     : [/drive\.google/.test(client.logo) && idLogo ? vignetteUrl(idLogo) : client.logo];
   const logo = logos[essaiLogo];
-  const nav = [films.length && ['films', 'Films'], ...collections.map((c) => [slug(c.nom), c.nom]),
+  const nav = [...galeries.map((g) => [slug(g.nom), 'Photos']), films.length && ['films', 'Films'], ...collections.map((c) => [slug(c.nom), c.nom]),
     enCours.length && ['en-cours', 'En cours'], (documents.length || paiements.length) && ['documents', 'Documents']].filter(Boolean);
   const prenom = (client.contact || '').split(/\s+/)[0];
   const initiales = (client.contact || client.entreprise).split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
@@ -270,6 +329,7 @@ export default function PortalPage() {
               <h1>{client.entreprise}</h1>
               <p>Tout ce que nous avons réalisé pour vous, à regarder ici ou à télécharger.</p>
               <div className="counts">
+                {vue.nbPhotos > 0 && <span><b>{vue.nbPhotos}</b>{vue.nbPhotos > 1 ? 'photos' : 'photo'}</span>}
                 {vue.nbPaysage > 0 && <span><b>{vue.nbPaysage}</b>{vue.nbPaysage > 1 ? 'vidéos' : 'vidéo'}</span>}
                 {vue.nbVertical > 0 && <span><b>{vue.nbVertical}</b>{vue.nbVertical > 1 ? 'vidéos verticales' : 'vidéo verticale'}</span>}
                 {enCours.length > 0 && <span className="live"><b>{enCours.length}</b>en cours</span>}
@@ -297,6 +357,8 @@ export default function PortalPage() {
             </div>
           </section>
         )}
+
+        {galeries.map((p) => <Galerie key={p.nom} p={p} onOpen={setPhoto} verrou={verrou} />)}
 
         {films.length > 0 && (
           <section className="block wrap" id="films">
@@ -378,6 +440,7 @@ export default function PortalPage() {
       <footer><div className="wrap"><span>TL Visuals · Thomas Loiseau · <a href="https://thomasloiseauvisuals.com" target="_blank" rel="noopener">thomasloiseauvisuals.com</a></span><span>Une question sur une livraison ? Écrivez-moi, je réponds vite.</span></div></footer>
 
       {ouvert && <Lecteur item={ouvert} verrou={verrou} onClose={() => setOuvert(null)} />}
+      {photo && <Visionneuse liste={photo.liste} depart={photo.i} verrou={verrou} onClose={() => setPhoto(null)} />}
     </>
   );
 }

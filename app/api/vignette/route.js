@@ -6,7 +6,9 @@ const API = 'https://www.googleapis.com/drive/v3/files';
 // Vignettes servies par le portail (API Drive officielle + cache CDN) : l'adresse directe
 // lh3.googleusercontent.com répond 429 dès qu'une page affiche quelques dizaines d'images.
 export async function GET(request) {
-  const id = new URL(request.url).searchParams.get('id') || '';
+  const params = new URL(request.url).searchParams;
+  const id = params.get('id') || '';
+  const mini = params.has('mini'); // grille de la galerie : miniature Drive (~150 Ko) au lieu de la photo HD
   if (!/^[\w-]{10,}$/.test(id)) return new Response('id invalide', { status: 400 });
   if (!KEY) return NextResponse.redirect(`https://lh3.googleusercontent.com/d/${id}=w1280`);
 
@@ -15,8 +17,8 @@ export async function GET(request) {
   if (!meta.ok) return new Response('introuvable', { status: 404 });
   const { mimeType, thumbnailLink } = await meta.json();
   // une image (.jpg posée à côté de la vidéo) est servie telle quelle, sinon la miniature calculée par Drive
-  const src = mimeType?.startsWith('image/') ? `${API}/${id}?alt=media&key=${KEY}`
-    : thumbnailLink?.replace(/=s\d+$/, '=s1280');
+  const src = mimeType?.startsWith('image/') && !mini ? `${API}/${id}?alt=media&key=${KEY}`
+    : thumbnailLink?.replace(/=s\d+$/, mini ? '=s900' : '=s1280');
   if (!src) return new Response('pas de vignette', { status: 404 });
 
   const r = await fetch(src, { cache: 'no-store' });

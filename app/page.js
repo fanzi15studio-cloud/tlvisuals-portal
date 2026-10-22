@@ -77,32 +77,69 @@ const REALISATIONS = [
   },
 ];
 
-const SAVOIR_FAIRE = [
-  { icon: '🎬', title: 'Vidéo', text: 'Films d’entreprise, produit, événement, interviews. Tournage 4K en Sony FX30 Cinema Line.' },
-  { icon: '📸', title: 'Photo', text: 'Portrait, packshot, culinaire en macro, reportage. Retouche soignée.' },
-  { icon: '🚁', title: 'Drone', text: 'Prises de vue aériennes pour lieux, bâtiments et événements.' },
-  { icon: '✂️', title: 'Montage', text: 'Final Cut Pro, étalonnage, motion design, déclinaisons tous formats.' },
-  { icon: '💻', title: 'Sites web', text: 'Sites rapides et sur mesure, réservation, paiement, formulaires, référencement.' },
-  { icon: '📈', title: 'Visibilité', text: 'Réseaux sociaux, publicité en ligne, automatisation de la prise de contact.' },
+const COMPETENCES = [
+  {
+    img: 'video',
+    pos: 'center 30%',
+    title: 'Vidéo',
+    text: 'Films d’entreprise, produit, événement, interview. Tournage 4K en Sony FX30, montage et étalonnage sur Final Cut Pro.',
+  },
+  {
+    img: 'studio-pov',
+    pos: 'center 40%',
+    title: 'Studio & packshot',
+    text: 'Mise en lumière, slider motorisé, plans produit au millimètre : ici en vue subjective, sur un tournage horlogerie.',
+  },
+  {
+    img: 'photo',
+    pos: 'center 45%',
+    title: 'Photo',
+    text: 'Portrait, packshot, culinaire en macro, reportage. Retouche soignée.',
+  },
+  {
+    img: 'drone',
+    pos: 'center 55%',
+    title: 'Drone',
+    text: 'Prises de vue aériennes de lieux, de bâtiments et d’événements.',
+  },
+  {
+    img: 'web',
+    pos: 'center 45%',
+    title: 'Sites web',
+    text: 'Sites rapides et sur mesure : réservation, paiement en ligne, formulaires, référencement.',
+  },
+  {
+    img: 'ia',
+    pos: 'center 30%',
+    title: 'Solutions IA',
+    text: 'Publicités générées par IA, automatisation des contacts et des tâches répétitives (Make, outils sur mesure).',
+  },
 ];
 
-const CLIENTS = [
-  'Artisans',
-  'Commerces & restaurants',
-  'Salles de sport & bien-être',
-  'PME & industrie',
-  'Startups',
+const SECTEURS = [
+  'Sport & bien-être',
+  'Artisanat',
   'Loisirs & tourisme',
-  'Associations & écoles',
-  'Événements',
+  'Restauration',
+  'Immobilier',
+  'Sécurité',
+  'Danse & culture',
+  'Événementiel',
 ];
 
 const PARCOURS = [
   {
-    period: '2009 — aujourd’hui',
-    role: 'Fondateur & directeur de production',
+    period: 'Depuis janvier 2026',
+    role: 'Fondateur & dirigeant',
     org: 'Thomas Loiseau Visuals',
-    text: "Production photo et vidéo de A à Z, puis création de sites et d'outils de communication pour des entreprises en Suisse romande et en France.",
+    logo: true,
+    text: 'Création et direction de la société : production photo et vidéo, sites web et solutions IA pour des entreprises en Suisse romande et en France.',
+  },
+  {
+    period: '2009 — 2025',
+    role: 'Vidéaste & photographe',
+    org: 'Activité indépendante',
+    text: 'Seize ans de tournages, de photos et de montages pour des marques, des événements et des réseaux sociaux.',
   },
   {
     period: '2015 — 2021',
@@ -133,48 +170,65 @@ const MATERIEL = [
   'Final Cut Pro',
 ];
 
+const TL_PATHS = [
+  'M459.165,1104.95 L471.163,1117.01 L477.877,1124.13 L513.783,1158.23 L513.967,853.497 L515.756,843.776 L562.696,843.549 L583.003,823.733 L602.313,804.029 L619.136,787.32 L661.392,744.714 L659.602,742.191 L247.831,742.322 L250.486,748.519 L256.258,753.87 L283.174,781.621 L336.695,835.303 L344.497,843.679 L407.983,843.813 L410.459,845.906 L410.874,864.504 L411.168,1056.67 L421.218,1066.99 L447.942,1093.88 L459.165,1104.95 Z',
+  'M552.122,1158.15 L860.464,1158.09 L869.777,1158.37 L868.358,1155.72 L861.927,1149.23 L842.919,1130.16 L837.811,1125.08 L829.359,1116.71 L768.877,1056.63 L640.435,1056.57 L640.394,798.378 L636.88,798.808 L627.631,808.513 L616.032,820.16 L606.643,829.623 L584.125,852.163 L576.876,859.1 L571.002,864.438 L538.091,864.771 L538.288,1136.04 L538.59,1149.72 L539.707,1158.14 L552.122,1158.15 Z',
+];
+
+function Monogram() {
+  return (
+    <svg viewBox="247 742 633 418" aria-hidden="true">
+      {TL_PATHS.map((d) => (
+        <path key={d.slice(0, 12)} d={d} />
+      ))}
+    </svg>
+  );
+}
+
 export default function CvPage() {
   return (
     <>
       <header className="nav">
         <a className="nav-brand" href="#top" aria-label="Haut de page">
           <span className="monogram">
-            <svg viewBox="247 742 633 418" aria-hidden="true">
-              <path d="M459.165,1104.95 L471.163,1117.01 L477.877,1124.13 L513.783,1158.23 L513.967,853.497 L515.756,843.776 L562.696,843.549 L583.003,823.733 L602.313,804.029 L619.136,787.32 L661.392,744.714 L659.602,742.191 L247.831,742.322 L250.486,748.519 L256.258,753.87 L283.174,781.621 L336.695,835.303 L344.497,843.679 L407.983,843.813 L410.459,845.906 L410.874,864.504 L411.168,1056.67 L421.218,1066.99 L447.942,1093.88 L459.165,1104.95 Z" />
-              <path d="M552.122,1158.15 L860.464,1158.09 L869.777,1158.37 L868.358,1155.72 L861.927,1149.23 L842.919,1130.16 L837.811,1125.08 L829.359,1116.71 L768.877,1056.63 L640.435,1056.57 L640.394,798.378 L636.88,798.808 L627.631,808.513 L616.032,820.16 L606.643,829.623 L584.125,852.163 L576.876,859.1 L571.002,864.438 L538.091,864.771 L538.288,1136.04 L538.59,1149.72 L539.707,1158.14 L552.122,1158.15 Z" />
-            </svg>
+            <Monogram />
           </span>
           <span>Thomas Loiseau</span>
         </a>
         <nav className="nav-links" aria-label="Sections">
           <a href="#realisations">2026</a>
-          <a href="#savoir-faire">Savoir-faire</a>
+          <a href="#competences">Compétences</a>
           <a href="#parcours">Parcours</a>
         </nav>
-        <a className="btn btn-small" href="#contact">Me contacter</a>
+        <a className="btn btn-small" href="#contact">Contact</a>
       </header>
 
       <main id="top">
         {/* HERO */}
         <section className="hero">
           <div className="hero-text">
-            <p className="eyebrow">
-              <span className="dot" /> Disponible pour de nouveaux projets
-            </p>
+            <p className="eyebrow">Curriculum vitae · 2026</p>
             <h1>
-              Je donne envie de pousser <em>votre</em> porte.
+              Thomas <em>Loiseau</em>
             </h1>
             <p className="lead">
-              Vidéaste, photographe et créateur de sites. Depuis 17 ans, je raconte des entreprises en
-              images, puis je construis les outils qui transforment ces images en clients.
+              Vidéaste, photographe et créateur de sites web. Dix-sept ans d’expérience de l’image, du
+              tournage à la livraison, et aujourd’hui à la tête de ma propre société.
             </p>
+            <div className="company">
+              <img src="/cv-digital/img/tlv-logo.svg" alt="Thomas Loiseau Visuals" width="96" height="73" />
+              <div>
+                <p className="company-role">Fondateur & dirigeant</p>
+                <p className="company-since">Thomas Loiseau Visuals · depuis janvier 2026</p>
+              </div>
+            </div>
             <div className="hero-actions">
-              <a className="btn" href="#contact">Parlons de votre projet</a>
+              <a className="btn" href="#contact">Me contacter</a>
               <a className="btn btn-ghost" href={CONTACT.site} target="_blank" rel="noopener noreferrer">
-                Voir le portfolio →
+                Voir mon portfolio →
               </a>
             </div>
-            <p className="hero-meta">Frontière franco-suisse · Permis B · Mobile partout</p>
+            <p className="hero-meta">Frontière franco-suisse · Permis B · Mobile</p>
           </div>
 
           <div className="hero-visual">
@@ -182,9 +236,9 @@ export default function CvPage() {
               <div className="portrait-frame" aria-hidden="true" />
               <img src="/cv-digital/thomas.webp" alt="Portrait de Thomas Loiseau" width="976" height="1200" />
             </div>
-            <span className="chip chip-1">🎥 Sony FX30</span>
-            <span className="chip chip-2">▶ 12,7 M de vues</span>
-            <span className="chip chip-3">💻 Sites sur mesure</span>
+            <span className="chip chip-1">Vidéaste</span>
+            <span className="chip chip-2">12,7 M de vues</span>
+            <span className="chip chip-3">Sites web & automatisations IA</span>
           </div>
         </section>
 
@@ -206,12 +260,9 @@ export default function CvPage() {
           <div className="section-head">
             <p className="kicker">L’année 2026</p>
             <h2>
-              Ce que j’ai réalisé <em>cette année</em>
+              Mes réalisations <em>cette année</em>
             </h2>
-            <p className="section-lead">
-              Une sélection de projets menés avec Thomas Loiseau Visuals, de l’image jusqu’au site qui
-              fait venir les clients.
-            </p>
+            <p className="section-lead">Une sélection de projets menés avec Thomas Loiseau Visuals.</p>
           </div>
           <div className="bento">
             {REALISATIONS.map((r) => (
@@ -229,28 +280,32 @@ export default function CvPage() {
           </div>
         </section>
 
-        {/* SAVOIR-FAIRE */}
-        <section id="savoir-faire" className="section">
+        {/* COMPÉTENCES */}
+        <section id="competences" className="section">
           <div className="section-head">
-            <p className="kicker">Savoir-faire</p>
+            <p className="kicker">Compétences</p>
             <h2>
-              Un seul interlocuteur, <em>de l’idée à la mise en ligne</em>
+              De l’idée <em>à la mise en ligne</em>
             </h2>
           </div>
           <div className="skills">
-            {SAVOIR_FAIRE.map((s) => (
-              <div key={s.title} className="skill">
-                <span className="skill-icon" aria-hidden="true">{s.icon}</span>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </div>
+            {COMPETENCES.map((c) => (
+              <figure key={c.title} className="skill">
+                <div className="skill-media">
+                  <img src={`/cv-digital/img/${c.img}.webp`} alt="" loading="lazy" style={{ objectPosition: c.pos }} />
+                </div>
+                <figcaption>
+                  <h3>{c.title}</h3>
+                  <p>{c.text}</p>
+                </figcaption>
+              </figure>
             ))}
           </div>
 
           <div className="for-who">
-            <p className="for-who-title">Pour qui ?</p>
+            <p className="for-who-title">Secteurs</p>
             <ul className="tags">
-              {CLIENTS.map((c) => (
+              {SECTEURS.map((c) => (
                 <li key={c}>{c}</li>
               ))}
             </ul>
@@ -261,13 +316,13 @@ export default function CvPage() {
         <section className="section">
           <div className="youtube">
             <div>
-              <p className="kicker kicker-light">La preuve par l’exemple</p>
+              <p className="kicker kicker-light">Projet personnel</p>
               <h2>
-                Des contenus qui <em>trouvent leur public</em>
+                Ma chaîne <em>YouTube</em>
               </h2>
               <p>
-                Avec ma chaîne @Fanzimotivation, j’ai appris ce qui fait qu’une vidéo est regardée
-                jusqu’au bout. Je mets ce savoir au service de vos réseaux.
+                Avec @Fanzimotivation, j’ai appris ce qui fait qu’une vidéo est regardée jusqu’au bout :
+                le rythme, l’accroche, le montage.
               </p>
               <a className="btn btn-light" href={CONTACT.youtube} target="_blank" rel="noopener noreferrer">
                 Voir la chaîne
@@ -288,11 +343,9 @@ export default function CvPage() {
             <h2>
               Un profil <em>hybride</em>
             </h2>
-            <p className="section-lead">
-              Image, terrain, commerce, artisanat : je parle le langage des entreprises que je filme.
-            </p>
+            <p className="section-lead">Image, terrain, commerce, artisanat.</p>
             <div className="gear">
-              <p className="for-who-title">Mon matériel</p>
+              <p className="for-who-title">Matériel</p>
               <ul className="tags tags-small">
                 {MATERIEL.map((m) => (
                   <li key={m}>{m}</li>
@@ -302,10 +355,14 @@ export default function CvPage() {
           </div>
           <ol className="timeline">
             {PARCOURS.map((p) => (
-              <li key={p.role}>
+              <li key={p.role} className={p.logo ? 'tl-current' : ''}>
                 <p className="tl-period">{p.period}</p>
                 <h3>{p.role}</h3>
-                <p className="tl-org">{p.org}</p>
+                {p.logo ? (
+                  <img className="tl-logo" src="/cv-digital/img/tlv-logo.svg" alt={p.org} width="84" height="64" />
+                ) : (
+                  <p className="tl-org">{p.org}</p>
+                )}
                 <p>{p.text}</p>
               </li>
             ))}
@@ -315,13 +372,13 @@ export default function CvPage() {
         {/* CONTACT */}
         <section id="contact" className="contact">
           <h2>
-            Un projet, une idée, <em>une envie&nbsp;?</em>
+            Me <em>joindre</em>
           </h2>
-          <p>Racontez-moi votre entreprise. Je vous réponds sous 24 heures.</p>
+          <p>Références et portfolio complet sur demande.</p>
           <div className="contact-actions">
             <a className="btn" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-            <a className="btn btn-ghost" href={`tel:${CONTACT.telChHref}`}>🇨🇭 {CONTACT.telCh}</a>
-            <a className="btn btn-ghost" href={`tel:${CONTACT.telHref}`}>🇫🇷 {CONTACT.tel}</a>
+            <a className="btn btn-ghost" href={`tel:${CONTACT.telChHref}`}>Suisse · {CONTACT.telCh}</a>
+            <a className="btn btn-ghost" href={`tel:${CONTACT.telHref}`}>France · {CONTACT.tel}</a>
           </div>
           <a className="contact-site" href={CONTACT.site} target="_blank" rel="noopener noreferrer">
             thomasloiseauvisuals.com

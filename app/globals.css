@@ -205,30 +205,12 @@ main {
   padding: 72px 0 48px;
 }
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: #fff;
-  box-shadow: var(--shadow);
   font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  margin-bottom: 28px;
-}
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #3fb67a;
-  box-shadow: 0 0 0 4px rgba(63, 182, 122, 0.18);
-  animation: pulse 2.4s ease-in-out infinite;
-}
-@keyframes pulse {
-  50% {
-    box-shadow: 0 0 0 8px rgba(63, 182, 122, 0);
-  }
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 20px;
 }
 .hero h1 {
   font-size: clamp(44px, 6.4vw, 84px);
@@ -241,6 +223,33 @@ main {
   color: var(--ink-soft);
   max-width: 34em;
   margin-bottom: 36px;
+}
+.company {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: fit-content;
+  padding: 14px 22px 14px 16px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.company img {
+  width: 72px;
+  height: auto;
+}
+.company-role {
+  font-weight: 700;
+}
+.company-since {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.tl-logo {
+  width: 72px;
+  height: auto;
+  margin: 8px 0 10px;
 }
 .hero-actions {
   display: flex;
@@ -260,7 +269,7 @@ main {
   width: 100%;
 }
 /* Cadre en arche : la photo (coupée net en bas) repose sur le bas du cadre,
-   la tête dépasse au-dessus. Même largeur, mêmes coins bas : aucun décalage. */
+   la tête dépasse au-dessus. Même largeur et bas droit : les bras se fondent dans l'encart. */
 .portrait {
   position: relative;
   width: 100%;
@@ -271,7 +280,7 @@ main {
   right: 0;
   bottom: 0;
   top: 18%;
-  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+  border-radius: 999px 999px 0 0;
   background:
     radial-gradient(ellipse 70% 60% at 30% 20%, rgba(255, 255, 255, 0.55), transparent 60%),
     linear-gradient(165deg, var(--apricot) 0%, #f6b496 60%, var(--coral) 140%);
@@ -279,7 +288,6 @@ main {
 .portrait img {
   position: relative;
   width: 100%;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 .chip {
   position: absolute;
@@ -442,24 +450,33 @@ main {
   gap: 16px;
 }
 .skill {
-  padding: 28px;
+  margin: 0;
+  overflow: hidden;
   border-radius: var(--radius);
   background: #fff;
   box-shadow: var(--shadow);
-  transition: transform 0.35s var(--ease);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 .skill:hover {
   transform: translateY(-4px);
+  box-shadow: 0 24px 40px -20px rgba(31, 27, 22, 0.28);
 }
-.skill-icon {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
+.skill-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   background: var(--paper-deep);
-  font-size: 24px;
-  margin-bottom: 18px;
+}
+.skill-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.skill:hover .skill-media img {
+  transform: scale(1.04);
+}
+.skill figcaption {
+  padding: 22px 24px 26px;
 }
 .skill h3 {
   font-size: 24px;

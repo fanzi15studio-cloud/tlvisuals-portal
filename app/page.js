@@ -92,9 +92,9 @@ const COMPETENCES = [
   },
   {
     img: 'photo',
-    pos: 'center 45%',
+    pos: 'center',
     title: 'Photo',
-    text: 'Portrait, packshot, culinaire en macro, reportage. Retouche soignée.',
+    text: 'Portrait, reportage, packshot, culinaire en macro. Ici, un reportage dans une salle de sport.',
   },
   {
     img: 'drone',
@@ -258,6 +258,30 @@ export default function CvPage() {
               <p className="stat-label">{s.label}</p>
             </div>
           ))}
+        </section>
+
+        {/* CLIENT PRINCIPAL */}
+        <section className="section" aria-labelledby="client-titre">
+          <article className="client">
+            <img className="client-logo" src="/cv-digital/img/ddl-logo.png" alt="Logo Doula des Lunes" width="214" height="216" />
+            <div className="client-body">
+              <p className="kicker">Client principal</p>
+              <h2 id="client-titre">
+                Doula des <em>Lunes</em>
+              </h2>
+              <p className="client-lead">
+                Organisme de formation de doulas. J’ai filmé en 4K une série de témoignages
+                d’anciennes élèves, puis réalisé les films d’interview et leurs déclinaisons courtes pour
+                les réseaux sociaux : montage, sous-titres animés, habillage graphique et renvoi vers la
+                chaîne YouTube.
+              </p>
+              <ul className="client-stats">
+                <li><strong>4</strong> films d’interview</li>
+                <li><strong>29</strong> formats courts</li>
+                <li><strong>4K</strong> tournage Sony FX30</li>
+              </ul>
+            </div>
+          </article>
         </section>
 
         {/* RÉALISATIONS */}

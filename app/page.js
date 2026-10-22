@@ -63,10 +63,10 @@ const REALISATIONS = [
   {
     tone: 'ciel',
     logo: 'caron.png',
-    tag: 'Site vitrine · Association',
+    tag: 'Site + photo + vidéo · École de danse',
     title: 'École de Danse Caron',
-    text: "Quarante ans d'école racontés en un site clair : cours, tarifs, gala, danse de mariage.",
-    points: ['Site vitrine'],
+    text: "Photos et vidéos des cours et du gala, puis un site clair pour raconter quarante ans d'école : cours, tarifs, gala, danse de mariage.",
+    points: ['Photo', 'Vidéo', 'Site vitrine'],
   },
   {
     tone: 'rose',

@@ -47,6 +47,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
         run: |
+          TOKEN=$(printf '%s' "$TOKEN" | tr -d '\r\n[:space:]')
           curl -sS "https://developers.hostinger.com/api/hosting/v1/websites" -H "Authorization: Bearer $TOKEN" \
             | jq -r '(.data // .)[]? | "\(.username // "?")  \(.domain // "?")  \(.is_enabled // "")"' || true
 
@@ -59,6 +60,7 @@ jobs:
             echo "::error::Secret HOSTINGER_API_TOKEN absent (Settings > Secrets and variables > Actions)."
             exit 1
           fi
+          TOKEN=$(printf '%s' "$TOKEN" | tr -d '\r\n[:space:]')   # un retour à la ligne collé avec le jeton casse les en-têtes
           API=https://developers.hostinger.com/api/hosting/v1
           cd out
           count=0

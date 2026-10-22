@@ -55,9 +55,8 @@ function getVal(row, headers, name, fallbackIndex) {
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const code = (searchParams.get('code') || '').trim().toUpperCase();
-  const debug = searchParams.get('debug') === '1';
 
-  if (!code && !debug) {
+  if (!code) {
     return NextResponse.json({ error: "Code d'accès requis." }, { status: 400 });
   }
 
@@ -73,16 +72,6 @@ export async function GET(request) {
       fetchSheet('documents'),
       fetchSheet('paiements'),
     ]);
-
-    // Debug mode: show what we read
-    if (debug) {
-      return NextResponse.json({
-        clients: { headers: clientsData.headers, rows: clientsData.rows.slice(0, 3) },
-        projets: { headers: projetsData.headers, rows: projetsData.rows.slice(0, 3) },
-        documents: { headers: documentsData.headers, rows: documentsData.rows.slice(0, 3) },
-        paiements: { headers: paiementsData.headers, rows: paiementsData.rows.slice(0, 3) },
-      });
-    }
 
     const cH = clientsData.headers;
     const cRows = clientsData.rows;

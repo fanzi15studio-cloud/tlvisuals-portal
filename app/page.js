@@ -17,43 +17,67 @@ const STATS = [
 
 const REALISATIONS = [
   {
-    tone: 'apricot',
+    tone: 'lune',
     size: 'wide',
-    tag: 'Site + vidéo · Salle de sport',
-    title: 'Le Local Besançon',
-    text: "Refonte complète d'un site WordPress en site rapide et sur mesure, vidéo drone en ouverture, tunnel d'inscription en ligne intégré et redirection de toutes les anciennes pages pour garder le référencement. Tournage des portes ouvertes.",
-    points: ['Vidéo drone', 'SEO préservé', 'Inscription en ligne'],
+    logo: 'doula.png',
+    logoTight: true,
+    tag: 'Vidéo · Formation de doulas',
+    title: 'Doula des Lunes',
+    text: 'Série de témoignages filmés en 4K, puis films d’interview et formats courts pour les réseaux sociaux : montage, sous-titres animés, habillage graphique et renvoi vers la chaîne YouTube.',
+    points: ['4 films d’interview', '29 formats courts', 'Tournage 4K'],
   },
   {
-    tone: 'sage',
+    tone: 'prairie',
+    logo: 'dietrich.png',
+    tag: 'Photo & vidéo · Entreprise',
+    title: 'Dietrich',
+    text: 'Missions photo et vidéo pour la communication de l’entreprise : prises de vue sur le terrain, portraits et contenus pour les réseaux.',
+    points: ['Photo', 'Vidéo'],
+  },
+  {
+    tone: 'aube',
+    logo: 'buggy.png',
+    logoDark: true,
     tag: 'Réservation en ligne · Loisirs',
     title: 'Buggy & Co',
     text: 'Site de réservation avec empreinte bancaire, bons cadeaux et notifications automatiques, plus des vidéos dédiées mobile et ordinateur.',
     points: ['Paiement par carte', 'Automatisations'],
   },
   {
-    tone: 'butter',
+    tone: 'peche',
+    size: 'wide',
+    logo: 'lelocal.png',
+    tag: 'Site + vidéo · Salle de sport',
+    title: 'Le Local Besançon',
+    text: "Refonte complète d'un site WordPress en site rapide et sur mesure, vidéo drone en ouverture, tunnel d'inscription en ligne intégré et redirection de toutes les anciennes pages pour garder le référencement. Tournage des portes ouvertes.",
+    points: ['Vidéo drone', 'SEO préservé', 'Inscription en ligne'],
+  },
+  {
+    tone: 'miel',
+    logo: 'kassai.svg',
     tag: 'Identité + site · Artisan',
     title: 'Menuiserie Kassaï',
     text: 'Logo, cartes de visite et site vitrine. Formulaire de demande où le client envoie photos de sa pièce et message vocal.',
     points: ['Logo', 'Demande avec photos'],
   },
   {
-    tone: 'sky',
-    tag: 'Site vitrine · Association',
+    tone: 'ciel',
+    logo: 'caron.png',
+    tag: 'Site + photo + vidéo · École de danse',
     title: 'École de Danse Caron',
-    text: "Quarante ans d'école racontés en un site clair : cours, tarifs, gala, danse de mariage.",
-    points: ['Site vitrine'],
+    text: "Photos et vidéos des cours et du gala, puis un site clair pour raconter quarante ans d'école : cours, tarifs, gala, danse de mariage.",
+    points: ['Photo', 'Vidéo', 'Site vitrine'],
   },
   {
     tone: 'rose',
+    logo: 'protection.png',
     tag: 'Deux sites · Sécurité',
     title: 'Projet Protection & DiagAlarm',
     text: "Deux sites pour des installateurs d'alarme et de vidéosurveillance dans le Var, pensés pour générer des demandes d'étude.",
     points: ['Génération de contacts'],
   },
   {
-    tone: 'lilac',
+    tone: 'lune',
     size: 'wide',
     tag: 'Accompagnement · Startup',
     title: "Dossier de lancement d'une startup en sécurité IA",
@@ -61,14 +85,14 @@ const REALISATIONS = [
     points: ['Note d’innovation', 'Feuille de route', 'Budget pub'],
   },
   {
-    tone: 'apricot',
+    tone: 'peche',
     tag: 'Motion design',
     title: 'Animations sur mesure',
     text: 'Carrousels Instagram, vidéo anniversaire, bande dessinée animée pour un mariage : des formats courts qui se partagent.',
     points: ['Réseaux sociaux'],
   },
   {
-    tone: 'sage',
+    tone: 'prairie',
     size: 'full',
     tag: 'Acquisition',
     title: 'Publicité & automatisations',
@@ -92,9 +116,9 @@ const COMPETENCES = [
   },
   {
     img: 'photo',
-    pos: 'center 45%',
+    pos: 'center',
     title: 'Photo',
-    text: 'Portrait, packshot, culinaire en macro, reportage. Retouche soignée.',
+    text: 'Portrait, reportage, packshot, culinaire en macro. Ici, un reportage dans une salle de sport.',
   },
   {
     img: 'drone',
@@ -272,6 +296,11 @@ export default function CvPage() {
           <div className="bento">
             {REALISATIONS.map((r) => (
               <article key={r.title} className={`card tone-${r.tone} ${r.size || ''}`}>
+                {r.logo && (
+                  <span className={`card-logo${r.logoDark ? ' dark' : ''}${r.logoTight ? ' tight' : ''}`}>
+                    <img src={`/cv-digital/img/logos/${r.logo}`} alt={`Logo ${r.title}`} loading="lazy" />
+                  </span>
+                )}
                 <p className="card-tag">{r.tag}</p>
                 <h3>{r.title}</h3>
                 <p>{r.text}</p>

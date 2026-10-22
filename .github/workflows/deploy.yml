@@ -63,27 +63,46 @@ jobs:
           TOKEN=$(printf '%s' "$TOKEN" | tr -d '\r\n[:space:]')   # un retour à la ligne collé avec le jeton casse les en-têtes
           API=https://developers.hostinger.com/api/hosting/v1
           cd out
+
+          # Identifiants d'envoi : demandés une fois, renouvelés si Hostinger les refuse.
+          get_creds() {
+            for attempt in 1 2 3 4 5 6; do
+              code=$(curl -sS -o /tmp/creds.json -w '%{http_code}' -X POST "$API/files/upload-urls" \
+                -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" \
+                -d "{\"username\":\"$HOSTINGER_USER\",\"domain\":\"$HOSTINGER_DOMAIN\"}")
+              if [ "$code" = 200 ] && [ -n "$(jq -r '.url // empty' /tmp/creds.json)" ]; then
+                url=$(jq -r .url /tmp/creds.json); auth=$(jq -r .auth_key /tmp/creds.json); rest=$(jq -r .rest_auth_key /tmp/creds.json)
+                return 0
+              fi
+              echo "upload-urls : HTTP $code, nouvel essai dans $((attempt * 10)) s"
+              sleep $((attempt * 10))
+            done
+            echo "::error::Impossible d'obtenir une URL d'envoi Hostinger : $(head -c 300 /tmp/creds.json)"
+            exit 1
+          }
+
+          upload() {   # $1 = fichier local, $2 = chemin distant ; renvoie 1 si refusé
+            local dest="$url/$TARGET_DIR/$2?override=true" size
+            size=$(stat -c%s "$1")
+            curl -sS --retry 2 --fail -o /dev/null -X POST "$dest" \
+              -H "X-Auth: $auth" -H "X-Auth-Rest: $rest" -H "Tus-Resumable: 1.0.0" \
+              -H "Upload-Length: $size" -H "Upload-Offset: 0" || return 1
+            curl -sS --retry 2 --fail -o /dev/null -X PATCH "$dest" \
+              -H "X-Auth: $auth" -H "X-Auth-Rest: $rest" -H "Tus-Resumable: 1.0.0" \
+              -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
+              --data-binary "@$1" || return 1
+            echo "envoyé : $TARGET_DIR/$2 ($size octets)"
+          }
+
+          get_creds
           count=0
           while IFS= read -r -d '' f; do
             rel="${f#./}"
-            size=$(stat -c%s "$f")
-            creds=$(curl -sS --retry 2 -X POST "$API/files/upload-urls" \
-              -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
-              -d "{\"username\":\"$HOSTINGER_USER\",\"domain\":\"$HOSTINGER_DOMAIN\"}")
-            if [ "$(jq -r '.url // empty' <<<"$creds")" = "" ]; then
-              echo "::error::Réponse de l'API Hostinger : $(jq -c '{message, errors}' <<<"$creds" 2>/dev/null || echo "$creds" | head -c 300)"
-              exit 1
+            if ! upload "$f" "$rel"; then
+              echo "envoi refusé pour $rel : renouvellement des identifiants"
+              sleep 5; get_creds
+              upload "$f" "$rel" || { echo "::error::Échec définitif pour $rel"; exit 1; }
             fi
-            url=$(jq -r .url <<<"$creds"); auth=$(jq -r .auth_key <<<"$creds"); rest=$(jq -r .rest_auth_key <<<"$creds")
-            dest="$url/$TARGET_DIR/$rel?override=true"
-            curl -sS --retry 2 --retry-all-errors --fail-with-body -o /dev/null -X POST "$dest" \
-              -H "X-Auth: $auth" -H "X-Auth-Rest: $rest" -H "Tus-Resumable: 1.0.0" \
-              -H "Upload-Length: $size" -H "Upload-Offset: 0"
-            curl -sS --retry 2 --retry-all-errors --fail-with-body -o /dev/null -X PATCH "$dest" \
-              -H "X-Auth: $auth" -H "X-Auth-Rest: $rest" -H "Tus-Resumable: 1.0.0" \
-              -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
-              --data-binary "@$f"
-            echo "envoyé : $TARGET_DIR/$rel ($size octets)"
             count=$((count + 1))
           done < <(find . -type f -print0 | sort -z)
           echo "$count fichiers envoyés."

@@ -85,10 +85,10 @@ const COMPETENCES = [
     text: 'Films d’entreprise, produit, événement, interview. Tournage 4K en Sony FX30, montage et étalonnage sur Final Cut Pro.',
   },
   {
-    img: 'studio-pov',
+    img: 'studio',
     pos: 'center 40%',
     title: 'Studio & packshot',
-    text: 'Mise en lumière, slider motorisé, plans produit au millimètre : ici en vue subjective, sur un tournage horlogerie.',
+    text: 'Sony FX30 sur slider motorisé, moniteur de contrôle, softbox à grille : des plans produit précis, ici pour un tournage horlogerie.',
   },
   {
     img: 'photo',
@@ -104,15 +104,15 @@ const COMPETENCES = [
   },
   {
     img: 'web',
-    pos: 'center 45%',
+    pos: 'center',
     title: 'Sites web',
     text: 'Sites rapides et sur mesure : réservation, paiement en ligne, formulaires, référencement.',
   },
   {
     img: 'ia',
-    pos: 'center 30%',
+    pos: 'top left',
     title: 'Solutions IA',
-    text: 'Publicités générées par IA, automatisation des contacts et des tâches répétitives (Make, outils sur mesure).',
+    text: 'Tableau de bord de vidéosurveillance avec détection par IA conçu en 2026, automatisation des contacts et des tâches répétitives.',
   },
 ];
 

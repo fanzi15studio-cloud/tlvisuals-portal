@@ -29,10 +29,10 @@ const REALISATIONS = [
   {
     tone: 'prairie',
     logo: 'dietrich.png',
-    tag: 'Photo & vidéo · Entreprise',
+    tag: 'Vidéo & photo · Chantier',
     title: 'Dietrich',
-    text: 'Missions photo et vidéo pour la communication de l’entreprise : prises de vue sur le terrain, portraits et contenus pour les réseaux.',
-    points: ['Photo', 'Vidéo'],
+    text: 'Vidéos de chantier pour la communication de l’entreprise : tournage sur le terrain, suivi des travaux, montage et photos des réalisations.',
+    points: ['Vidéos de chantier', 'Photo'],
   },
   {
     tone: 'aube',
@@ -196,7 +196,7 @@ const MATERIEL = [
 
 const LANGUES = [
   { langue: 'Français', niveau: 'langue maternelle' },
-  { langue: 'Anglais', niveau: 'niveau professionnel' },
+  { langue: 'Anglais', niveau: 'courant' },
 ];
 
 const TL_PATHS = [

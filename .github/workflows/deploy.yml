@@ -58,15 +58,15 @@ jobs:
           while IFS= read -r -d '' f; do
             rel="${f#./}"
             size=$(stat -c%s "$f")
-            creds=$(curl -sS --fail-with-body -X POST "$API/files/upload-urls" \
+            creds=$(curl -sS --retry 2 --retry-all-errors --fail-with-body -X POST "$API/files/upload-urls" \
               -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
               -d "{\"username\":\"$HOSTINGER_USER\",\"domain\":\"$HOSTINGER_DOMAIN\"}")
             url=$(jq -r .url <<<"$creds"); auth=$(jq -r .auth_key <<<"$creds"); rest=$(jq -r .rest_auth_key <<<"$creds")
             dest="$url/$TARGET_DIR/$rel?override=true"
-            curl -sS --fail-with-body -o /dev/null -X POST "$dest" \
+            curl -sS --retry 2 --retry-all-errors --fail-with-body -o /dev/null -X POST "$dest" \
               -H "X-Auth: $auth" -H "X-Auth-Rest: $rest" -H "Tus-Resumable: 1.0.0" \
               -H "Upload-Length: $size" -H "Upload-Offset: 0"
-            curl -sS --fail-with-body -o /dev/null -X PATCH "$dest" \
+            curl -sS --retry 2 --retry-all-errors --fail-with-body -o /dev/null -X PATCH "$dest" \
               -H "X-Auth: $auth" -H "X-Auth-Rest: $rest" -H "Tus-Resumable: 1.0.0" \
               -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
               --data-binary "@$f"

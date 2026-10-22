@@ -1,5 +1,7 @@
 const CONTACT = {
   email: 'contact@thomasloiseauvisuals.com',
+  telCh: '+41 78 608 27 24',
+  telChHref: '+41786082724',
   tel: '+33 7 81 99 28 12',
   telHref: '+33781992812',
   site: 'https://thomasloiseauvisuals.com',
@@ -136,7 +138,12 @@ export default function CvPage() {
     <>
       <header className="nav">
         <a className="nav-brand" href="#top" aria-label="Haut de page">
-          <span className="monogram">TL</span>
+          <span className="monogram">
+            <svg viewBox="247 742 633 418" aria-hidden="true">
+              <path d="M459.165,1104.95 L471.163,1117.01 L477.877,1124.13 L513.783,1158.23 L513.967,853.497 L515.756,843.776 L562.696,843.549 L583.003,823.733 L602.313,804.029 L619.136,787.32 L661.392,744.714 L659.602,742.191 L247.831,742.322 L250.486,748.519 L256.258,753.87 L283.174,781.621 L336.695,835.303 L344.497,843.679 L407.983,843.813 L410.459,845.906 L410.874,864.504 L411.168,1056.67 L421.218,1066.99 L447.942,1093.88 L459.165,1104.95 Z" />
+              <path d="M552.122,1158.15 L860.464,1158.09 L869.777,1158.37 L868.358,1155.72 L861.927,1149.23 L842.919,1130.16 L837.811,1125.08 L829.359,1116.71 L768.877,1056.63 L640.435,1056.57 L640.394,798.378 L636.88,798.808 L627.631,808.513 L616.032,820.16 L606.643,829.623 L584.125,852.163 L576.876,859.1 L571.002,864.438 L538.091,864.771 L538.288,1136.04 L538.59,1149.72 L539.707,1158.14 L552.122,1158.15 Z" />
+            </svg>
+          </span>
           <span>Thomas Loiseau</span>
         </a>
         <nav className="nav-links" aria-label="Sections">
@@ -171,8 +178,10 @@ export default function CvPage() {
           </div>
 
           <div className="hero-visual">
-            <div className="blob" aria-hidden="true" />
-            <img src="/cv-digital/thomas.webp" alt="Portrait de Thomas Loiseau" width="848" height="1264" />
+            <div className="portrait">
+              <div className="portrait-frame" aria-hidden="true" />
+              <img src="/cv-digital/thomas.webp" alt="Portrait de Thomas Loiseau" width="976" height="1200" />
+            </div>
             <span className="chip chip-1">🎥 Sony FX30</span>
             <span className="chip chip-2">▶ 12,7 M de vues</span>
             <span className="chip chip-3">💻 Sites sur mesure</span>
@@ -311,7 +320,8 @@ export default function CvPage() {
           <p>Racontez-moi votre entreprise. Je vous réponds sous 24 heures.</p>
           <div className="contact-actions">
             <a className="btn" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-            <a className="btn btn-ghost" href={`tel:${CONTACT.telHref}`}>{CONTACT.tel}</a>
+            <a className="btn btn-ghost" href={`tel:${CONTACT.telChHref}`}>🇨🇭 {CONTACT.telCh}</a>
+            <a className="btn btn-ghost" href={`tel:${CONTACT.telHref}`}>🇫🇷 {CONTACT.tel}</a>
           </div>
           <a className="contact-site" href={CONTACT.site} target="_blank" rel="noopener noreferrer">
             thomasloiseauvisuals.com

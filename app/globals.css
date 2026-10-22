@@ -172,14 +172,14 @@ main {
 .monogram {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: var(--coral);
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-style: italic;
+  background: var(--ink);
+}
+.monogram svg {
+  width: 22px;
+  fill: #fff;
 }
 .nav-links {
   display: flex;
@@ -259,24 +259,27 @@ main {
   justify-self: center;
   width: 100%;
 }
-.blob {
+/* Cadre en arche : la photo (coupée net en bas) repose sur le bas du cadre,
+   la tête dépasse au-dessus. Même largeur, mêmes coins bas : aucun décalage. */
+.portrait {
+  position: relative;
+  width: 100%;
+}
+.portrait-frame {
   position: absolute;
-  inset: 14% 2% 0 2%;
-  border-radius: 48% 52% 46% 54% / 55% 48% 52% 45%;
-  background: linear-gradient(160deg, var(--apricot) 0%, #f7b99a 55%, var(--coral) 130%);
-  animation: morph 14s ease-in-out infinite alternate;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 18%;
+  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 20%, rgba(255, 255, 255, 0.55), transparent 60%),
+    linear-gradient(165deg, var(--apricot) 0%, #f6b496 60%, var(--coral) 140%);
 }
-@keyframes morph {
-  to {
-    border-radius: 56% 44% 52% 48% / 46% 56% 44% 54%;
-  }
-}
-.hero-visual img {
+.portrait img {
   position: relative;
   width: 100%;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
 }
 .chip {
   position: absolute;
@@ -290,17 +293,17 @@ main {
   animation: float 6s ease-in-out infinite;
 }
 .chip-1 {
-  top: 30%;
-  left: -8%;
+  top: 26%;
+  left: -10%;
 }
 .chip-2 {
-  top: 52%;
-  right: -6%;
+  top: 50%;
+  right: -8%;
   animation-delay: -2s;
 }
 .chip-3 {
-  bottom: 16%;
-  left: 0;
+  bottom: 10%;
+  left: -6%;
   animation-delay: -4s;
 }
 @keyframes float {
@@ -738,6 +741,12 @@ main {
   }
   .chip-2 {
     right: 0;
+  }
+  .chip-3 {
+    left: 8px;
+  }
+  .chip-1 {
+    left: 8px;
   }
   .section {
     padding-top: 72px;

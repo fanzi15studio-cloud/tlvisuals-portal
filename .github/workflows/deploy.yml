@@ -43,6 +43,13 @@ jobs:
       - name: Build static export
         run: npm run build
 
+      - name: List websites on the Hostinger account
+        env:
+          TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+        run: |
+          curl -sS "https://developers.hostinger.com/api/hosting/v1/websites" -H "Authorization: Bearer $TOKEN" \
+            | jq -r '(.data // .)[]? | "\(.username // "?")  \(.domain // "?")  \(.is_enabled // "")"' || true
+
       - name: Upload to Hostinger via API
         env:
           TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
@@ -58,9 +65,13 @@ jobs:
           while IFS= read -r -d '' f; do
             rel="${f#./}"
             size=$(stat -c%s "$f")
-            creds=$(curl -sS --retry 2 --retry-all-errors --fail-with-body -X POST "$API/files/upload-urls" \
+            creds=$(curl -sS --retry 2 -X POST "$API/files/upload-urls" \
               -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
               -d "{\"username\":\"$HOSTINGER_USER\",\"domain\":\"$HOSTINGER_DOMAIN\"}")
+            if [ "$(jq -r '.url // empty' <<<"$creds")" = "" ]; then
+              echo "::error::Réponse de l'API Hostinger : $(jq -c '{message, errors}' <<<"$creds" 2>/dev/null || echo "$creds" | head -c 300)"
+              exit 1
+            fi
             url=$(jq -r .url <<<"$creds"); auth=$(jq -r .auth_key <<<"$creds"); rest=$(jq -r .rest_auth_key <<<"$creds")
             dest="$url/$TARGET_DIR/$rel?override=true"
             curl -sS --retry 2 --retry-all-errors --fail-with-body -o /dev/null -X POST "$dest" \

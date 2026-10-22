@@ -104,15 +104,15 @@ const COMPETENCES = [
   },
   {
     img: 'web',
-    pos: 'center',
+    pos: 'left center',
     title: 'Sites web',
     text: 'Sites rapides et sur mesure : réservation, paiement en ligne, formulaires, référencement.',
   },
   {
     img: 'ia',
-    pos: 'top left',
+    pos: 'center',
     title: 'Solutions IA',
-    text: 'Tableau de bord de vidéosurveillance avec détection par IA conçu en 2026, automatisation des contacts et des tâches répétitives.',
+    text: 'Visuels générés par IA, ici un home cinéma imaginé pour un menuisier avant le chantier, et automatisation des tâches répétitives.',
   },
 ];
 
@@ -168,6 +168,11 @@ const MATERIEL = [
   'Drone',
   'MacBook Pro M4 Max',
   'Final Cut Pro',
+];
+
+const LANGUES = [
+  { langue: 'Français', niveau: 'langue maternelle' },
+  { langue: 'Anglais', niveau: 'niveau professionnel' },
 ];
 
 const TL_PATHS = [
@@ -349,6 +354,16 @@ export default function CvPage() {
               <ul className="tags tags-small">
                 {MATERIEL.map((m) => (
                   <li key={m}>{m}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="gear">
+              <p className="for-who-title">Langues</p>
+              <ul className="langues">
+                {LANGUES.map((l) => (
+                  <li key={l.langue}>
+                    <strong>{l.langue}</strong> {l.niveau}
+                  </li>
                 ))}
               </ul>
             </div>

@@ -30,12 +30,4 @@ jobs:
           U: ${{ secrets.FTP_USERNAME }}
           P: ${{ secrets.FTP_PASSWORD }}
         run: |
-          lftp -c "set net:timeout 15; set net:max-retries 1; set ftp:ssl-force true; set ftp:ssl-protect-data true; open -u \"$U\",\"$P\" \"$HOST\"; cls -1 /public_html | head -20" && echo "FTPS : CONNEXION OK" || echo "FTPS : ÉCHEC"
-
-      - name: Try plain FTP login (lecture seule, liste du dossier)
-        env:
-          HOST: ${{ secrets.FTP_SERVER }}
-          U: ${{ secrets.FTP_USERNAME }}
-          P: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          lftp -c "set net:timeout 15; set net:max-retries 1; set ftp:ssl-allow false; open -u \"$U\",\"$P\" \"$HOST\"; cls -1 /public_html | head -5" && echo "FTP : CONNEXION OK" || echo "FTP : ÉCHEC"
+          lftp -c "set net:timeout 15; set net:max-retries 1; set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate yes; open -u \"$U\",\"$P\" \"$HOST\"; cls -1 /public_html | head -20" && echo "FTPS : CONNEXION OK" || echo "FTPS : ÉCHEC"

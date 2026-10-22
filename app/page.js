@@ -17,29 +17,52 @@ const STATS = [
 
 const REALISATIONS = [
   {
-    tone: 'apricot',
+    tone: 'lune',
     size: 'wide',
-    tag: 'Site + vidéo · Salle de sport',
-    title: 'Le Local Besançon',
-    text: "Refonte complète d'un site WordPress en site rapide et sur mesure, vidéo drone en ouverture, tunnel d'inscription en ligne intégré et redirection de toutes les anciennes pages pour garder le référencement. Tournage des portes ouvertes.",
-    points: ['Vidéo drone', 'SEO préservé', 'Inscription en ligne'],
+    logo: 'doula.png',
+    logoTight: true,
+    tag: 'Vidéo · Formation de doulas',
+    title: 'Doula des Lunes',
+    text: 'Série de témoignages filmés en 4K, puis films d’interview et formats courts pour les réseaux sociaux : montage, sous-titres animés, habillage graphique et renvoi vers la chaîne YouTube.',
+    points: ['4 films d’interview', '29 formats courts', 'Tournage 4K'],
   },
   {
-    tone: 'sage',
+    tone: 'prairie',
+    logo: 'dietrich.png',
+    tag: 'Photo & vidéo · Entreprise',
+    title: 'Dietrich',
+    text: 'Missions photo et vidéo pour la communication de l’entreprise : prises de vue sur le terrain, portraits et contenus pour les réseaux.',
+    points: ['Photo', 'Vidéo'],
+  },
+  {
+    tone: 'aube',
+    logo: 'buggy.png',
+    logoDark: true,
     tag: 'Réservation en ligne · Loisirs',
     title: 'Buggy & Co',
     text: 'Site de réservation avec empreinte bancaire, bons cadeaux et notifications automatiques, plus des vidéos dédiées mobile et ordinateur.',
     points: ['Paiement par carte', 'Automatisations'],
   },
   {
-    tone: 'butter',
+    tone: 'peche',
+    size: 'wide',
+    logo: 'lelocal.png',
+    tag: 'Site + vidéo · Salle de sport',
+    title: 'Le Local Besançon',
+    text: "Refonte complète d'un site WordPress en site rapide et sur mesure, vidéo drone en ouverture, tunnel d'inscription en ligne intégré et redirection de toutes les anciennes pages pour garder le référencement. Tournage des portes ouvertes.",
+    points: ['Vidéo drone', 'SEO préservé', 'Inscription en ligne'],
+  },
+  {
+    tone: 'miel',
+    logo: 'kassai.svg',
     tag: 'Identité + site · Artisan',
     title: 'Menuiserie Kassaï',
     text: 'Logo, cartes de visite et site vitrine. Formulaire de demande où le client envoie photos de sa pièce et message vocal.',
     points: ['Logo', 'Demande avec photos'],
   },
   {
-    tone: 'sky',
+    tone: 'ciel',
+    logo: 'caron.png',
     tag: 'Site vitrine · Association',
     title: 'École de Danse Caron',
     text: "Quarante ans d'école racontés en un site clair : cours, tarifs, gala, danse de mariage.",
@@ -47,13 +70,14 @@ const REALISATIONS = [
   },
   {
     tone: 'rose',
+    logo: 'protection.png',
     tag: 'Deux sites · Sécurité',
     title: 'Projet Protection & DiagAlarm',
     text: "Deux sites pour des installateurs d'alarme et de vidéosurveillance dans le Var, pensés pour générer des demandes d'étude.",
     points: ['Génération de contacts'],
   },
   {
-    tone: 'lilac',
+    tone: 'lune',
     size: 'wide',
     tag: 'Accompagnement · Startup',
     title: "Dossier de lancement d'une startup en sécurité IA",
@@ -61,14 +85,14 @@ const REALISATIONS = [
     points: ['Note d’innovation', 'Feuille de route', 'Budget pub'],
   },
   {
-    tone: 'apricot',
+    tone: 'peche',
     tag: 'Motion design',
     title: 'Animations sur mesure',
     text: 'Carrousels Instagram, vidéo anniversaire, bande dessinée animée pour un mariage : des formats courts qui se partagent.',
     points: ['Réseaux sociaux'],
   },
   {
-    tone: 'sage',
+    tone: 'prairie',
     size: 'full',
     tag: 'Acquisition',
     title: 'Publicité & automatisations',
@@ -260,30 +284,6 @@ export default function CvPage() {
           ))}
         </section>
 
-        {/* CLIENT PRINCIPAL */}
-        <section className="section" aria-labelledby="client-titre">
-          <article className="client">
-            <img className="client-logo" src="/cv-digital/img/ddl-logo.png" alt="Logo Doula des Lunes" width="214" height="216" />
-            <div className="client-body">
-              <p className="kicker">Client principal</p>
-              <h2 id="client-titre">
-                Doula des <em>Lunes</em>
-              </h2>
-              <p className="client-lead">
-                Organisme de formation de doulas. J’ai filmé en 4K une série de témoignages
-                d’anciennes élèves, puis réalisé les films d’interview et leurs déclinaisons courtes pour
-                les réseaux sociaux : montage, sous-titres animés, habillage graphique et renvoi vers la
-                chaîne YouTube.
-              </p>
-              <ul className="client-stats">
-                <li><strong>4</strong> films d’interview</li>
-                <li><strong>29</strong> formats courts</li>
-                <li><strong>4K</strong> tournage Sony FX30</li>
-              </ul>
-            </div>
-          </article>
-        </section>
-
         {/* RÉALISATIONS */}
         <section id="realisations" className="section">
           <div className="section-head">
@@ -296,6 +296,11 @@ export default function CvPage() {
           <div className="bento">
             {REALISATIONS.map((r) => (
               <article key={r.title} className={`card tone-${r.tone} ${r.size || ''}`}>
+                {r.logo && (
+                  <span className={`card-logo${r.logoDark ? ' dark' : ''}${r.logoTight ? ' tight' : ''}`}>
+                    <img src={`/cv-digital/img/logos/${r.logo}`} alt={`Logo ${r.title}`} loading="lazy" />
+                  </span>
+                )}
                 <p className="card-tag">{r.tag}</p>
                 <h3>{r.title}</h3>
                 <p>{r.text}</p>

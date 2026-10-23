@@ -51,7 +51,7 @@ const REALISATIONS = [
     logo: 'lelocal.png',
     tag: 'Site + vidéo · Salle de sport',
     title: 'Le Local Besançon',
-    extraits: ['lelocal-1', 'lelocal-2'],
+    extraits: ['lelocal-tapis-1', 'lelocal-tapis-2'],
     text: "Refonte complète d'un site WordPress en site rapide et sur mesure, vidéo drone en ouverture, tunnel d'inscription en ligne intégré et redirection de toutes les anciennes pages pour garder le référencement. Tournage des portes ouvertes.",
     points: ['Vidéo drone', 'SEO préservé', 'Inscription en ligne'],
   },

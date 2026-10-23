@@ -32,7 +32,6 @@ const REALISATIONS = [
     logo: 'dietrich.png',
     tag: 'Vidéo & photo · Chantier',
     title: 'Dietrich',
-    extraits: ['dietrich'],
     text: 'Vidéos de chantier pour la communication de l’entreprise : tournage sur le terrain, suivi des travaux, montage et photos des réalisations.',
     points: ['Vidéos de chantier', 'Photo'],
   },

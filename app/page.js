@@ -23,6 +23,7 @@ const REALISATIONS = [
     logoTight: true,
     tag: 'Vidéo · Formation de doulas',
     title: 'Doula des Lunes',
+    extraits: ['doula-1', 'doula-2'],
     text: 'Série de témoignages filmés en 4K, puis films d’interview et formats courts pour les réseaux sociaux : montage, sous-titres animés, habillage graphique et renvoi vers la chaîne YouTube.',
     points: ['4 films d’interview', '29 formats courts', 'Tournage 4K'],
   },
@@ -31,6 +32,7 @@ const REALISATIONS = [
     logo: 'dietrich.png',
     tag: 'Vidéo & photo · Chantier',
     title: 'Dietrich',
+    extraits: ['dietrich'],
     text: 'Vidéos de chantier pour la communication de l’entreprise : tournage sur le terrain, suivi des travaux, montage et photos des réalisations.',
     points: ['Vidéos de chantier', 'Photo'],
   },
@@ -40,6 +42,7 @@ const REALISATIONS = [
     logoDark: true,
     tag: 'Réservation en ligne · Loisirs',
     title: 'Buggy & Co',
+    extraits: ['buggy'],
     text: 'Site de réservation avec empreinte bancaire, bons cadeaux et notifications automatiques, plus des vidéos dédiées mobile et ordinateur.',
     points: ['Paiement par carte', 'Automatisations'],
   },
@@ -49,6 +52,7 @@ const REALISATIONS = [
     logo: 'lelocal.png',
     tag: 'Site + vidéo · Salle de sport',
     title: 'Le Local Besançon',
+    extraits: ['lelocal-1', 'lelocal-2'],
     text: "Refonte complète d'un site WordPress en site rapide et sur mesure, vidéo drone en ouverture, tunnel d'inscription en ligne intégré et redirection de toutes les anciennes pages pour garder le référencement. Tournage des portes ouvertes.",
     points: ['Vidéo drone', 'SEO préservé', 'Inscription en ligne'],
   },
@@ -57,6 +61,7 @@ const REALISATIONS = [
     logo: 'kassai.svg',
     tag: 'Identité + site · Artisan',
     title: 'Menuiserie Kassaï',
+    extraits: ['kassai'],
     text: 'Logo, cartes de visite et site vitrine. Formulaire de demande où le client envoie photos de sa pièce et message vocal.',
     points: ['Logo', 'Demande avec photos'],
   },
@@ -65,6 +70,7 @@ const REALISATIONS = [
     logo: 'caron.png',
     tag: 'Site + photo + vidéo · École de danse',
     title: 'École de Danse Caron',
+    extraits: ['caron'],
     text: "Photos et vidéos des cours et du gala, puis un site clair pour raconter quarante ans d'école : cours, tarifs, gala, danse de mariage.",
     points: ['Photo', 'Vidéo', 'Site vitrine'],
   },
@@ -73,6 +79,7 @@ const REALISATIONS = [
     logo: 'protection.png',
     tag: 'Deux sites · Sécurité',
     title: 'Projet Protection & DiagAlarm',
+    extraits: ['protection'],
     text: "Deux sites pour des installateurs d'alarme et de vidéosurveillance dans le Var, pensés pour générer des demandes d'étude.",
     points: ['Génération de contacts'],
   },
@@ -295,7 +302,14 @@ export default function CvPage() {
           </div>
           <div className="bento">
             {REALISATIONS.map((r) => (
-              <article key={r.title} className={`card tone-${r.tone} ${r.size || ''}`}>
+              <article key={r.title} className={`card tone-${r.tone} ${r.size || ''}${r.extraits ? ' has-extraits' : ''}`}>
+                {r.extraits && (
+                  <div className="card-extraits" aria-hidden="true">
+                    {r.extraits.map((e) => (
+                      <img key={e} src={`/cv-digital/img/extraits/${e}.webp`} alt="" loading="lazy" />
+                    ))}
+                  </div>
+                )}
                 {r.logo && (
                   <span className={`card-logo${r.logoDark ? ' dark' : ''}${r.logoTight ? ' tight' : ''}`}>
                     <img src={`/cv-digital/img/logos/${r.logo}`} alt={`Logo ${r.title}`} loading="lazy" />

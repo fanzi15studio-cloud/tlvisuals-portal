@@ -408,8 +408,44 @@ main {
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 .card:hover {
-  transform: translateY(-4px) rotate(-0.4deg);
   box-shadow: 0 24px 40px -20px rgba(31, 27, 22, 0.28);
+}
+/* Extraits de projet : petites vignettes posées dans le coin, sans toucher au texte */
+.card {
+  position: relative;
+}
+.card-extraits {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: flex;
+  pointer-events: none;
+}
+.card-extraits img {
+  width: 112px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 24px -10px rgba(31, 27, 22, 0.45);
+  transform: rotate(3deg);
+  transition: transform 0.5s var(--ease);
+}
+.card-extraits img + img {
+  margin-left: -36px;
+  transform: rotate(-4deg) translateY(10px);
+}
+.has-extraits .card-logo {
+  max-width: calc(100% - 140px);
+}
+.has-extraits .card-logo img {
+  max-width: 100%;
+}
+.card:hover .card-extraits img {
+  transform: rotate(0);
+}
+.card:hover .card-extraits img + img {
+  transform: rotate(0) translateY(10px);
 }
 .card.wide {
   grid-column: span 2;
@@ -805,6 +841,16 @@ main {
   .card.wide,
   .card.full {
     grid-column: auto;
+  }
+  .card-extraits {
+    top: 18px;
+    right: 18px;
+  }
+  .card-extraits img {
+    width: 96px;
+  }
+  .has-extraits .card-logo {
+    max-width: calc(100% - 124px);
   }
   .hero {
     gap: 24px;

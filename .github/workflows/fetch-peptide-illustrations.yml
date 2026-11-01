@@ -1,0 +1,52 @@
+name: Importer les illustrations peptides (Higgsfield)
+
+# Se déclenche uniquement sur la branche du guide Aeterna, quand le manifeste ou le script
+# changent. Ne déploie rien (le déploiement Hostinger reste réservé à main).
+on:
+  push:
+    branches:
+      - claude/aeterna-peptides-guide-fr-1703sz
+    paths:
+      - clients/aeterna-labs/brand/illustrations-manifest.json
+      - .github/scripts/fetch_illustrations.py
+      - .github/workflows/fetch-peptide-illustrations.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-peptide-illustrations
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer Pillow
+        run: pip install --quiet pillow
+
+      - name: Télécharger + optimiser les illustrations
+        run: python .github/scripts/fetch_illustrations.py
+
+      - name: Committer les images dans la branche
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/aeterna-guide-peptides/illustrations clients/aeterna-labs/livraison/illustrations-peptides
+          if git diff --cached --quiet; then
+            echo "Aucune nouvelle image."
+          else
+            git commit -m "Import des illustrations apothicaire Higgsfield (WebP web + HD)"
+            git push origin HEAD:${{ github.ref_name }}
+          fi

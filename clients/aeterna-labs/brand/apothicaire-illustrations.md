@@ -5,9 +5,12 @@ gravée : flacon + gravure encre navy + accents or sur parchemin crème, **sans 
 format **4:5**, **2K**. Chaque famille a sa teinte d'essence ; le motif central évoque
 le **bénéfice** du peptide.
 
-> Note : ces images sont hébergées sur le CDN Higgsfield (bloqué depuis le conteneur cloud).
-> Pour les intégrer, les télécharger depuis une session **locale** ou depuis le panneau Higgsfield.
-> `job_id` = identifiant de génération (réutilisable via l'API Higgsfield).
+> **Images importées dans le dépôt** (via le workflow GitHub Actions `fetch-peptide-illustrations`) :
+> - Web (app, 1200 px) : `public/aeterna-guide-peptides/illustrations/<slug>.webp`
+> - HD (archive, pleine résolution) : `clients/aeterna-labs/livraison/illustrations-peptides/<slug>.webp`
+> - Prompt prêt à coller dans Lovable : `clients/aeterna-labs/lovable/prompt-remplacement-images.md`
+>
+> `job_id` = identifiant de génération Higgsfield (réutilisable pour régénérer une variante).
 
 ## ⚖️ Métabolisme — essence ambre-or
 | Peptide | Bénéfice illustré | job_id |
